@@ -1,44 +1,66 @@
 ##
-## Combine each UK nation's IMD data into a single file
-## and prep separate shapefiles showing 10% most deprived LSOAs (or equivalents) for each domain of deprivation
+## Combine each UK nation's Index of Multiple Deprivation data into a single file
 ##
 library(tidyverse)
 library(readxl)
+library(readODS)
 library(janitor)
-library(rgdal)
-library(rmapshaper)
-library(spdplyr)
 library(Hmisc)
 
 data.dir = "data"
 
 ##
-## Load LSOAs
+## Load IMD data directly from web
 ##
-lsoas = readOGR(dsn = file.path(data.dir, "Boundaries"), 
-                layer = "uk_bounds",
-                verbose = F)
+# England
+tmp_imd_eng = tempfile()
+download.file("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833973/File_2_-_IoD2019_Domains_of_Deprivation.xlsx",
+              tmp_imd_eng, mode = "wb")
 
-map_proj = CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")  # use this projection for all boundaries
+imd_eng = read_excel(tmp_imd_eng, sheet = "IoD2019 Domains")
+unlink(tmp_imd_eng); rm(tmp_imd_eng)
 
-lsoas = spTransform(lsoas, map_proj)
+# Wales
+tmp_imd_wal = tempfile()
+download.file("https://gov.wales/sites/default/files/statistics-and-research/2019-11/welsh-index-multiple-deprivation-2019-index-and-domain-ranks-by-small-area.ods",
+              tmp_imd_wal, mode = "wb")
 
-# lsoas = ms_simplify(lsoas)
+imd_wal = read_ods(tmp_imd_wal, sheet = "WIMD_2019_ranks", skip = 2)
+unlink(tmp_imd_wal); rm(tmp_imd_wal)
+
+# Scotland
+tmp_imd_sco = tempfile()
+download.file("https://www2.gov.scot/Resource/0053/00534450.xlsx",
+              tmp_imd_sco, mode = "wb")
+
+imd_sco = read_excel(tmp_imd_sco, sheet = "SIMD16 ranks")
+unlink(tmp_imd_sco); rm(tmp_imd_sco)
+
+# Northern Ireland
+tmp_imd_ni = tempfile()
+download.file("https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/NIMDM17_SOAresults.xls",
+              tmp_imd_ni, mode = "wb")
+
+imd_ni = read_excel(tmp_imd_ni, sheet = "MDM")
+unlink(tmp_imd_ni); rm(tmp_imd_ni)
 
 ##
-## Load IMDs
+## load IMD data from local files
 ##
-imd_eng = read_excel(file.path(data.dir, "England", "File_2_ID_2015_Domains_of_deprivation.xlsx"), sheet = "ID2015 Domains")
-imd_wal = read_excel(file.path(data.dir, "WIMD Ranks and Deciles 2014.xlsx"), sheet = "WIMD 2014 results Eng", skip = 3)
-imd_sco = read_excel(file.path(data.dir, "SIMD16 ranks and domain ranks.xlsx"), sheet = "SIMD16 ranks")
-imd_ni  = read_excel(file.path(data.dir, "NI_IMD.xls"), sheet = "MDM")
+# imd_eng = read_excel(file.path(data.dir, "England", "File_2_ID_2015_Domains_of_deprivation.xlsx"), sheet = "ID2015 Domains")
+# imd_wal = read_excel(file.path(data.dir, "WIMD Ranks and Deciles 2014.xlsx"), sheet = "WIMD 2014 results Eng", skip = 3)
+# imd_sco = read_excel(file.path(data.dir, "SIMD16 ranks and domain ranks.xlsx"), sheet = "SIMD16 ranks")
+# imd_ni  = read_excel(file.path(data.dir, "NI_IMD.xls"), sheet = "MDM")
 
-# clean up Wales data
-imd_wal = imd_wal %>% 
-  janitor::remove_empty_cols() %>% 
+##
+## Data cleaning
+##
+# clean up Wales data - only needed if loading from the local file
+imd_wal = imd_wal %>%
+  janitor::remove_empty("cols") %>%
   filter(startsWith(`LSOA Code`, "W"))
 
-# clean up NI column names
+# clean up NI column names - remove newlines
 names(imd_ni) = str_replace(names(imd_ni), "\\n", "")
 
 # names and codes of Scotland's Data Zones (their equivalent of LSOAs)
@@ -70,8 +92,8 @@ imd_eng = imd_eng %>%
 ## calculate deciles for Scotland and NI - for each domain of deprivation
 ##
 imd_wal = imd_wal %>% 
-  mutate(IMD_decile = as.integer(cut2(`WIMD 2014 (r)`, g = 10)), 
-         Income_decile = as.integer(cut2(`Income (r)`, g = 10)), 
+  mutate(IMD_decile = as.integer(cut2(`WIMD 2019`, g = 10)), 
+         Income_decile = as.integer(cut2(`Income`, g = 10)), 
          Employment_decile = as.integer(cut2(Employment, g = 10)), 
          Health_decile = as.integer(cut2(Health, g = 10)), 
          Education_decile = as.integer(cut2(Education, g = 10)), 
@@ -80,8 +102,8 @@ imd_wal = imd_wal %>%
          Environment_decile = as.integer(cut2(`Physical Environment`, g = 10)),
          Crime_decile = as.integer(cut2(`Community Safety`, g = 10))) %>% 
   
-  rename(IMD_rank = `WIMD 2014 (r)`,
-         Income_rank = `Income (r)`,
+  rename(IMD_rank = `WIMD 2019`,
+         Income_rank = `Income`,
          Employment_rank = Employment,
          Health_rank = Health,
          Education_rank = Education,
@@ -179,82 +201,3 @@ imd_uk = bind_rows(
 
 # save everything
 write_csv(imd_uk, file.path(data.dir, "UK IMD domains.csv"))
-
-##
-## merge all IMD domains into LSOAs boundaries variable
-##
-lsoas = lsoas %>% 
-  left_join(imd_uk %>% select(-Name), by = "LSOA")
-
-writeOGR(lsoas, data.dir, "IMD in LSOAs", driver="ESRI Shapefile")
-
-##
-## make separate boundary variables for each domain, keeping only 10% most deprived LSOAs in each
-##
-lsoas_imd = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, IMD_decile == 1)$LSOA)
-
-lsoas_income = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Income_decile == 1)$LSOA)
-
-lsoas_employment = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Employment_decile == 1)$LSOA)
-
-lsoas_education = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Education_decile == 1)$LSOA)
-
-lsoas_health = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Health_decile == 1)$LSOA)
-
-lsoas_crime = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Crime_decile == 1)$LSOA)
-
-lsoas_housing_access = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Housing_and_Access_decile == 1)$LSOA)
-
-lsoas_environment = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Environment_decile == 1)$LSOA)
-
-lsoas_housing = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Housing_decile == 1)$LSOA)
-
-lsoas_access = lsoas %>% 
-  filter(LSOA %in% subset(imd_uk, Access_decile == 1)$LSOA)
-
-##
-## save boundaries for each domain separately
-##
-save(lsoas_imd, lsoas_income, lsoas_employment, lsoas_education, lsoas_health, lsoas_crime, lsoas_housing_access, lsoas_environment, lsoas_housing, lsoas_access,
-     file = "deprivation.RData")
-
-save(lsoas, file = "deprivation - all areas.RData")
-
-##
-## get population sizes, by country, for:
-## (i) ten most deprived areas
-## (ii) 10% most deprived areas
-## (iii) 20% most deprived areas
-##
-pop = lsoas@data %>% mutate(Country = case_when(
-  startsWith(LSOA, "E") ~ "England",
-  startsWith(LSOA, "W") ~ "Wales",
-  startsWith(LSOA, "S") ~ "Scotland",
-  startsWith(LSOA, "9") ~ "Northern Ireland",
-  TRUE ~ ""
-))
-
-# (i)
-pop %>% 
-  group_by(Country) %>%
-  
-  filter(IMD_rank <= 10) %>%  # x% most deprived areas
-  
-  summarise(sum(People))
-
-# (ii) and (iii)
-pop %>% 
-  group_by(Country) %>%
-  
-  filter(IMD_decile <= 2) %>%  # x% most deprived areas
-  
-  summarise(sum(People))

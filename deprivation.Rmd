@@ -34,6 +34,7 @@ col_rc_green_dark = "#05853A"
 col_rc_teal = "#2B7586"
 col_nhs_orange = "#ED8B00"
 
+# run `prep deprivation.r` and `prep map.r` to generate this file:
 load("deprivation.RData")
 
 max_ppl = max(lsoas_access@data$People, lsoas_crime@data$People, lsoas_education@data$People, lsoas_employment@data$People, lsoas_environment@data$People,
