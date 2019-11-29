@@ -1,4 +1,4 @@
-#Index of Multiple Deprivation
+# Index of Multiple Deprivation
 
 `prep deprivation.r` combines each UK nation's IMD data into a single table, as well as producing shapefiles showing the 10% most deprived LSOAs (or equivalents) in each nation.
 
