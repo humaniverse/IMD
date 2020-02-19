@@ -30,10 +30,10 @@ unlink(tmp_imd_wal); rm(tmp_imd_wal)
 
 # Scotland
 tmp_imd_sco = tempfile()
-download.file("https://www2.gov.scot/Resource/0053/00534450.xlsx",
+download.file("https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2020/01/scottish-index-of-multiple-deprivation-2020-ranks-and-domain-ranks/documents/scottish-index-of-multiple-deprivation-2020-ranks-and-domain-ranks/scottish-index-of-multiple-deprivation-2020-ranks-and-domain-ranks/govscot%3Adocument/SIMD_2020_Ranks_and_Domain_Ranks.xlsx",
               tmp_imd_sco, mode = "wb")
 
-imd_sco = read_excel(tmp_imd_sco, sheet = "SIMD16 ranks")
+imd_sco = read_excel(tmp_imd_sco, sheet = "SIMD2020 Ranks")
 unlink(tmp_imd_sco); rm(tmp_imd_sco)
 
 # Northern Ireland
@@ -45,12 +45,19 @@ imd_ni = read_excel(tmp_imd_ni, sheet = "MDM")
 unlink(tmp_imd_ni); rm(tmp_imd_ni)
 
 ##
-## load IMD data from local files
+## Load lookup table(s)
 ##
-# imd_eng = read_excel(file.path(data.dir, "England", "File_2_ID_2015_Domains_of_deprivation.xlsx"), sheet = "ID2015 Domains")
-# imd_wal = read_excel(file.path(data.dir, "WIMD Ranks and Deciles 2014.xlsx"), sheet = "WIMD 2014 results Eng", skip = 3)
-# imd_sco = read_excel(file.path(data.dir, "SIMD16 ranks and domain ranks.xlsx"), sheet = "SIMD16 ranks")
-# imd_ni  = read_excel(file.path(data.dir, "NI_IMD.xls"), sheet = "MDM")
+# Look-up: Data zone to intermediate zone, local authority, health board, multi-member ward, Scottish parliamentary constituency 
+# source: https://www2.gov.scot/Topics/Statistics/SIMD/Look-Up
+tmp_sco_lookup = tempfile()
+download.file("https://www2.gov.scot/Resource/0053/00534447.xlsx",
+              tmp_sco_lookup, mode = "wb")
+
+dz_names = read_excel(tmp_sco_lookup, sheet = "SIMD16 DZ look-up data") %>% 
+  select(DZ, DZname) %>% 
+  distinct()
+
+unlink(tmp_sco_lookup); rm(tmp_sco_lookup)
 
 ##
 ## Data cleaning
@@ -62,11 +69,6 @@ imd_wal = imd_wal %>%
 
 # clean up NI column names - remove newlines
 names(imd_ni) = str_replace(names(imd_ni), "\\n", "")
-
-# names and codes of Scotland's Data Zones (their equivalent of LSOAs)
-dz_names = read_excel(file.path(data.dir, "Data zone to intermediate zone, local authority, health board, multi-member ward, Scottish parliamentary constituency.xlsx"),
-                      sheet = "SIMD16 DZ look-up data") %>% 
-  select(DZ, DZname)
 
 # rename Eng variables
 imd_eng = imd_eng %>% 
@@ -113,23 +115,23 @@ imd_wal = imd_wal %>%
          Crime_rank = `Community Safety`)
 
 imd_sco = imd_sco %>% 
-  mutate(IMD_decile = as.integer(cut2(Overall_SIMD16_rank, g = 10)), 
-         Income_decile = as.integer(cut2(Income_domain_2016_rank, g = 10)), 
-         Employment_decile = as.integer(cut2(Employment_domain_2016_rank, g = 10)), 
-         Health_decile = as.integer(cut2(Health_domain_2016_rank, g = 10)), 
-         Education_decile = as.integer(cut2(Education_domain_2016_rank, g = 10)), 
-         Housing_decile = as.integer(cut2(Housing_domain_2016_rank, g = 10)), 
-         Access_decile = as.integer(cut2(Access_domain_2016_rank, g = 10)), 
-         Crime_decile = as.integer(cut2(Crime_domain_2016_rank, g = 10))) %>% 
+  mutate(IMD_decile = as.integer(cut2(SIMD2020_Rank, g = 10)), 
+         Income_decile = as.integer(cut2(SIMD2020_Income_Domain_Rank, g = 10)), 
+         Employment_decile = as.integer(cut2(SIMD2020_Employment_Domain_Rank, g = 10)), 
+         Health_decile = as.integer(cut2(SIMD2020_Health_Domain_Rank, g = 10)), 
+         Education_decile = as.integer(cut2(SIMD2020_Education_Domain_Rank, g = 10)), 
+         Housing_decile = as.integer(cut2(SIMD2020_Housing_Domain_Rank, g = 10)), 
+         Access_decile = as.integer(cut2(SIMD2020_Access_Domain_Rank, g = 10)), 
+         Crime_decile = as.integer(cut2(SIMD2020_Crime_Domain_Rank, g = 10))) %>% 
   
-  rename(IMD_rank = Overall_SIMD16_rank,
-         Income_rank = Income_domain_2016_rank,
-         Employment_rank = Employment_domain_2016_rank,
-         Health_rank = Health_domain_2016_rank,
-         Education_rank = Education_domain_2016_rank,
-         Housing_rank = Housing_domain_2016_rank,
-         Access_rank = Access_domain_2016_rank,
-         Crime_rank = Crime_domain_2016_rank)
+  rename(IMD_rank = SIMD2020_Rank,
+         Income_rank = SIMD2020_Income_Domain_Rank,
+         Employment_rank = SIMD2020_Employment_Domain_Rank,
+         Health_rank = SIMD2020_Health_Domain_Rank,
+         Education_rank = SIMD2020_Education_Domain_Rank,
+         Housing_rank = SIMD2020_Housing_Domain_Rank,
+         Access_rank = SIMD2020_Access_Domain_Rank,
+         Crime_rank = SIMD2020_Crime_Domain_Rank)
 
 imd_ni = imd_ni %>% 
   mutate(IMD_decile = as.integer(cut2(`Multiple Deprivation Measure Rank (where 1 is most deprived)`, g = 10)), 
