@@ -2,6 +2,7 @@
 ## Calculate deprivation in Local Authorities
 ##
 library(tidyverse)
+library(readODS)
 library(readxl)
 library(httr)
 
@@ -30,6 +31,17 @@ pop_sco = pop_sco %>%
   filter(Year == 2019 & Sex == "All") %>% 
   select(Code = DataZone, `No. people` = AllAges)
 
+# ---- Super Output Area population estimates for NI ----
+GET("https://www.ninis2.nisra.gov.uk/Download/Population/Population%20Totals%20(statistical%20geographies).ods",
+    write_disk(tf <- tempfile(fileext = ".ods")))
+
+pop_ni = read_ods(tf, sheet = "SOA", skip = 3)
+names(pop_ni)[names(pop_ni) == "Persons"] = as.character(2019:2001)
+
+unlink(tf); rm(tf)
+
+pop_ni = pop_ni %>% select(Code = `SOA Code`, `No. people` = `2019`)
+
 # ---- Load LSOA to LAD lookup ----
 lsoa_lad = read_csv("https://opendata.arcgis.com/datasets/fe6c55f0924b4734adf1cf7104a0173e_0.csv")
 lsoa_lad = lsoa_lad %>% 
@@ -41,7 +53,15 @@ lad_17_19 = read_csv("https://github.com/britishredcrosssociety/covid-19-vulnera
 lsoa_lad = lsoa_lad %>% 
   left_join(lad_17_19, by = "LAD17CD")
 
+# ---- Small (Output) Area to Local Government Districts for NI ----
+# Small Areas (2011) to SOAs to Local Government Districts (December 2018) Lookup with Area Classifications in Northern Ireland
+# source: https://geoportal.statistics.gov.uk/datasets/small-areas-2011-to-soas-to-local-government-districts-december-2018-lookup-with-area-classifications-in-northern-ireland
+soa_lgd = read_csv("https://opendata.arcgis.com/datasets/096a7ccbc8e244cc972189b2f07a321a_0.csv") 
 
+soa_lgd = soa_lgd %>% 
+  select(LSOA11CD, LAD18CD) %>% 
+  left_join(lad_17_19, by = c("LAD18CD" = "LAD17CD"))
+  
 # ---- Wales ----
 wimd = imd_uk %>% 
   filter(str_sub(LSOA, 1, 1) == "W") %>% 
@@ -59,7 +79,6 @@ wimd_la = wimd %>%
 # Save
 write_csv(wimd_la, "data/Welsh IMD - Local Authorities.csv")
 
-
 # ---- Scotland ----
 simd = imd_uk %>% 
   filter(str_sub(LSOA, 1, 1) == "S") %>% 
@@ -76,3 +95,21 @@ simd_la = simd %>%
 
 # Save
 write_csv(simd_la, "data/Scottish IMD - Local Authorities.csv")
+
+
+# ---- Northern Ireland ----
+nimdm = imd_uk %>% 
+  filter(str_sub(LSOA, 1, 1) == "9") %>% 
+  select(Code = LSOA, IMD_rank, IMD_decile) %>% 
+  
+  mutate(IMD_score = 0) %>%  # don't have IMD scores for Wales so just add a dummy column
+  
+  left_join(soa_lgd, by = c("Code" = "LSOA11CD")) %>% 
+  left_join(pop_ni, by = "Code")
+
+# Aggregate into LAs
+nimdm_la = nimdm %>% 
+  aggregate_scores(domain = "IMD", score_suffix = "_score", rank_suffix = "_rank", decile_suffix = "_decile", aggregate_by = "LAD19CD")
+
+# Save
+write_csv(nimdm_la, "data/NI IMD - Local Authorities.csv")
