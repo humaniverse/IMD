@@ -49,14 +49,27 @@ lsoa_lad = lsoa_lad %>%
   distinct()
 
 # ---- England ----
-eimd = imd_uk %>% 
-  filter(str_sub(LSOA, 1, 1) == "E") %>% 
-  select(Code = LSOA, IMD_rank, IMD_decile) %>% 
-  
-  mutate(IMD_score = 0) %>%  # don't have IMD scores for Wales so just add a dummy column
+# File 7: all ranks, deciles and scores for the indices of deprivation, and population denominators
+# from https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019
+eimd = read_csv("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/845345/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv")
+
+eimd = eimd %>% 
+  select(Code = `LSOA code (2011)`, 
+         IMD_score = `Index of Multiple Deprivation (IMD) Score`, 
+         IMD_rank = `Index of Multiple Deprivation (IMD) Rank (where 1 is most deprived)`, 
+         IMD_decile = `Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10% of LSOAs)`) %>% 
   
   left_join(lsoa_lad, by = c("Code" = "LSOA11CD")) %>% 
   left_join(pop, by = "Code")
+
+# eimd = imd_uk %>% 
+#   filter(str_sub(LSOA, 1, 1) == "E") %>% 
+#   select(Code = LSOA, IMD_rank, IMD_decile) %>% 
+#   
+#   mutate(IMD_score = 0) %>%  # don't have IMD scores for Wales so just add a dummy column
+#   
+#   left_join(lsoa_lad, by = c("Code" = "LSOA11CD")) %>% 
+#   left_join(pop, by = "Code")
 
 # Aggregate intoMSOAs
 eimd_msoa = eimd %>% 
