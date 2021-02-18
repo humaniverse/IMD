@@ -32,14 +32,14 @@ pop_sco = pop_sco %>%
   select(Code = DataZone, `No. people` = AllAges)
 
 # ---- Super Output Area population estimates for NI ----
-GET("https://www.ninis2.nisra.gov.uk/Download/Population/Population%20Totals%20(statistical%20geographies).ods",
-    write_disk(tf <- tempfile(fileext = ".ods")))
-
-pop_ni = read_ods(tf, sheet = "SOA", skip = 3)
-names(pop_ni)[names(pop_ni) == "Persons"] = as.character(2019:2001)
-
-unlink(tf); rm(tf)
-
+# GET("https://www.ninis2.nisra.gov.uk/Download/Population/Population%20Totals%20(statistical%20geographies).ods",
+#     write_disk(tf <- tempfile(fileext = ".ods")))
+# 
+# pop_ni = read_ods(tf, sheet = "SOA", skip = 3)
+# names(pop_ni)[names(pop_ni) == "Persons"] = as.character(2019:2001)
+# 
+# unlink(tf); rm(tf)
+# 
 # pop_ni = pop_ni %>% select(Code = `SOA Code`, `No. people` = `2019`)
 
 # ---- Load LSOA to MSOA lookup ----
