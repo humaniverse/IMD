@@ -35,9 +35,10 @@ pop_weighted_scores = function(d,
   score_col = paste0(domain, score_suffix)
   
   d %>% 
-    group_by(!!sym(aggregate_by)) %>%
+    # group_by(!!sym(aggregate_by)) %>%
     
-    mutate(Percentile = round((!!sym(rank_col) / max(!!sym(rank_col))) * 100, 0)) %>% 
+    # mutate(Percentile = round((!!sym(rank_col) / max(!!sym(rank_col))) * 100, 0)) %>% 
+    mutate(Percentile = ntile(IMD_rank, 100)) %>% 
     
     # invert percentiles because, in the Vulnerability Index, higher percentiles mean higher vulnerability - but the extent score calculation below assumes lower percentiles mean higher vulnerability
     # mutate(Percentile = invert_this(Percentile)) %>%
@@ -51,9 +52,9 @@ pop_weighted_scores = function(d,
     # and then decreases by (0.95-0.05)/19 for each of the subsequent nineteen percentiles 
   # until it reaches 0.05 for the most deprived thirtieth percentile, and zero for areas outside the most deprived 30 per cent"
   mutate(Extent = case_when(
-    Percentile <= 10 ~ !!sym(population_col),
-    Percentile == 11 ~ !!sym(population_col) * 0.95,
-    Percentile > 11 & Percentile <= 30 ~ !!sym(population_col) * (0.95 - ((0.9/19) * (Percentile - 11))),
+    Percentile <= 10 ~ `No. people`,
+    Percentile == 11 ~ `No. people` * 0.95,
+    Percentile > 11 & Percentile <= 30 ~ `No. people` * (0.95 - ((0.9/19) * (Percentile - 11))),
     TRUE ~ 0
   )) %>% 
     
@@ -89,7 +90,7 @@ aggregate_scores = function(d,
   # calculate proportions of highly deprived MSOAs in the higher-level geography
   d_props = d %>% 
     # label MSOAs by whether they're in top 10% most-deprived then summarise by this label
-    mutate(Top20 = ifelse(!!sym(decile_col) <= 1, "Top10", "Other")) %>% 
+    mutate(Top10 = ifelse(!!sym(decile_col) <= 1, "Top10", "Other")) %>% 
     janitor::tabyl(!!sym(aggregate_by), Top10) %>% 
     
     # calculate proportion of most deprived LSOAs
