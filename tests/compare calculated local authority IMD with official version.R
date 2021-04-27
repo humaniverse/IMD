@@ -53,14 +53,8 @@ imd %>%
   geom_point(alpha = 0.5) +
   geom_smooth(method = "lm")
 
-imd %>% 
-  filter(Extent < 0.2 & Extent_official > 0.4)
-
+# Now only miniscule differences in Extents
 imd %>% 
   mutate(Extent_diff = abs(Extent - Extent_official)) %>% 
+  select(LAD19CD, starts_with("Extent")) %>% 
   arrange(desc(Extent_diff))
-
-eimd %>% 
-  filter(LAD19CD == "E09000002")
-
-
