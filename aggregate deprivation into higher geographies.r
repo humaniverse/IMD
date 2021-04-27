@@ -61,7 +61,33 @@ soa_lgd = read_csv("https://opendata.arcgis.com/datasets/096a7ccbc8e244cc972189b
 soa_lgd = soa_lgd %>% 
   select(LSOA11CD, LAD18CD) %>% 
   left_join(lad_17_19, by = c("LAD18CD" = "LAD17CD"))
-  
+
+# ---- England ----
+# This isn't strictly needed since LA-level IMD scores are already publicly available
+eimd = read_csv("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/845345/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv") %>% 
+  select(Code = `LSOA code (2011)`, 
+         LAD19CD = `Local Authority District code (2019)`,
+         IMD_score = `Index of Multiple Deprivation (IMD) Score`,
+         IMD_rank = `Index of Multiple Deprivation (IMD) Rank (where 1 is most deprived)`, 
+         IMD_decile = `Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10% of LSOAs)`, 
+         `No. people` = `Total population: mid 2015 (excluding prisoners)`)
+
+# eimd = imd_uk %>% 
+#   filter(str_sub(LSOA, 1, 1) == "E") %>% 
+#   select(Code = LSOA, IMD_rank, IMD_decile) %>% 
+#   
+#   mutate(IMD_score = 0) %>%  # don't have IMD scores for Wales so just add a dummy column
+#   
+#   left_join(lsoa_lad, by = c("Code" = "LSOA11CD")) %>% 
+#   left_join(pop, by = "Code")
+
+# Aggregate into LAs
+eimd_la = eimd %>% 
+  aggregate_scores(domain = "IMD", score_suffix = "_score", rank_suffix = "_rank", decile_suffix = "_decile", aggregate_by = "LAD19CD")
+
+# Save
+write_csv(eimd_la, "data/English IMD - Local Authorities.csv")
+
 # ---- Wales ----
 wimd = imd_uk %>% 
   filter(str_sub(LSOA, 1, 1) == "W") %>% 
