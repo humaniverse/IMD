@@ -88,12 +88,12 @@ aggregate_scores = function(d,
   
   # calculate proportions of highly deprived MSOAs in the higher-level geography
   d_props = d %>% 
-    # label MSOAs by whether they're in top 20% most-deprived then summarise by this label
-    mutate(Top20 = ifelse(!!sym(decile_col) <= 2, "Top20", "Other")) %>% 
-    janitor::tabyl(!!sym(aggregate_by), Top20) %>% 
+    # label MSOAs by whether they're in top 10% most-deprived then summarise by this label
+    mutate(Top20 = ifelse(!!sym(decile_col) <= 1, "Top10", "Other")) %>% 
+    janitor::tabyl(!!sym(aggregate_by), Top10) %>% 
     
     # calculate proportion of most deprived LSOAs
-    mutate(Proportion = Top20 / (Top20 + Other)) %>% 
+    mutate(Proportion = Top10 / (Top10 + Other)) %>% 
     select(!!sym(aggregate_by), Proportion)
   
   # calculate population-weighted scores and extent for the higher-level geography
