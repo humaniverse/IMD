@@ -38,7 +38,7 @@ pop_weighted_scores = function(d,
     # group_by(!!sym(aggregate_by)) %>%
     
     # mutate(Percentile = round((!!sym(rank_col) / max(!!sym(rank_col))) * 100, 0)) %>% 
-    mutate(Percentile = ntile(IMD_rank, 100)) %>% 
+    mutate(Percentile = ntile(!!sym(rank_col), 100)) %>% 
     
     # invert percentiles because, in the Vulnerability Index, higher percentiles mean higher vulnerability - but the extent score calculation below assumes lower percentiles mean higher vulnerability
     # mutate(Percentile = invert_this(Percentile)) %>%

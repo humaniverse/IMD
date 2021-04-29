@@ -131,7 +131,7 @@ eimd_msoa = eimd_msoa %>%
 
 # Save
 write_csv(eimd_msoa, "data/English IMD - MSOA.csv")  
-  
+
 # ---- Wales ----
 wimd = imd_uk %>% 
   filter(str_sub(LSOA, 1, 1) == "W") %>% 
