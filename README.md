@@ -20,7 +20,7 @@ For details on how these are calculated, see the code in `functions.r` and read 
 
 ### Files
 
-** Middle Layer Super Output Areas** for [England](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20MSOA.csv) and [Wales](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20MSOA.csv), and Intermediate Zones for [Scotland](https://github.com/matthewgthomas/IMD/blob/master/data/Scottish%20IMD%20-%20MSOA.csv). (Northern Ireland doesn't have an equivalent geography at this level.)
+**Middle Layer Super Output Areas** for [England](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20MSOA.csv) and [Wales](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20MSOA.csv), and Intermediate Zones for [Scotland](https://github.com/matthewgthomas/IMD/blob/master/data/Scottish%20IMD%20-%20MSOA.csv). (Northern Ireland doesn't have an equivalent geography at this level.)
 
 **Wards** for England, using [2017 ward codes](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20Ward%202017.csv) and [2020 ward codes](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20Ward%202020.csv). Wards for Wales using [2017 codes](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20Ward%202017.csv) and [2020 codes](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20Ward%202020.csv). (Ward-level deprivation for Scotland and Northern Ireland coming soon.)
 
