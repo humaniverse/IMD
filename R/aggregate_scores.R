@@ -1,4 +1,4 @@
-#' Aggregate deprivation scores 
+#' Aggregate deprivation scores
 #'
 #' @description Aggregate deprivation scores into higher-level geographies,
 #'     calculating:
@@ -7,17 +7,18 @@
 #'       deprived areas)
 #'     - population-weighted average score
 #'
-#' @param d Dataframe containing deciles, ranks, scores and population 
-#'          estimates
-#' @param domain Which domain to calculate population-weighted scores for
-#' @param score_suffix The wording of the variable containing scores
-#' @param rank_suffix The wording of the variable containing ranks
-#' @param decile_suffix The wording of the variable containing deciles
-#' @param higher_level_geography Name of the column to use for higher-level 
-#'                               aggregation (e.g. "LAD19CD")
-#' @param population_col Name of the column containing population estimates
+#' @param data Data frame containing a variable to be aggregated, lower level
+#'        geography population estimates, and a higher level geographical
+#'        grouping variable
+#' @param score_col Variable containing deprivation scores
+#' @param rank_col Variable containing deprivation ranks
+#' @param decile_col Variable containing deprivation deciles
+#' @param higher_level_geography Name of the variable in the data frame
+#'        containing the higher level geography names/codes
+#' @param population Name of the variable in the data frame containing
+#'        the population estimates of the lower level geography
 #'
-#' @return A tibble containing population-weighted average scores, 
+#' @return A tibble containing population-weighted average scores,
 #'     proportions of highly deprived areas, and the extent for
 #'     the higher-level geography.
 #'
@@ -25,47 +26,43 @@
 #'
 #' @examples
 #' \dontrun{
-#' aggregate_scores(imd_england, higher_level_geography = "LAD19CD")
+#' imd_england_lsoa |>
+#'     aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa_code, population)
 #' }
-aggregate_scores <- 
-	function(d,
-             domain = "Index of Multiple Deprivation (IMD)",
-             score_suffix = " Score",
-             rank_suffix = " Rank (where 1 is most deprived)",
-             decile_suffix = " Decile (where 1 is most deprived 10% of LSOAs)",
-             higher_level_geography,
-             population_col = "No. people"
+aggregate_scores <-
+	function(data,
+	         score_col,
+	         rank_col,
+	         decile_col,
+	         higher_level_geography,
+           population
 			) {
 
-  decile_col <- paste0(domain, decile_suffix)
+	  # data <-
+	  #   eimd |>
+	  #   select(lsoa_code, higher_level_geography = msoa_code, decile_col = IMD_decile, rank_col = IMD_rank, score_col = IMD_score, population)
 
-  # calculate proportions of highly deprived LSOAs in the higher-level geography
-  d_props <-
-	d |>
-    # label LSOAs by whether they're in top 10% most-deprived then summarise by this label
-    dplyr::mutate(Top10 = ifelse({{ decile_col }} <= 1, "Top10", "Other")) |>
-    janitor::tabyl({{higher_level_geography}}, Top10) |>
+	  data_proportion <-
+	    data |>
+	    calculate_proportion({{ decile_col }}, {{ higher_level_geography }})
 
-    # calculate proportion of most deprived LSOAs
-    dplyr::mutate(Proportion = Top10 / (Top10 + Other)) |>
-    dplyr::select({{ higher_level_geography }}, Proportion)
+	  data_extent <-
+	    data |>
+	    calculate_extent({{ rank_col }}, {{ higher_level_geography }}, {{ population }})
 
-  # calculate population-weighted scores and extent for the higher-level geography
-  d_scores = d |>
-    pop_weighted_scores(
-		domain = domain,
-        score_suffix = score_suffix, 
-		rank_suffix = rank_suffix,
-        higher_level_geography = higher_level_geography, 
-		population_col = population_col
-	) |>
+	  data_score <-
+	    data |>
+	    calculate_pop_weighted_score({{ score_col }}, {{ higher_level_geography }}, {{ population }})
 
-    dplyr::group_by({{ higher_level_geography }}) |>
-    dplyr::summarise(
-		Extent = sum(Extent) / sum({{ population_col }}),
-        Score = sum(Score) / sum({{ population_col }})
-	)
+	  # Combine and return all aggregated measures
+	  data_score |>
+	    dplyr::left_join(
+	      data_proportion
+	      # by = {{ higher_level_geography }}
+	    ) |>
 
-  # Combine and return all aggregated measures
-  dplyr::left_join(d_props, d_scores, by = higher_level_geography)
-}
+	    dplyr::left_join(
+	      data_extent
+	      # by = {{ higher_level_geography }}
+	    )
+	}

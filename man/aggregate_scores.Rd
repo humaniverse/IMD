@@ -5,34 +5,33 @@
 \title{Aggregate deprivation scores}
 \usage{
 aggregate_scores(
-  d,
-  domain = "Index of Multiple Deprivation (IMD)",
-  score_suffix = " Score",
-  rank_suffix = " Rank (where 1 is most deprived)",
-  decile_suffix = " Decile (where 1 is most deprived 10\% of LSOAs)",
+  data,
+  score_col,
+  rank_col,
+  decile_col,
   higher_level_geography,
-  population_col = "No. people"
+  population
 )
 }
 \arguments{
-\item{d}{Dataframe containing deciles, ranks, scores and population 
-estimates}
+\item{data}{Data frame containing a variable to be aggregated, lower level
+geography population estimates, and a higher level geographical
+grouping variable}
 
-\item{domain}{Which domain to calculate population-weighted scores for}
+\item{score_col}{Variable containing deprivation scores}
 
-\item{score_suffix}{The wording of the variable containing scores}
+\item{rank_col}{Variable containing deprivation ranks}
 
-\item{rank_suffix}{The wording of the variable containing ranks}
+\item{decile_col}{Variable containing deprivation deciles}
 
-\item{decile_suffix}{The wording of the variable containing deciles}
+\item{higher_level_geography}{Name of the variable in the data frame
+containing the higher level geography names/codes}
 
-\item{higher_level_geography}{Name of the column to use for higher-level 
-aggregation (e.g. "LAD19CD")}
-
-\item{population_col}{Name of the column containing population estimates}
+\item{population}{Name of the variable in the data frame containing
+the population estimates of the lower level geography}
 }
 \value{
-A tibble containing population-weighted average scores, 
+A tibble containing population-weighted average scores,
     proportions of highly deprived areas, and the extent for
     the higher-level geography.
 }
@@ -46,6 +45,7 @@ Aggregate deprivation scores into higher-level geographies,
 }
 \examples{
 \dontrun{
-aggregate_scores(imd_england, higher_level_geography = "LAD19CD")
+imd_england_lsoa |>
+    aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa_code, population)
 }
 }
