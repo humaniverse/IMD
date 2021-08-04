@@ -1,0 +1,350 @@
+---
+output:
+  html_document:
+    theme: null
+    highlight: null
+    css: styles.css
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+
+## Global options
+opts_chunk$set(echo=FALSE,
+	             cache=FALSE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+```
+
+```{r load_packages}
+library(tidyverse)
+library(readxl)
+library(leaflet)
+library(leaflet.extras)
+library(rgdal)
+```
+
+```{r load_bounds, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+# colours
+col_rc_grey_light = "#9CAAAE"
+col_rc_green_dark = "#05853A"
+col_rc_teal = "#2B7586"
+col_nhs_orange = "#ED8B00"
+
+# run `prep deprivation.r` and `prep map.r` to generate this file:
+load("deprivation.RData")
+
+max_ppl = max(lsoas_access@data$People, lsoas_crime@data$People, lsoas_education@data$People, lsoas_employment@data$People, lsoas_environment@data$People,
+              lsoas_health@data$People, lsoas_housing@data$People, lsoas_housing_access@data$People, lsoas_imd@data$People, lsoas_income@data$People)
+
+pal = colorNumeric("Reds", c(0, max_ppl))
+pal_ruc = colorFactor(c(col_nhs_orange, col_rc_green_dark, col_rc_teal), lsoas_imd@data$RUC)
+```
+
+```{r icons, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+shop_icon = awesomeIcons(
+  icon = 'fa-shopping-basket',
+  iconColor = 'black',
+  library = 'fa',
+  markerColor = "lightblue",
+  squareMarker = F
+)
+
+shop_closed_icon = awesomeIcons(
+  icon = 'fa-shopping-basket',
+  iconColor = 'black',
+  library = 'fa',
+  markerColor = "lightred",
+  squareMarker = F
+)
+
+shop_soon_icon = awesomeIcons(
+  icon = 'fa-shopping-basket',
+  iconColor = 'black',
+  library = 'fa',
+  markerColor = "lightgreen",
+  squareMarker = F
+)
+```
+
+<!--html_preserve-->
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border:none;}
+.tg td{padding:1px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg .tg-us36{border-color:inherit;vertical-align:top}
+</style>
+
+<div style="z-index: 1; position: absolute; top: 0px; left: 50px; background-color: rgba(255, 255, 255, 0.6); padding: 5px 5px 5px 5px; font-size: 12px">
+  <h3>Domains of deprivation</h3>
+  <p>This map shows the 10% most deprived areas of the UK for each domain of deprivation.</p>
+  <p>Note that deprivation is defined differently in each of the UK nations, so they cannot be directly compared.</p>
+</div>
+<!--/html_preserve-->
+
+```{r map}
+leaflet(lsoas_imd,
+        width = "100%", height = "100%", padding = 0,
+        options = leafletOptions(minZoom = 5, maxZoom = 12, attributionControl = T)) %>% 
+  
+  # centre map on Whitendale Hanging Stones, the centre of GB: https://en.wikipedia.org/wiki/Centre_points_of_the_United_Kingdom
+  setView(lat = 54.00366, lng = -2.547855, zoom = 7) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  
+  # overall IMD
+  addPolygons(data = lsoas_imd,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Overall deprivation") %>%
+  
+  # income
+  addPolygons(data = lsoas_income,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Income deprivation") %>%
+  
+  # education
+  addPolygons(data = lsoas_education,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Education deprivation") %>%
+  
+  # health
+  addPolygons(data = lsoas_health,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Health deprivation") %>%
+  
+  # crime
+  addPolygons(data = lsoas_crime,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Crime deprivation") %>%
+  
+  # environment
+  addPolygons(data = lsoas_environment,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Environment deprivation") %>%
+  
+  # housing and access
+  addPolygons(data = lsoas_housing_access,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Housing and access deprivation") %>%
+  
+  # housing
+  addPolygons(data = lsoas_housing,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Housing deprivation") %>%
+  
+  # access
+  addPolygons(data = lsoas_access,
+              weight = 1, smoothFactor = 0.5, fillOpacity = 1,
+              # color = col_rc_red, fillColor = col_rc_red,
+              # color = ~pal(People), fillColor = ~pal(People),
+              color = ~pal_ruc(RUC), fillColor = ~pal_ruc(RUC),
+              highlightOptions = highlightOptions(color = col_rc_grey_light, weight = 2, bringToFront = T),
+
+              label = ~Name,
+
+              popup = ~paste(
+                "<b>", Name, "</b><br/><br/>",
+                "Breakdown of deprivation domains<br/>",
+                "Overall IMD decile: ", IMD_decile, "<br/>",
+                "Income decile: ", Income_decile, "<br/>",
+                "Education decile: ", Education_decile, "<br/>",
+                "Health decile: ", Health_decile, "<br/>",
+                "Crime decile: ", Crime_decile, "<br/>",
+                "Environment decile: ", Environment_decile, "<br/>",
+                "<br/>",
+                "Housing and access decile: ", Housing_and_Access_decile, "<br/>",
+                "Housing decile: ", Housing_decile, "<br/>",
+                "Access decile: ", Access_decile, "<br/>"
+              ),
+              group = "Access deprivation") %>%
+  
+  addLayersControl(
+    overlayGroups = c("Overall deprivation", "Income deprivation", "Education deprivation", "Health deprivation", "Crime deprivation",
+                      "Environment deprivation", "Housing and access deprivation", "Housing deprivation", "Access deprivation"),
+    options = layersControlOptions(collapsed = FALSE)
+  ) %>%
+
+  addLegend("bottomright", pal = pal_ruc,
+            values = ~RUC,
+            title = "Rural/urban classification",
+            opacity = 1
+  ) %>%
+  
+  hideGroup("Income deprivation") %>% 
+  hideGroup("Education deprivation") %>% 
+  hideGroup("Health deprivation") %>% 
+  hideGroup("Crime deprivation") %>% 
+  hideGroup("Environment deprivation") %>% 
+  hideGroup("Housing and access deprivation") %>% 
+  hideGroup("Housing deprivation") %>% 
+  hideGroup("Access deprivation")
+```
