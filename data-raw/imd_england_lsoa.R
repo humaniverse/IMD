@@ -1,18 +1,18 @@
 # Load package
-load_all(".")
+devtools::load_all(".")
 
 # Set query url
 query_url <-
-  query_urls %>%
-  filter(data_set == "imd_lsoa_england") %>%
-  pull(query_url)
+  query_urls |>
+  dplyr::filter(data_set == "imd_lsoa_england") |>
+  dplyr::pull(query_url)
 
 imd_england_lsoa <-
-  read_csv(query_url)
+  readr::read_csv(query_url)
 
 imd_england_lsoa <-
-  imd_england_lsoa %>%
-  select(
+  imd_england_lsoa |>
+  dplyr::select(
     lsoa_code = `LSOA code (2011)`,
 
     IMD_decile = `Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10% of LSOAs)`,
