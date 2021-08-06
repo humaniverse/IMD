@@ -11,20 +11,19 @@ A data frame of class "tbl" with 890 rows and 17 variables:
   \item{IMD_decile}{IMD decile}
   \item{Income_decile}{Income domain decile}
   \item{Employment_decile}{Employment domain decile}
-  \item{Education_decile}{Education domain decile}
   \item{Health_decile}{Health and Disability domain decile}
-  \item{Crime_decile}{Crime domain decile}
+  \item{Education_decile}{Education domain decile}
   \item{Access_decile}{Access to services domain decile}
   \item{Environment_decile}{Environment domain decile}
+  \item{Crime_decile}{Crime domain decile}
   \item{IMD_rank}{IMD rank}
   \item{Income_rank}{Income domain rank}
   \item{Employment_rank}{Employment domain rank}
-  \item{Education_rank}{Education domain rank}
   \item{Health_rank}{Health domain rank}
-  \item{Crime_rank}{Crime domain rank}
-  \item{Housing_rank}{Housing domain rank}
+  \item{Education_rank}{Education domain rank}
   \item{Access_rank}{Access to services domain rank}
   \item{Environment_rank}{Environment domain rank}
+  \item{Crime_rank}{Crime domain rank}
   ...
 }
 }
