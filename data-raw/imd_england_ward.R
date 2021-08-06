@@ -1,7 +1,7 @@
 # Load package
 devtools::load_all(".")
 
-# ---- LSOA to MSOA lookup ----
+# ---- LSOA to Ward lookup ----
 query_url <-
   query_urls |>
   dplyr::filter(data_set == "lsoa_ward") |>
