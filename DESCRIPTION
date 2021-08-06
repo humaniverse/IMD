@@ -21,12 +21,14 @@ RoxygenNote: 7.1.1
 Imports:
     devtools,
     dplyr,
+    tidyr,
     readr,
     tibble,
     janitor,
     Hmisc,
     httr,
-    readxl
+    readxl,
+    readODS
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
