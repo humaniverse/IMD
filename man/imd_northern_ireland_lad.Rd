@@ -39,7 +39,7 @@ A data frame of class "tbl" with 11 rows and 25 variables:
 imd_northern_ireland_lad
 }
 \description{
-A data set containing IMD ranks and deciles for Local Government Districts
+A data set containing proportions and extents for Local Government Districts
 (Local Authorities) in Northern Ireland.
 }
 \keyword{datasets}

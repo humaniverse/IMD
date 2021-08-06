@@ -41,8 +41,7 @@ A data frame of class "tbl" with 410 rows and 19 variables:
 imd_wales_msoa
 }
 \description{
-A data set containing IMD ranks and deciles for Middle Layer Super
-Output Areas (LSOAs) in Wales. Note that IMD scores for Wales are
-not available.
+A data set containing proportions and extents for Middle Layer Super Output
+Areas (LSOAs) in Wales. Note that IMD scores for Wales are not available.
 }
 \keyword{datasets}

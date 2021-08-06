@@ -38,7 +38,7 @@ A data frame of class "tbl" with 1,279 rows and 17 variables:
 imd_scotland_iz
 }
 \description{
-A data set containing IMD ranks and deciles for Intermediate Zones
+A data set containing proportions and extents for Intermediate Zones
 (IZs) in Scotland. Note that IMD scores for Scotland are not available.
 }
 \keyword{datasets}

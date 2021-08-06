@@ -41,7 +41,7 @@ A data frame of class "tbl" with 22 rows and 19 variables:
 imd_wales_lad
 }
 \description{
-A data set containing IMD ranks and deciles for Local Authorities in Wales.
-Note that IMD scores for Wales are not available.
+A data set containing proportions and extents for Local Authorities in
+Wales. Note that IMD scores for Wales are not available.
 }
 \keyword{datasets}

@@ -7,7 +7,7 @@
 \format{
 A data frame of class "tbl" with 843 rows and 19 variables:
 \describe{
-  \item{msoa_code}{MSOA code}
+  \item{ward_code}{Ward code}
   \item{Proportion}{Proportion of small areas in the nation's most deprived}
   \item{Extent}{Extent for overall IMD}
   \item{Income_Proportion}{Proportion of most deprived areas for Income}

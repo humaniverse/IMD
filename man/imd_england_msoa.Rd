@@ -50,7 +50,7 @@ A data frame of class "tbl" with 6,791 rows and 25 variables:
 imd_england_msoa
 }
 \description{
-A data set containing IMD ranks and deciles for Middle Layer Super
-Output Areas (LSOAs) in England.
+A data set containing population-weighted average scores, proportions and
+extents for Middle Layer Super Output Areas (LSOAs) in England.
 }
 \keyword{datasets}

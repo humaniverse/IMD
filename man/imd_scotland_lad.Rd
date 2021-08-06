@@ -38,7 +38,7 @@ A data frame of class "tbl" with 32 rows and 17 variables:
 imd_scotland_lad
 }
 \description{
-A data set containing IMD ranks and deciles for Council Areas (Local
+A data set containing proportions and extents for Council Areas (Local
 Authorities) in Scotland. Note that IMD scores for Scotland are not
 available.
 }
