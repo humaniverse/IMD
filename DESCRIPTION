@@ -1,0 +1,36 @@
+Package: IMD
+Type: Package
+Title: Indices of Multiple Deprivation for the UK
+Version: 0.1.0
+Authors@R: c(
+    person(c("Matthew", "Gwynfryn"), "Thomas", email = "matthewgthomas@gmail.com", role = "cre"),
+    person("Mike", "Page", email = "mpage@redcross.org.uk", role = "aut")
+    )
+Maintainer: Matthew Gwynfryn Thomas <matthewgthomas@gmail.com>
+Description: Indices of Multiple Deprivation for the UK's nations at various 
+    geographical levels:
+    - England: Lower Layer Super Output Area (LSOA), Middle Layer Super Output
+    Area (MSOA), Ward, and Local Authority
+    - Wales: LSOA, MSOA, Ward, and Local Authority
+    - Scotland: Data Zone, Intermediate Zone, and Council Area
+    - Northern Ireland: Super Output Area and Local Government District
+License: GPL (>= 3) + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports:
+    devtools,
+    dplyr,
+    tidyr,
+    readr,
+    tibble,
+    janitor,
+    Hmisc,
+    httr,
+    readxl,
+    readODS
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)

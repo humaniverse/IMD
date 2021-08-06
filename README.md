@@ -1,38 +1,79 @@
-# Index of Multiple Deprivation
+# IMD
 
-This repo provides each UK nation's Index of Multiple Deprivation in a single file as well as the indices aggregated into higher-level geographies.
+<!-- badges: start -->
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+<!-- badges: end -->
 
-## UK-wide deprivation
+## Overview
+Indices of Multiple Deprivation for the UK's nations at various geographical levels:
 
-[`UK IMD domains.csv`](https://github.com/matthewgthomas/IMD/raw/master/data/UK%20IMD%20domains.csv) presents the [English indices of deprivation 2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019), [Welsh Index of Multiple Deprivation 2019](https://statswales.gov.wales/Catalogue/Community-Safety-and-Social-Inclusion/Welsh-Index-of-Multiple-Deprivation/WIMD-2019), [Scottish Index of Multiple Deprivation 2020](https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020), and [Northern Ireland Multiple Deprivation Measure 2017](https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017) in one file. Deprivation ranks and deciles are given for each small area in each nation (Lower Layer Super Output Areas in England and Wales, Data Zones in Scotland, and Super Output Areas in Northern Ireland).
+- England: Lower Layer Super Output Area (LSOA), Middle Layer Super Output Area (MSOA), Ward, and Local Authority
+- Wales: LSOA, MSOA, Ward, and Local Authority
+- Scotland: Data Zone, Intermediate Zone, and Council Area
+- Northern Ireland: Super Output Area and Local Government District
 
-Note that deprivation isn't comparable between nations but you can look at which areas are in the 10% most deprived of each nation (for example). [Alex Parsons](https://twitter.com/alexparsons) at mySociety has produced a dataset using a method to unify the deprivation indices, allowing comparison across nations - see [this article](https://www.mysociety.org/2021/04/22/unified-uk-measures-of-rurality-and-deprivation/) and [this repo](https://github.com/mysociety/composite_uk_imd) for details.
+## Installation
+You can install the development version from [GitHub](https://github.com/) with:
 
-## Deprivation in higher geographies
+``` r
+# install.packages("devtools")
+devtools::install_github("matthewgthomas/IMD")
+```
 
-These files aggregate the small area deprivation indices into higher geographies. Deprivation at higher-level geographies is presented in three ways:
+## Usage
+The `IMD` package provides several datasets for the IMD in each UK nation:
 
-- population-weighted average deprivation scores (the `Score` column)
-- proportions of neighbourhoods within a higher geography that are in a nation's most deprivation 10% nationally (the `Proportion` column)
-- proportion of a neighbourhood's population that are in a nation's most deprivation 10% nationally (the `Extent` column)
+England:
 
-For details on how these are calculated, see the code in `functions.r` and read Appendix N of the [English IMD's technical report](https://www.gov.uk/government/publications/english-indices-of-deprivation-2019-technical-report).
+- Lower Layer Super Output Areas: `IMD::imd_england_lsoa`
+- Middle Layer Super Output Areas: `IMD::imd_england_msoa`
+- Wards: `IMD::imd_england_ward`
+- Local Authorities: `IMD::imd_england_lad`
 
-### Files
+Wales:
 
-**Middle Layer Super Output Areas** for [England](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20MSOA.csv) and [Wales](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20MSOA.csv), and Intermediate Zones for [Scotland](https://github.com/matthewgthomas/IMD/blob/master/data/Scottish%20IMD%20-%20MSOA.csv). (Northern Ireland doesn't have an equivalent geography at this level.)
+- Lower Layer Super Output Areas: `IMD::imd_wales_lsoa`
+- Middle Layer Super Output Areas: `IMD::imd_wales_msoa`
+- Wards: `IMD::imd_wales_ward`
+- Local Authorities: `IMD::imd_wales_lad`
 
-**Wards** for England, using [2017 ward codes](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20Ward%202017.csv) and [2020 ward codes](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20Ward%202020.csv). Wards for Wales using [2017 codes](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20Ward%202017.csv) and [2020 codes](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20Ward%202020.csv). (Ward-level deprivation for Scotland and Northern Ireland coming soon.)
+Scotland:
+- Data Zones: `IMD::imd_scotland_dz`
+- Intermediate Zones: `IMD::imd_scotland_iz`
+- Council Areas: `IMD::imd_scotland_lad`
 
-**Local Authorities** for [England](https://github.com/matthewgthomas/IMD/blob/master/data/English%20IMD%20-%20Local%20Authorities.csv) and [Wales](https://github.com/matthewgthomas/IMD/blob/master/data/Welsh%20IMD%20-%20Local%20Authorities.csv), [Scotland's Council Areas](https://github.com/matthewgthomas/IMD/blob/master/data/Scottish%20IMD%20-%20Local%20Authorities.csv), and [Northern Ireland's Local Government Districts](https://github.com/matthewgthomas/IMD/blob/master/data/NI%20IMD%20-%20Local%20Authorities.csv).
+Northern Ireland:
 
-## Source code
-`prep deprivation.r` combines each UK nation's IMD data into a single table: saved as `./data/UK IMD domains.csv`
+- Super Output Areas: `IMD::imd_northern_ireland_soa`
+- Local Government Districts: `IMD::imd_northern_ireland_lad`
 
-`prep map.r` produces shapefiles showing the 10% most deprived LSOAs (or equivalents) in each nation.
+### Composite 2020 UK Index of Multiple Deprivation
+We have also included the [composite 2020 UK Index of Multiple Deprivation](https://github.com/mysociety/composite_uk_imd) produced by mySociety, allowing comparison of deprivation across UK nations. For more information about how and when to use this version of the IMD, see [their README](https://github.com/mysociety/composite_uk_imd/blob/master/readme.md).
 
-`functions.r` contains the functions used to aggregate deprivation into higher geographies.
+Rather than providing a copy of this data, the `IMD` package gives URLs to the data hosted on mySociety's GitHub. To load these files, run the following code:
 
-The `aggregate deprivation into higher geographies...` files do the aggregation for different geographies.
+```r
+query_url <-
+  IMD::query_urls |>
+  dplyr::filter(data_set == "imd_uk_e") |>  # for other nations, use: "imd_uk_w", "imd_uk_s" or "imd_uk_n"
+  dplyr::pull(query_url)
 
-`deprivation.Rmd` shows the 10% most deprived areas on an interactive map.
+imd_uk_e <-
+  readr::read_csv(query_url)
+```
+
+### Functions for aggregating small area data into higher-level geographies
+You can also use the functions we'ved used for aggregating data into higher-level geographies:
+
+- `IMD::calculate_pop_weighted_score(...)`: calculate population-weighted average scores within the higher-level geography
+- `IMD::calculate_proportion(...)`: calculate the proportion of small areas in the higher-level geography that are within the 10% most deprived areas in the nation (or another decile of your choosing).
+- `IMD::calculate_extent(...)` - calculate the 'extent', which is the proportion of a local population living in areas classified as among the most deprived in the nation
+- `IMD::aggregate_scores(...)` - this function combines the above three functions into one place
+
+For more information about how to use these functions, see the manual pages for each.
+
+## Getting help
+If you encounter a clear bug, please file an issue with a minimal reproducible example on [GitHub](https://github.com/matthewgthomas/IMD/issues).
+
+---
+Please note that this project is released with a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/). By participating in this project you agree to abide by its terms.
