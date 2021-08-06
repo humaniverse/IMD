@@ -1,7 +1,7 @@
 Package: IMD
 Type: Package
 Title: Indices of Multiple Deprivation for the UK
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: c(
     person(c("Matthew", "Gwynfryn"), "Thomas", email = "matthewgthomas@gmail.com", role = "cre"),
     person("Mike", "Page", email = "mpage@redcross.org.uk", role = "aut")
