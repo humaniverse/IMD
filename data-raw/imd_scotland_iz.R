@@ -38,11 +38,11 @@ dz_pop <-
     population = AllAges
   )
 
-# ---- Aggregate IMD into MSOAs ----
+# ---- Aggregate IMD into Intermediate Zones ----
 simd_dz <-
   imd_scotland_dz |>
 
-  # We don't have IMD scores for Wales so just set them as zero
+  # We don't have IMD scores for Scotland so just set them as zero
   dplyr::mutate(
     IMD_score = 0,
     Income_score = 0,
@@ -57,7 +57,7 @@ simd_dz <-
   dplyr::left_join(dz_pop, by = "dz_code") |>
   dplyr::left_join(dz_iz, by = "dz_code")
 
-# Aggregate into MSOAs
+# Aggregate into IZs
 simd_iz <-
   simd_dz |> aggregate_scores(IMD_score, IMD_rank, IMD_decile, iz_code, population)
 
@@ -87,7 +87,7 @@ imd_scotland_iz <-
   dplyr::left_join(simd_iz_housing,  by = "iz_code") |>
   dplyr::left_join(simd_iz_barriers, by = "iz_code") |>
 
-  # Don't have scores for Wales so drop these columns
+  # Don't have scores for Scotland so drop these columns
   dplyr::select(-dplyr::ends_with("Score"))
 
 # Save output to data/ folder
