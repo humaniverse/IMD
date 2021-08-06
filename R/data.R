@@ -129,33 +129,27 @@
 #'   \item{Income_Score}{Population-weighted average score for Income domain}
 #'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
 #'   \item{Income_Extent}{Extent for Income}
-#'
 #'   \item{Employment_Score}{Population-weighted average score for Employment
 #'     domain}
 #'   \item{Employment_Proportion}{Proportion of most deprived areas for
 #'     Employment}
 #'   \item{Employment_Extent}{Extent for Employment}
-#'
 #'   \item{Education_Score}{Population-weighted average score for Education
 #'     domain}
 #'   \item{Education_Proportion}{Proportion of most deprived areas for
 #'     Education}
 #'   \item{Education_Extent}{Extent for Education}
-#'
 #'   \item{Health_Score}{Population-weighted average score for Health domain}
 #'   \item{Health_Proportion}{Proportion of most deprived areas for Health}
 #'   \item{Health_Extent}{Extent for Health}
-#'
 #'   \item{Crime_Score}{Population-weighted average score for Crime domain}
 #'   \item{Crime_Proportion}{Proportion of most deprived areas for Crime}
 #'   \item{Crime_Extent}{Extent for Crime}
-#'
 #'   \item{Housing_and_Access_Score}{Population-weighted average score for
 #'     Housing/Access domain}
 #'   \item{Housing_and_Access_Proportion}{Proportion of most deprived areas
 #'     for Housing/Access domain}
 #'   \item{Housing_and_Access_Extent}{Extent for Housing/Access}
-#'
 #'   \item{Environment_Score}{Population-weighted average score for Environment
 #'     domain}
 #'   \item{Environment_Proportion}{Proportion of most deprived areas for
@@ -165,3 +159,41 @@
 #' }
 #' @source \url{https://www.gov.uk/}
 "imd_england_msoa"
+
+
+#' Index of Multiple Deprivation for MSOAs in Wales
+#'
+#' A data set containing IMD ranks and deciles for Middle Layer Super
+#' Output Areas (LSOAs) in Wales. Note that IMD scores for Wales are
+#' not available.
+#'
+#' @format A data frame of class "tbl" with 410 rows and 19 variables:
+#' \describe{
+#'   \item{msoa_code}{MSOA code}
+#'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
+#'   \item{Extent}{Extent for overall IMD}
+#'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
+#'   \item{Income_Extent}{Extent for Income}
+#'   \item{Employment_Proportion}{Proportion of most deprived areas for
+#'     Employment}
+#'   \item{Employment_Extent}{Extent for Employment}
+#'   \item{Education_Proportion}{Proportion of most deprived areas for
+#'     Education}
+#'   \item{Education_Extent}{Extent for Education}
+#'   \item{Health_Proportion}{Proportion of most deprived areas for Health}
+#'   \item{Health_Extent}{Extent for Health}
+#'   \item{Crime_Proportion}{Proportion of most deprived areas for Crime}
+#'   \item{Crime_Extent}{Extent for Crime}
+#'   \item{Housing_Proportion}{Proportion of most deprived areas
+#'     for Housing domain}
+#'   \item{Housing_Extent}{Extent for Housing}
+#'   \item{Access_Proportion}{Proportion of most deprived areas
+#'     for Access domain}
+#'   \item{Access_Extent}{Extent for Access}
+#'   \item{Environment_Proportion}{Proportion of most deprived areas for
+#'     Environment}
+#'   \item{Environment_Extent}{Extent for Environment}
+#'   ...
+#' }
+#' @source \url{https://www.gov.wales/}
+"imd_wales_msoa"
