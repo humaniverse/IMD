@@ -9,7 +9,7 @@ query_url <-
 
 httr::GET(
   query_url,
-  httr::write_disk(tf <- tempfile(fileext = ".ods"))
+  httr::write_disk(tf <- tempfile(fileext = ".xlsx"))
 )
 
 imd_scotland_dz <-
