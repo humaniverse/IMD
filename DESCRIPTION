@@ -2,7 +2,10 @@ Package: IMD
 Type: Package
 Title: Indices of Multiple Deprivation for the UK
 Version: 0.1.0
-Author: Matthew Gwynfryn Thomas
+Authors@R: c(
+    person("Matthew", "Gwynfryn", "Thomas", email = "matthewgthomas@gmail.com", role = "cre"),
+    person("Mike", "Page", email = "mpage@redcross.org.uk", role = "aut")
+    )
 Maintainer: Matthew Gwynfryn Thomas <matthewgthomas@gmail.com>
 Description: Indices of Multiple Deprivation for the UK's nations at various 
     geographical levels:
