@@ -8,12 +8,9 @@ Authors@R: c(
     )
 Maintainer: Matthew Gwynfryn Thomas <matthewgthomas@gmail.com>
 Description: Indices of Multiple Deprivation for the UK's nations at various 
-    geographical levels:
-    - England: Lower Layer Super Output Area (LSOA), Middle Layer Super Output
-    Area (MSOA), Ward, and Local Authority
-    - Wales: LSOA, MSOA, Ward, and Local Authority
-    - Scotland: Data Zone, Intermediate Zone, and Council Area
-    - Northern Ireland: Super Output Area and Local Government District
+    geographical levels: Lower Layer Super Output Area (LSOA), Middle Layer 
+    Super Output Area (MSOA), Ward, Local Authority, Data Zone, Intermediate
+    Zone, Council Area, Super Output Area, and Local Government District.
 License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 LazyData: true
