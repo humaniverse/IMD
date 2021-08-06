@@ -299,3 +299,37 @@
 #' }
 #' @source \url{https://www.gov.wales/}
 "imd_wales_lad"
+
+#' Index of Multiple Deprivation for Local Government Districts in Northern
+#' Ireland
+#'
+#' A data set containing IMD ranks and deciles for Local Government Districts
+#' (Local Authorities) in Northern Ireland.
+#'
+#' @format A data frame of class "tbl" with 11 rows and 25 variables:
+#' \describe{
+#'   \item{lad_code}{LAD code}
+#'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
+#'   \item{Extent}{Extent for overall IMD}
+#'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
+#'   \item{Income_Extent}{Extent for Income}
+#'   \item{Employment_Proportion}{Proportion of most deprived areas for
+#'     Employment}
+#'   \item{Employment_Extent}{Extent for Employment}
+#'   \item{Education_Proportion}{Proportion of most deprived areas for
+#'     Education}
+#'   \item{Education_Extent}{Extent for Education}
+#'   \item{Health_Proportion}{Proportion of most deprived areas for Health}
+#'   \item{Health_Extent}{Extent for Health}
+#'   \item{Crime_Proportion}{Proportion of most deprived areas for Crime}
+#'   \item{Crime_Extent}{Extent for Crime}
+#'   \item{Access_Proportion}{Proportion of most deprived areas
+#'     for Access domain}
+#'   \item{Access_Extent}{Extent for Access}
+#'   \item{Environment_Proportion}{Proportion of most deprived areas for
+#'     Environment}
+#'   \item{Environment_Extent}{Extent for Environment}
+#'   ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/}
+"imd_northern_ireland_lad"
