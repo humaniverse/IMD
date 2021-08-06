@@ -21,7 +21,7 @@ load_composite_imd <-
     if (!nation %in% c("e", "w", "s", "n"))
       stop("Invalid nation: it must be one of 'E', 'W', 'S', 'N'")
 
-    devtools::load_all()
+    # devtools::load_all()
 
     query_url <-
       query_urls |>
