@@ -28,8 +28,8 @@ eimd_raw <-
 
 # ---- Aggregate IMD into MSOAs ----
 eimd <-
-  eimd_raw %>%
-  select(
+  eimd_raw |>
+  dplyr::select(
     lsoa_code = `LSOA code (2011)`,
 
     IMD_score = `Index of Multiple Deprivation (IMD) Score`,
@@ -67,7 +67,7 @@ eimd <-
     population = `Total population: mid 2015 (excluding prisoners)`
   ) |>
 
-  left_join(lsoa_msoa, by = "lsoa_code")
+  dplyr::left_join(lsoa_msoa, by = "lsoa_code")
 
 # Aggregate into MSOAs
 eimd_msoa <-
@@ -81,23 +81,23 @@ eimd_msoa_crime    <- eimd |> aggregate_scores(Crime_score, Crime_rank, Crime_de
 eimd_msoa_barriers <- eimd |> aggregate_scores(Housing_and_Access_score, Housing_and_Access_rank, Housing_and_Access_decile, msoa_code, population)
 eimd_msoa_env      <- eimd |> aggregate_scores(Environment_score, Environment_rank, Environment_decile, msoa_code, population)
 
-eimd_msoa_income   <- eimd_msoa_income   |> rename(Income_Proportion = Proportion, Income_Extent = Extent, Income_Score = Score)
-eimd_msoa_employ   <- eimd_msoa_employ   |> rename(Employment_Proportion = Proportion, Employment_Extent = Extent, Employment_Score = Score)
-eimd_msoa_edu      <- eimd_msoa_edu      |> rename(Education_Proportion = Proportion, Education_Extent = Extent, Education_Score = Score)
-eimd_msoa_health   <- eimd_msoa_health   |> rename(Health_Proportion = Proportion, Health_Extent = Extent, Health_Score = Score)
-eimd_msoa_crime    <- eimd_msoa_crime    |> rename(Crime_Proportion = Proportion, Crime_Extent = Extent, Crime_Score = Score)
-eimd_msoa_barriers <- eimd_msoa_barriers |> rename(Housing_and_Access_Proportion = Proportion, Housing_and_Access_Extent = Extent, Housing_and_Access_Score = Score)
-eimd_msoa_env      <- eimd_msoa_env      |> rename(Environment_Proportion = Proportion, Environment_Extent = Extent, Environment_Score = Score)
+eimd_msoa_income   <- eimd_msoa_income   |> dplyr::rename(Income_Proportion = Proportion, Income_Extent = Extent, Income_Score = Score)
+eimd_msoa_employ   <- eimd_msoa_employ   |> dplyr::rename(Employment_Proportion = Proportion, Employment_Extent = Extent, Employment_Score = Score)
+eimd_msoa_edu      <- eimd_msoa_edu      |> dplyr::rename(Education_Proportion = Proportion, Education_Extent = Extent, Education_Score = Score)
+eimd_msoa_health   <- eimd_msoa_health   |> dplyr::rename(Health_Proportion = Proportion, Health_Extent = Extent, Health_Score = Score)
+eimd_msoa_crime    <- eimd_msoa_crime    |> dplyr::rename(Crime_Proportion = Proportion, Crime_Extent = Extent, Crime_Score = Score)
+eimd_msoa_barriers <- eimd_msoa_barriers |> dplyr::rename(Housing_and_Access_Proportion = Proportion, Housing_and_Access_Extent = Extent, Housing_and_Access_Score = Score)
+eimd_msoa_env      <- eimd_msoa_env      |> dplyr::rename(Environment_Proportion = Proportion, Environment_Extent = Extent, Environment_Score = Score)
 
 eimd_msoa <-
-  eimd_msoa %>%
-  left_join(eimd_msoa_income,   by = "msoa_code") %>%
-  left_join(eimd_msoa_employ,   by = "msoa_code") %>%
-  left_join(eimd_msoa_edu,      by = "msoa_code") %>%
-  left_join(eimd_msoa_health,   by = "msoa_code") %>%
-  left_join(eimd_msoa_crime,    by = "msoa_code") %>%
-  left_join(eimd_msoa_barriers, by = "msoa_code") %>%
-  left_join(eimd_msoa_env,      by = "msoa_code")
+  eimd_msoa  |>
+  dplyr::left_join(eimd_msoa_income,   by = "msoa_code") |>
+  dplyr::left_join(eimd_msoa_employ,   by = "msoa_code") |>
+  dplyr::left_join(eimd_msoa_edu,      by = "msoa_code") |>
+  dplyr::left_join(eimd_msoa_health,   by = "msoa_code") |>
+  dplyr::left_join(eimd_msoa_crime,    by = "msoa_code") |>
+  dplyr::left_join(eimd_msoa_barriers, by = "msoa_code") |>
+  dplyr::left_join(eimd_msoa_env,      by = "msoa_code")
 
 # Rename
 imd_england_msoa <- eimd_msoa
