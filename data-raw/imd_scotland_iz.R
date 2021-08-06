@@ -1,7 +1,7 @@
 # Load package
 devtools::load_all(".")
 
-# ---- LSOA to MSOA lookup ----
+# ---- Data Zone to Intermediate Zone lookup ----
 query_url <-
   query_urls |>
   dplyr::filter(data_set == "lsoa_msoa_lad") |>
