@@ -116,8 +116,8 @@
 
 #' Index of Multiple Deprivation for MSOAs in England
 #'
-#' A data set containing IMD ranks and deciles for Middle Layer Super
-#' Output Areas (LSOAs) in England.
+#' A data set containing population-weighted average scores, proportions and
+#' extents for Middle Layer Super Output Areas (LSOAs) in England.
 #'
 #' @format A data frame of class "tbl" with 6,791 rows and 25 variables:
 #' \describe{
@@ -161,9 +161,8 @@
 
 #' Index of Multiple Deprivation for MSOAs in Wales
 #'
-#' A data set containing IMD ranks and deciles for Middle Layer Super
-#' Output Areas (LSOAs) in Wales. Note that IMD scores for Wales are
-#' not available.
+#' A data set containing proportions and extents for Middle Layer Super Output
+#' Areas (LSOAs) in Wales. Note that IMD scores for Wales are not available.
 #'
 #' @format A data frame of class "tbl" with 410 rows and 19 variables:
 #' \describe{
@@ -198,7 +197,7 @@
 
 #' Index of Multiple Deprivation for IZs in Scotland
 #'
-#' A data set containing IMD ranks and deciles for Intermediate Zones
+#' A data set containing proportions and extents for Intermediate Zones
 #' (IZs) in Scotland. Note that IMD scores for Scotland are not available.
 #'
 #' @format A data frame of class "tbl" with 1,279 rows and 17 variables:
@@ -231,7 +230,7 @@
 
 #' Index of Multiple Deprivation for Council Areas in Scotland
 #'
-#' A data set containing IMD ranks and deciles for Council Areas (Local
+#' A data set containing proportions and extents for Council Areas (Local
 #' Authorities) in Scotland. Note that IMD scores for Scotland are not
 #' available.
 #'
@@ -265,8 +264,8 @@
 
 #' Index of Multiple Deprivation for Local Authorities in Wales
 #'
-#' A data set containing IMD ranks and deciles for Local Authorities in Wales.
-#' Note that IMD scores for Wales are not available.
+#' A data set containing proportions and extents for Local Authorities in
+#' Wales. Note that IMD scores for Wales are not available.
 #'
 #' @format A data frame of class "tbl" with 22 rows and 19 variables:
 #' \describe{
@@ -302,7 +301,7 @@
 #' Index of Multiple Deprivation for Local Government Districts in Northern
 #' Ireland
 #'
-#' A data set containing IMD ranks and deciles for Local Government Districts
+#' A data set containing proportions and extents for Local Government Districts
 #' (Local Authorities) in Northern Ireland.
 #'
 #' @format A data frame of class "tbl" with 11 rows and 25 variables:
@@ -423,7 +422,7 @@
 #'
 #' @format A data frame of class "tbl" with 843 rows and 19 variables:
 #' \describe{
-#'   \item{msoa_code}{MSOA code}
+#'   \item{ward_code}{Ward code}
 #'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
 #'   \item{Extent}{Extent for overall IMD}
 #'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
