@@ -13,8 +13,6 @@
 #' @param max_quantile Get proportion of small areas categorised as less than
 #'        or equal to `max_quantile` (default = 1)
 #'
-#' @export
-#'
 #' @examples
 #' \dontrun{
 #' calculate_proportion(imd_england_lsoa, IMD_decile, msoa_code, n_people)

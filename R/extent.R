@@ -25,8 +25,6 @@
 #' @param population Name of the variable in the data frame containing
 #'        the population estimates of the lower level geography
 #'
-#' @export
-#'
 #' @examples
 #' \dontrun{
 #' calculate_extent(imd_england_lsoa, IMD_rank, msoa_code, pop_count)

@@ -12,8 +12,6 @@
 #' @param population Name of the variable in the data frame containing
 #'        the population estimates of the lower level geography
 #'
-#' @export
-#'
 #' @examples
 #' \dontrun{
 #' calculate_pop_weighted_score(imd_england_lsoa, IMD_score, pop_count)

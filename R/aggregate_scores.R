@@ -22,8 +22,6 @@
 #'     proportions of highly deprived areas, and the extent for
 #'     the higher-level geography.
 #'
-#' @export
-#'
 #' @examples
 #' \dontrun{
 #' imd_england_lsoa |>
