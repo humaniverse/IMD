@@ -23,26 +23,27 @@ devtools::install_github("matthewgthomas/IMD")
 ## Usage
 The `IMD` package provides several datasets for the IMD in each UK nation:
 
-### England:
+### England
 
 - Lower Layer Super Output Areas: `IMD::imd_england_lsoa`
 - Middle Layer Super Output Areas: `IMD::imd_england_msoa`
 - Wards: `IMD::imd_england_ward`
 - Local Authorities: `IMD::imd_england_lad`
 
-### Wales:
+### Wales
 
 - Lower Layer Super Output Areas: `IMD::imd_wales_lsoa`
 - Middle Layer Super Output Areas: `IMD::imd_wales_msoa`
 - Wards: `IMD::imd_wales_ward`
 - Local Authorities: `IMD::imd_wales_lad`
 
-### Scotland:
+### Scotland
+
 - Data Zones: `IMD::imd_scotland_dz`
 - Intermediate Zones: `IMD::imd_scotland_iz`
 - Council Areas: `IMD::imd_scotland_lad`
 
-### Northern Ireland:
+### Northern Ireland
 
 - Super Output Areas: `IMD::imd_northern_ireland_soa`
 - Local Government Districts: `IMD::imd_northern_ireland_lad`
