@@ -94,7 +94,7 @@ imd_northern_ireland_lad <-
   dplyr::left_join(niimd_lad_health,   by = "lad_code") |>
   dplyr::left_join(niimd_lad_crime,    by = "lad_code") |>
   dplyr::left_join(niimd_lad_barriers, by = "lad_code") |>
-  dplyr::left_join(niimd_lad_env,      by = "lad_code")
+  dplyr::left_join(niimd_lad_env,      by = "lad_code") |>
 
   # Don't have scores for NI so drop these columns
   dplyr::select(-dplyr::ends_with("Score"))
