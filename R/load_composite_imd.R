@@ -8,6 +8,7 @@
 #'               (N)orthern Ireland. See the GitHub link about for more details
 #'               about why there are separate composite IMDs for each nation.
 #'
+#' @importFrom rlang .data
 #' @export
 #'
 #' @examples
@@ -23,7 +24,7 @@ load_composite_imd <-
 
     query_url <-
       query_urls |>
-      dplyr::filter(data_set == paste0("imd_uk_", nation)) |>
+      dplyr::filter(.data$data_set == paste0("imd_uk_", nation)) |>
       dplyr::pull(query_url)
 
     data <-

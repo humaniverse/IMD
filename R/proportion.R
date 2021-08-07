@@ -13,6 +13,8 @@
 #' @param max_quantile Get proportion of small areas categorised as less than
 #'        or equal to `max_quantile` (default = 1)
 #'
+#' @importFrom rlang .data
+#'
 #' @examples
 #' \dontrun{
 #' calculate_proportion(imd_england_lsoa, IMD_decile, msoa_code, n_people)
@@ -25,10 +27,10 @@ calculate_proportion <-
     data |>
       # Label LSOAs by whether they're in top 10% most-deprived then summarise by this label
       dplyr::mutate(Top10 = ifelse({{ var }} <= max_quantile, "Top10", "Other")) |>
-      janitor::tabyl({{higher_level_geography}}, Top10) |>
+      janitor::tabyl({{higher_level_geography}}, .data$Top10) |>
 
       # Calculate proportion of most deprived LSOAs
-      dplyr::mutate(Proportion = Top10 / (Top10 + Other)) |>
-      dplyr::select({{ higher_level_geography }}, Proportion) |>
+      dplyr::mutate(Proportion = .data$Top10 / (.data$Top10 + .data$Other)) |>
+      dplyr::select({{ higher_level_geography }}, .data$Proportion) |>
       tibble::as_tibble()
   }

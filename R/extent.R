@@ -25,6 +25,8 @@
 #' @param population Name of the variable in the data frame containing
 #'        the population estimates of the lower level geography
 #'
+#' @importFrom rlang .data
+#'
 #' @examples
 #' \dontrun{
 #' calculate_extent(imd_england_lsoa, IMD_rank, msoa_code, pop_count)
@@ -46,7 +48,7 @@ calculate_extent <-
         )
       ) |>
       dplyr::group_by({{ higher_level_geography }}) |>
-      dplyr::summarise(Extent = sum(extent) / sum({{ population }}))
+      dplyr::summarise(Extent = sum(.data$extent) / sum({{ population }}))
 
     return(data)
   }
