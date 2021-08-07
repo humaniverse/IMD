@@ -30,7 +30,7 @@ A data frame of class "tbl" with 1,909 rows and 19 variables:
 }
 }
 \source{
-\url{https://www.gov.wales/}
+\url{https://gov.wales/}
 }
 \usage{
 imd_wales_lsoa

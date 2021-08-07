@@ -55,7 +55,7 @@
 #'   \item{Environment_rank}{Environment domain rank}
 #'   ...
 #' }
-#' @source \url{https://www.gov.wales/}
+#' @source \url{https://gov.wales/}
 "imd_wales_lsoa"
 
 #' Index of Multiple Deprivation for Data Zones in Scotland
@@ -192,7 +192,7 @@
 #'   \item{Environment_Extent}{Extent for Environment}
 #'   ...
 #' }
-#' @source \url{https://www.gov.wales/}
+#' @source \url{https://gov.wales/}
 "imd_wales_msoa"
 
 #' Index of Multiple Deprivation for IZs in Scotland
@@ -295,7 +295,7 @@
 #'   \item{Environment_Extent}{Extent for Environment}
 #'   ...
 #' }
-#' @source \url{https://www.gov.wales/}
+#' @source \url{https://gov.wales/}
 "imd_wales_lad"
 
 #' Index of Multiple Deprivation for Local Government Districts in Northern
@@ -448,5 +448,5 @@
 #'   \item{Environment_Extent}{Extent for Environment}
 #'   ...
 #' }
-#' @source \url{https://www.gov.wales/}
+#' @source \url{https://gov.wales/}
 "imd_wales_ward"
