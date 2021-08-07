@@ -1,22 +1,30 @@
 Package: IMD
 Type: Package
-Title: Indices of Multiple Deprivation for the UK
-Version: 1.0.0
+Title: Index of Multiple Deprivation Data for the UK
+Version: 1.0.1
 Authors@R: c(
-    person(c("Matthew", "Gwynfryn"), "Thomas", email = "matthewgthomas@gmail.com", role = "cre"),
-    person("Mike", "Page", email = "mpage@redcross.org.uk", role = "aut")
+    person(given = c("Matthew", "Gwynfryn"), 
+           family = "Thomas", 
+           email = "matthewgthomas@gmail.com", 
+           role = c("cre", "aut", "cph")),
+    person(given = "Mike", 
+           family = "Page", 
+           email = "mpage@redcross.org.uk", 
+           role = "aut")
     )
-Maintainer: Matthew Gwynfryn Thomas <matthewgthomas@gmail.com>
-Description: Indices of Multiple Deprivation for the UK's nations at various 
-    geographical levels: Lower Layer Super Output Area (LSOA), Middle Layer 
-    Super Output Area (MSOA), Ward, Local Authority, Data Zone, Intermediate
-    Zone, Council Area, Super Output Area, and Local Government District.
-License: GPL (>= 3) + file LICENSE
+Description: Index of Multiple Deprivation for UK nations at various 
+    geographical levels: Lower Layer Super Output Area, Middle Layer Super 
+    Output Area, Ward, Local Authority, Data Zone, Intermediate Zone, Council
+    Area, Super Output Area, and Local Government District.
+License: MIT + file LICENSE
+URL: https://github.com/matthewgthomas/IMD
+BugReports: https://github.com/matthewgthomas/IMD/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Imports:
     devtools,
+    rlang,
     dplyr,
     tidyr,
     readr,
@@ -30,4 +38,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Depends: 
-    R (>= 2.10)
+    R (>= 4.1.0)
