@@ -37,8 +37,3 @@ in the most deprived eleventh percentile, and then decreases by
 reaches 0.05 for the most deprived thirtieth percentile, and zero for areas
 outside the most deprived 30 per cent"
 }
-\examples{
-\dontrun{
-calculate_extent(imd_england_lsoa, IMD_rank, msoa_code, pop_count)
-}
-}

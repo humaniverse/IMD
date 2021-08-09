@@ -14,11 +14,6 @@
 #'        or equal to `max_quantile` (default = 1)
 #'
 #' @importFrom rlang .data
-#'
-#' @examples
-#' \dontrun{
-#' calculate_proportion(imd_england_lsoa, IMD_decile, msoa_code, n_people)
-#' }
 calculate_proportion <-
   function(data,
            var,

@@ -24,8 +24,3 @@ or equal to `max_quantile` (default = 1)}
 Calculate proportion of small areas in the higher-level geography that are
 within the 10% most deprived areas in the nation.
 }
-\examples{
-\dontrun{
-calculate_proportion(imd_england_lsoa, IMD_decile, msoa_code, n_people)
-}
-}

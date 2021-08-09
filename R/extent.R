@@ -26,11 +26,6 @@
 #'        the population estimates of the lower level geography
 #'
 #' @importFrom rlang .data
-#'
-#' @examples
-#' \dontrun{
-#' calculate_extent(imd_england_lsoa, IMD_rank, msoa_code, pop_count)
-#' }
 calculate_extent <-
   function(data,
            var,

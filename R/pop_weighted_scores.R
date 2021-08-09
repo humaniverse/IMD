@@ -13,11 +13,6 @@
 #'        the population estimates of the lower level geography
 #'
 #' @importFrom rlang .data
-#'
-#' @examples
-#' \dontrun{
-#' calculate_pop_weighted_score(imd_england_lsoa, IMD_score, pop_count)
-#' }
 calculate_pop_weighted_score <-
   function(data,
            var,

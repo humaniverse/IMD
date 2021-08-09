@@ -21,12 +21,6 @@
 #' @return A tibble containing population-weighted average scores,
 #'     proportions of highly deprived areas, and the extent for
 #'     the higher-level geography.
-#'
-#' @examples
-#' \dontrun{
-#' imd_england_lsoa |>
-#'     aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa_code, population)
-#' }
 aggregate_scores <-
 	function(data,
 	         score_col,

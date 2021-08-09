@@ -1,3 +1,7 @@
+# IMD 1.0.2
+
+- Removed examples from documentation for un-exported functions
+
 # IMD 1.0.1
 
 - Fixed R CMD check note for no visible bindings for global variables

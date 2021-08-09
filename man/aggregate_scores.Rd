@@ -43,9 +43,3 @@ Aggregate deprivation scores into higher-level geographies,
       deprived areas)
     - population-weighted average score
 }
-\examples{
-\dontrun{
-imd_england_lsoa |>
-    aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa_code, population)
-}
-}

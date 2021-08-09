@@ -23,8 +23,3 @@ the population estimates of the lower level geography}
 \description{
 Calculate population-weighted scores within small areas.
 }
-\examples{
-\dontrun{
-calculate_pop_weighted_score(imd_england_lsoa, IMD_score, pop_count)
-}
-}
