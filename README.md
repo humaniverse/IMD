@@ -18,7 +18,14 @@ Deprivation for the UK’s nations at various geographical levels:
 
 ## Installation
 
-You can install the development version from
+Install the released version of `IMD` from
+[CRAN](https://cran.r-project.org/package=IMD):
+
+``` r
+install.packages("IMD")
+```
+
+Alternatively, you can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
