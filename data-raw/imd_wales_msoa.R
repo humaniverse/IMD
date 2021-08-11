@@ -118,3 +118,4 @@ imd_wales_msoa <-
 
 # Save output to data/ folder
 usethis::use_data(imd_wales_msoa, overwrite = TRUE)
+readr::write_csv(imd_wales_msoa, "data-raw/imd_wales_msoa.csv")

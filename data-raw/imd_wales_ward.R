@@ -118,3 +118,4 @@ imd_wales_ward <-
 
 # Save output to data/ folder
 usethis::use_data(imd_wales_ward, overwrite = TRUE)
+readr::write_csv(imd_wales_ward, "data-raw/imd_wales_ward.csv")

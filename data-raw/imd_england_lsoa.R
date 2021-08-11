@@ -36,3 +36,4 @@ imd_england_lsoa <-
 
 # Save output to data/ folder
 usethis::use_data(imd_england_lsoa, overwrite = TRUE)
+readr::write_csv(imd_england_lsoa, "data-raw/imd_england_lsoa.csv")

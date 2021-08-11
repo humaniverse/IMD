@@ -96,3 +96,4 @@ imd_scotland_lad <-
 
 # Save output to data/ folder
 usethis::use_data(imd_scotland_lad, overwrite = TRUE)
+readr::write_csv(imd_scotland_lad, "data-raw/imd_scotland_lad.csv")

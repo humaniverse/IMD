@@ -142,3 +142,4 @@ imd_wales_lad <-
 
 # Save output to data/ folder
 usethis::use_data(imd_wales_lad, overwrite = TRUE)
+readr::write_csv(imd_wales_lad, "data-raw/imd_wales_lad.csv")

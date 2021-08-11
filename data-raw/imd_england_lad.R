@@ -11,8 +11,6 @@ httr::GET(
   httr::write_disk(tf <- tempfile(fileext = ".xlsx"))
 )
 
-# readxl::excel_sheets(tf)
-
 # ---- IMD ----
 imd_overall <-
   readxl::read_excel(tf, sheet = "IMD")
@@ -131,3 +129,4 @@ imd_england_lad <-
 
 # Save output to data/ folder
 usethis::use_data(imd_england_lad, overwrite = TRUE)
+readr::write_csv(imd_england_lad, "data-raw/imd_england_lad.csv")

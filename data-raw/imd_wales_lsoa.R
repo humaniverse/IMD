@@ -20,7 +20,7 @@ imd_wales_lsoa <-
 
   # Remove final column which is `NA`
   dplyr::select(-ncol(imd_wales_lsoa)) |>
-  as_tibble() |>
+  tibble::as_tibble() |>
 
   dplyr::mutate(
     IMD_decile = as.integer(Hmisc::cut2(`WIMD 2019`, g = 10)),
@@ -52,3 +52,4 @@ imd_wales_lsoa <-
 
 # Save output to data/ folder
 usethis::use_data(imd_wales_lsoa, overwrite = TRUE)
+readr::write_csv(imd_wales_lsoa, "data-raw/imd_wales_lsoa.csv")

@@ -101,3 +101,4 @@ imd_northern_ireland_lad <-
 
 # Save output to data/ folder
 usethis::use_data(imd_northern_ireland_lad, overwrite = TRUE)
+readr::write_csv(imd_northern_ireland_lad, "data-raw/imd_northern_ireland_lad.csv")

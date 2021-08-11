@@ -104,3 +104,4 @@ imd_england_ward <- eimd_ward
 
 # Save output to data/ folder
 usethis::use_data(imd_england_ward, overwrite = TRUE)
+readr::write_csv(imd_england_ward, "data-raw/imd_england_ward.csv")
