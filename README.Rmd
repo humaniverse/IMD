@@ -93,6 +93,34 @@ imd_wales_ward |>
   dplyr::count()
 ```
 
+## Accessing the data for non-R users
+We've provided `.csv` files for each geographical area in each nation:
+
+### England
+
+- Lower Layer Super Output Areas: [imd_england_lsoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lsoa.csv)
+- Middle Layer Super Output Areas: [imd_england_msoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_msoa.csv)
+- Wards: [imd_england_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_ward.csv)
+- Local Authorities: [imd_england_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lad.csv)
+
+### Wales
+
+- Lower Layer Super Output Areas: [imd_wales_lsoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_lsoa.csv)
+- Middle Layer Super Output Areas: [imd_wales_msoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_msoa.csv)
+- Wards: [imd_wales_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_ward.csv)
+- Local Authorities: [imd_wales_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_lad.csv)
+
+### Scotland
+
+- Data Zones: [imd_scotland_dz.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_dz.csv)
+- Intermediate Zones: [imd_scotland_iz.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_iz.csv)
+- Council Areas: [imd_scotland_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_lad.csv)
+
+### Northern Ireland
+
+- Super Output Areas: [imd_northern_ireland_soa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_northern_ireland_soa.csv)
+- Local Government Districts: [imd_northern_ireland_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
+
 ## Getting help
 If you encounter a clear bug, please file an issue with a minimal reproducible example on [GitHub](https://github.com/matthewgthomas/IMD/issues).
 

@@ -106,6 +106,48 @@ imd_wales_ward |>
 #> 1    14
 ```
 
+## Accessing the data for non-R users
+
+We’ve provided `.csv` files for each geographical area in each nation:
+
+### England
+
+-   Lower Layer Super Output Areas:
+    [imd\_england\_lsoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lsoa.csv)
+-   Middle Layer Super Output Areas:
+    [imd\_england\_msoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_msoa.csv)
+-   Wards:
+    [imd\_england\_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_ward.csv)
+-   Local Authorities:
+    [imd\_england\_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lad.csv)
+
+### Wales
+
+-   Lower Layer Super Output Areas:
+    [imd\_wales\_lsoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_lsoa.csv)
+-   Middle Layer Super Output Areas:
+    [imd\_wales\_msoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_msoa.csv)
+-   Wards:
+    [imd\_wales\_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_ward.csv)
+-   Local Authorities:
+    [imd\_wales\_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_lad.csv)
+
+### Scotland
+
+-   Data Zones:
+    [imd\_scotland\_dz.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_dz.csv)
+-   Intermediate Zones:
+    [imd\_scotland\_iz.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_iz.csv)
+-   Council Areas:
+    [imd\_scotland\_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_lad.csv)
+
+### Northern Ireland
+
+-   Super Output Areas:
+    [imd\_northern\_ireland\_soa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_northern_ireland_soa.csv)
+-   Local Government Districts:
+    [imd\_northern\_ireland\_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
+
 ## Getting help
 
 If you encounter a clear bug, please file an issue with a minimal
