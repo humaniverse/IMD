@@ -15,6 +15,7 @@ query_urls <-
     "imd_uk_w", "imd", "Composite 2020 UK Index of Multiple Deprivation: Wales", "https://github.com/mysociety/composite_uk_imd/raw/master/uk_index/UK_IMD_W.csv", "https://github.com/mysociety/composite_uk_imd",
     "imd_uk_s", "imd", "Composite 2020 UK Index of Multiple Deprivation: Scotland", "https://github.com/mysociety/composite_uk_imd/raw/master/uk_index/UK_IMD_S.csv", "https://github.com/mysociety/composite_uk_imd",
     "imd_uk_n", "imd", "Composite 2020 UK Index of Multiple Deprivation: NI", "https://github.com/mysociety/composite_uk_imd/raw/master/uk_index/UK_IMD_N.csv", "https://github.com/mysociety/composite_uk_imd",
+    "imd_england_subdomains", "imd", "Sub-domains of LSOA-level deprivation in England", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833976/File_4_-_IoD2019_Sub-domains_of_Deprivation.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
 
     # Lookups
     "lsoa_msoa_lad", "lookup", "Output Area to LSOA to MSOA to Local Authority District (December 2017) Lookup with Area Classifications in Great Britain", "https://opendata.arcgis.com/datasets/fe6c55f0924b4734adf1cf7104a0173e_0.csv", "http://geoportal.statistics.gov.uk/datasets/fe6c55f0924b4734adf1cf7104a0173e_0",

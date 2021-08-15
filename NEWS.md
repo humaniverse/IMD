@@ -1,3 +1,7 @@
+# IMD 1.1.0
+
+- Added dataset: sub-domains of deprivation for Lower Layer Super Output Areas in England
+
 # IMD 1.0.3
 
 - Removed Imports that aren't used in the published package

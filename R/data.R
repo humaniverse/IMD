@@ -450,3 +450,34 @@
 #' }
 #' @source \url{https://gov.wales/}
 "imd_wales_ward"
+
+#' Sub-domains of deprivation for LSOAs in England
+#'
+#' A data set containing deprivation sub-domain ranks and deciles for Lower
+#' Layer Super Output Areas (LSOAs) in England.
+#'
+#' @format A data frame of class "tbl" with 32,844 rows and 19 variables:
+#' \describe{
+#'   \item{lsoa_code}{LSOA code}
+#'   \item{Education_decile}{Education domain decile}
+#'   \item{Children_and_young_people_decile}{Children and Young People sub-domain decile}
+#'   \item{Adult_skills_decile}{Adult Skills sub-domain decile}
+#'   \item{Housing_and_Access_decile}{Housing and access to services domain decile}
+#'   \item{Geographical_barriers_decile}{Geographical Barriers sub-domain decile}
+#'   \item{Wider_barriers_decile}{Wider Barriers sub-domain decile}
+#'   \item{Environment_decile}{Environment domain decile}
+#'   \item{Indoors_decile}{Indoors sub-domain decile}
+#'   \item{Outdoors_decile}{Outdoors sub-domain decile}
+#'   \item{Education_rank}{Education domain rank}
+#'   \item{Children_and_young_people_rank}{Children and Young People sub-domain rank}
+#'   \item{Adult_skills_rank}{Adult Skills sub-domain rank}
+#'   \item{Housing_and_Access_rank}{Housing and access to services domain rank}
+#'   \item{Geographical_barriers_rank}{Geographical Barriers sub-domain rank}
+#'   \item{Wider_barriers_rank}{Wider Barriers sub-domain rank}
+#'   \item{Environment_rank}{Environment domain rank}
+#'   \item{Indoors_rank}{Indoors sub-domain rank}
+#'   \item{Outdoors_rank}{Outdoors sub-domain rank}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd_england_lsoa_subdomains"
