@@ -49,6 +49,8 @@ nation:
 -   Middle Layer Super Output Areas: `IMD::imd_england_msoa`
 -   Wards: `IMD::imd_england_ward`
 -   Local Authorities: `IMD::imd_england_lad`
+-   Sub-domains of deprivation for LSOAs:
+    `IMD::imd_england_lsoa_subdomains`
 
 ### Wales
 
@@ -120,6 +122,8 @@ We’ve provided `.csv` files for each geographical area in each nation:
     [imd\_england\_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_ward.csv)
 -   Local Authorities:
     [imd\_england\_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lad.csv)
+-   Sub-domains of deprivation for LSOAs:
+    [imd\_england\_lsoa\_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lsoa_subdomains.csv)
 
 ### Wales
 
