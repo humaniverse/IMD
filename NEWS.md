@@ -1,3 +1,7 @@
+# IMD 1.0.3
+
+- Removed Imports that aren't used in the published package
+
 # IMD 1.0.2
 
 - Removed examples from documentation for un-exported functions

@@ -1,7 +1,7 @@
 Package: IMD
 Type: Package
 Title: Index of Multiple Deprivation Data for the UK
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
     person(given = c("Matthew", "Gwynfryn"), 
            family = "Thomas", 
@@ -32,17 +32,12 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Imports:
-    devtools,
     rlang,
     dplyr,
-    tidyr,
     readr,
     tibble,
     janitor,
-    Hmisc,
-    httr,
-    readxl,
-    readODS
+    readxl
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
