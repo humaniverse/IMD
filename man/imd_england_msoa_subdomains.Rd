@@ -7,7 +7,7 @@
 \format{
 A data frame of class "tbl" with 6,791 rows and 13 variables:
 \describe{
-  \item{lsoa_code}{LSOA code}
+  \item{msoa_code}{MSOA code}
   \item{Children_and_young_people_Proportion}{Children and Young People
   sub-domain proportion}
   \item{Children_and_young_people_Extent}{Children and Young People
