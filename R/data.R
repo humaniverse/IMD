@@ -539,3 +539,32 @@
 #' }
 #' @source \url{https://www.gov.uk/}
 "imd_england_ward_subdomains"
+
+#' Sub-domains of deprivation for Local Authorities in England
+#'
+#' A data set containing deprivation sub-domain ranks and deciles for Local
+#' Authorities in England.
+#'
+#' @format A data frame of class "tbl" with 317 rows and 13 variables:
+#' \describe{
+#'   \item{lad_code}{Local Authority code}
+#'   \item{Children_and_young_people_Proportion}{Children and Young People
+#'   sub-domain proportion}
+#'   \item{Children_and_young_people_Extent}{Children and Young People
+#'   sub-domain extent}
+#'   \item{Adult_skills_Proportion}{Adult Skills sub-domain proportion}
+#'   \item{Adult_skills_Extent}{Adult Skills sub-domain extent}
+#'   \item{Geographical_barriers_Proportion}{Geographical Barriers sub-domain
+#'   proportion}
+#'   \item{Geographical_barriers_Extent}{Geographical Barriers sub-domain
+#'   extent}
+#'   \item{Wider_barriers_Proportion}{Wider Barriers sub-domain proportion}
+#'   \item{Wider_barriers_Extent}{Wider Barriers sub-domain extent}
+#'   \item{Indoors_Proportion}{Indoors sub-domain proportion}
+#'   \item{Indoors_Extent}{Indoors sub-domain extent}
+#'   \item{Outdoors_Proportion}{Outdoors sub-domain proportion}
+#'   \item{Outdoors_Extent}{Outdoors sub-domain extent}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd_england_lad_subdomains"
