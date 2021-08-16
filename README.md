@@ -49,8 +49,17 @@ nation:
 -   Middle Layer Super Output Areas: `IMD::imd_england_msoa`
 -   Wards: `IMD::imd_england_ward`
 -   Local Authorities: `IMD::imd_england_lad`
--   Sub-domains of deprivation for LSOAs:
-    `IMD::imd_england_lsoa_subdomains`
+
+**Sub-domains of deprivation** are also available for England. These
+include two in the Education domain (‘children and young people’ and
+‘adult skills’), two for the Barriers domain (‘geographical barriers’
+and ‘wider barriers’), and two for the Living Environment domain
+(‘indoors’ and ‘outdoors’)
+
+-   Sub-domains for LSOAs: `IMD::imd_england_lsoa_subdomains`
+-   Sub-domains for MSOAs: `IMD::imd_england_msoa_subdomains`
+-   Sub-domains for wards: `IMD::imd_england_ward_subdomains`
+-   Sub-domains for Local Authorities: `IMD::imd_england_lad_subdomains`
 
 ### Wales
 
@@ -122,8 +131,21 @@ We’ve provided `.csv` files for each geographical area in each nation:
     [imd\_england\_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_ward.csv)
 -   Local Authorities:
     [imd\_england\_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lad.csv)
--   Sub-domains of deprivation for LSOAs:
+
+**Sub-domains of deprivation** are also available for England. These
+include two in the Education domain (‘children and young people’ and
+‘adult skills’), two for the Barriers domain (‘geographical barriers’
+and ‘wider barriers’), and two for the Living Environment domain
+(‘indoors’ and ‘outdoors’)
+
+-   Sub-domains for LSOAs:
     [imd\_england\_lsoa\_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lsoa_subdomains.csv)
+-   Sub-domains for MSOAs:
+    [imd\_england\_msoa\_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_msoa_subdomains.csv)
+-   Sub-domains for wards:
+    [imd\_england\_ward\_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_ward_subdomains.csv)
+-   Sub-domains for Local Authorities:
+    [imd\_england\_lad\_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lad_subdomains.csv)
 
 ### Wales
 
