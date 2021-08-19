@@ -60,22 +60,54 @@ lsoa_pop_wales <-
   lsoa_pop |>
   dplyr::filter(substr(lsoa_code, 1, 1) == "W")
 
+# ---- Load IMD scores ----
+query_url <-
+  query_urls |>
+  dplyr::filter(data_set == "imd_lsoa_wales_scores") |>
+  dplyr::pull(query_url)
+
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".ods"))
+)
+
+imd_wales_lsoa_scores <-
+  readODS::read_ods(tf, sheet = "Data", skip = 2)
+
+imd_wales_lsoa_scores <-
+  imd_wales_lsoa_scores |>
+  tibble::as_tibble() |>
+  dplyr::select(
+    lsoa_code = `LSOA Code`,
+    IMD_score = `WIMD 2019`,
+    Income_score = Income,
+    Employment_score = Employment,
+    Education_score = Education,
+    Health_score = Health,
+    Crime_score = `Community Safety`,
+    Housing_score = Housing,
+    Access_score = `Access to Services`,
+    Environment_score = `Physical Environment`
+  )
+
 # ---- Aggregate IMD into MSOAs ----
 wimd_lsoa <-
   imd_wales_lsoa |>
 
-  # We don't have IMD scores for Wales so just set them as zero
-  dplyr::mutate(
-    IMD_score = 0,
-    Income_score = 0,
-    Employment_score = 0,
-    Education_score = 0,
-    Health_score = 0,
-    Crime_score = 0,
-    Housing_score = 0,
-    Access_score = 0,
-    Environment_score = 0
-  ) |>
+  dplyr::left_join(imd_wales_lsoa_scores, by = "lsoa_code") |>
+
+  # # We don't have IMD scores for Wales so just set them as zero
+  # dplyr::mutate(
+  #   IMD_score = 0,
+  #   Income_score = 0,
+  #   Employment_score = 0,
+  #   Education_score = 0,
+  #   Health_score = 0,
+  #   Crime_score = 0,
+  #   Housing_score = 0,
+  #   Access_score = 0,
+  #   Environment_score = 0
+  # ) |>
 
   dplyr::left_join(lsoa_pop, by = "lsoa_code") |>
   dplyr::left_join(lsoa_msoa, by = "lsoa_code")
@@ -111,10 +143,10 @@ imd_wales_msoa <-
   dplyr::left_join(wimd_msoa_crime,    by = "msoa_code") |>
   dplyr::left_join(wimd_msoa_housing,  by = "msoa_code") |>
   dplyr::left_join(wimd_msoa_barriers, by = "msoa_code") |>
-  dplyr::left_join(wimd_msoa_env,      by = "msoa_code") |>
+  dplyr::left_join(wimd_msoa_env,      by = "msoa_code")
 
   # Don't have scores for Wales so drop these columns
-  dplyr::select(-dplyr::ends_with("Score"))
+  # dplyr::select(-dplyr::ends_with("Score"))
 
 # Save output to data/ folder
 usethis::use_data(imd_wales_msoa, overwrite = TRUE)

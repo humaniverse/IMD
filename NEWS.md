@@ -1,6 +1,7 @@
 # IMD 1.1.0
 
 - Added dataset: sub-domains of deprivation for Lower Layer Super Output Areas, Middle Layer Super Output Areas, wards, and Local Authorities in England
+- Added population-weighted average scores for Welsh MSOAs
 
 # IMD 1.0.3
 

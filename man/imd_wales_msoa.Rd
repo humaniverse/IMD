@@ -5,29 +5,38 @@
 \alias{imd_wales_msoa}
 \title{Index of Multiple Deprivation for MSOAs in Wales}
 \format{
-A data frame of class "tbl" with 410 rows and 19 variables:
+A data frame of class "tbl" with 410 rows and 28 variables:
 \describe{
   \item{msoa_code}{MSOA code}
+  \item{Score}{Population-weighted average IMD score}
   \item{Proportion}{Proportion of small areas in the nation's most deprived}
   \item{Extent}{Extent for overall IMD}
+  \item{Income_Score}{Population-weighted average income score}
   \item{Income_Proportion}{Proportion of most deprived areas for Income}
   \item{Income_Extent}{Extent for Income}
+  \item{Employment_Score}{Population-weighted average Employment score}
   \item{Employment_Proportion}{Proportion of most deprived areas for
     Employment}
   \item{Employment_Extent}{Extent for Employment}
+  \item{Education_Score}{Population-weighted average Education score}
   \item{Education_Proportion}{Proportion of most deprived areas for
     Education}
   \item{Education_Extent}{Extent for Education}
+  \item{Health_Score}{Population-weighted average Health score}
   \item{Health_Proportion}{Proportion of most deprived areas for Health}
   \item{Health_Extent}{Extent for Health}
+  \item{Crime_Score}{Population-weighted average Crime score}
   \item{Crime_Proportion}{Proportion of most deprived areas for Crime}
   \item{Crime_Extent}{Extent for Crime}
+  \item{Housing_Score}{Population-weighted average Housing score}
   \item{Housing_Proportion}{Proportion of most deprived areas
     for Housing domain}
   \item{Housing_Extent}{Extent for Housing}
+  \item{Access_Score}{Population-weighted average Access score}
   \item{Access_Proportion}{Proportion of most deprived areas
     for Access domain}
   \item{Access_Extent}{Extent for Access}
+  \item{Environment_Score}{Population-weighted average Environment score}
   \item{Environment_Proportion}{Proportion of most deprived areas for
     Environment}
   \item{Environment_Extent}{Extent for Environment}
