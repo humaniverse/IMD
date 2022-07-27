@@ -1,8 +1,7 @@
 ## Resubmission
-This is a resubmission. In this version I have:
+This is a new submission. In this new version I have:
 
-* Removed examples from the documentation for functions that are not exported
-* Added URLs to the 'description' field of `DESCRIPTION` listing the web services used
+* Added the Community Needs Index for each nation
 
 ## Test environments
 * local Windows 10 install, R 4.1.0
@@ -10,6 +9,4 @@ This is a resubmission. In this version I have:
 * win-builder (devel)
 
 ## R CMD check results
-0 errors | 0 warnings | 1 note
-
-* This is a new release.
+0 errors | 0 warnings | 0 notes
