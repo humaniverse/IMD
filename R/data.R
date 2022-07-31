@@ -716,3 +716,68 @@
 #' }
 #' @source \url{https://www.gov.uk/}
 "imd2000_ward98_england"
+
+#' Index of Multiple Deprivation (2015) for LSOAs in England
+#'
+#' A data set containing IMD ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,844 rows and 6 variables:
+#' \describe{
+#'   \item{lsoa11_code}{LSOA (2011) code}
+#'   \item{lsoa11_name}{LSOA name}
+#'   \item{lad13_code}{Local Authority (2013) code}
+#'   \item{lad13_name}{Local Authority name}
+#'   \item{IMD_rank}{Index of multiple deprivation rank}
+#'   \item{IMD_decile}{Index of multiple deprivation decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2015_lsoa11_england"
+
+#' Index of Multiple Deprivation (2015) for Local Authorities in England
+#'
+#' A data set containing IMD proportions and extents for Local Authorites
+#' (2021 codes) in England.
+#'
+#' @format A data frame of class "tbl" with 309 rows and 3 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2015_lad21_england"
+
+#' Index of Multiple Deprivation (2010) for LSOAs in England
+#'
+#' A data set containing IMD ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,482 rows and 7 variables:
+#' \describe{
+#'   \item{lsoa01_code}{LSOA (2001) code}
+#'   \item{lad09_code}{Local Authority (2009) code}
+#'   \item{lad09_name}{Local Authority name}
+#'   \item{IMD_score}{Index of multiple deprivation score}
+#'   \item{IMD_rank}{Index of multiple deprivation rank}
+#'   \item{IMD_decile}{Index of multiple deprivation decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2010_lsoa01_england"
+
+#' Index of Multiple Deprivation (2010) for Local Authorities in England
+#'
+#' A data set containing IMD scores, proportions and extents for Local
+#' Authorites (2021 codes) in England.
+#'
+#' @format A data frame of class "tbl" with 310 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2010_lad21_england"
