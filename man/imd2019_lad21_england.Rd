@@ -3,7 +3,8 @@
 \docType{data}
 \name{imd2019_lad21_england}
 \alias{imd2019_lad21_england}
-\title{Index of Multiple Deprivation for Local Authorities (2021 codes) in England}
+\title{Index of Multiple Deprivation (2019) for Local Authorities (2021 codes) in
+England}
 \format{
 A data frame of class "tbl" with 309 rows and 25 variables:
 \describe{
