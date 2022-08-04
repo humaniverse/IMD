@@ -727,6 +727,7 @@
 #'   \item{lsoa11_name}{LSOA name}
 #'   \item{lad13_code}{Local Authority (2013) code}
 #'   \item{lad13_name}{Local Authority name}
+#'   \item{IMD_score}{Index of multiple deprivation score}
 #'   \item{IMD_rank}{Index of multiple deprivation rank}
 #'   \item{IMD_decile}{Index of multiple deprivation decile}
 #'   ...
@@ -742,6 +743,7 @@
 #' @format A data frame of class "tbl" with 309 rows and 3 variables:
 #' \describe{
 #'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Score}{Population-weighted deprivation score}
 #'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
 #'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
 #'   ...
@@ -756,6 +758,7 @@
 #' @format A data frame of class "tbl" with 6,791 rows and 3 variables:
 #' \describe{
 #'   \item{msoa111_code}{MSOA code}
+#'   \item{Score}{Population-weighted deprivation score}
 #'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
 #'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
 #'   ...

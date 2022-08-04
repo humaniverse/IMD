@@ -8,6 +8,7 @@
 A data frame of class "tbl" with 309 rows and 3 variables:
 \describe{
   \item{ltla21_code}{Local Authority (2021) code}
+  \item{Score}{Population-weighted deprivation score}
   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
   \item{Extent}{Extent of the LAs population living in the most deprived areas}
   ...

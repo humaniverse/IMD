@@ -30,11 +30,6 @@ pop_2015 <-
 imd_lsoa <-
   imd2015_lsoa11_england |>
 
-  # We don't have IMD scores for Wales so just set them as zero
-  dplyr::mutate(
-    IMD_score = 0
-  ) |>
-
   dplyr::left_join(pop_2015, by = "lsoa11_code") |>
   dplyr::left_join(geographr::lookup_lsoa11_ltla21, by = "lsoa11_code")
 
@@ -43,9 +38,7 @@ imd_lad <-
   imd_lsoa |>
   aggregate_scores(IMD_score, IMD_rank, IMD_decile, ltla21_code, total_population)
 
-imd2015_lad21_england <-
-  imd_lad |>
-  select(-Score)
+imd2015_lad21_england <- imd_lad
 
 # Save output to data/ folder
 usethis::use_data(imd2015_lad21_england, overwrite = TRUE)

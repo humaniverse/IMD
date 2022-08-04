@@ -11,6 +11,7 @@ A data frame of class "tbl" with 32,844 rows and 6 variables:
   \item{lsoa11_name}{LSOA name}
   \item{lad13_code}{Local Authority (2013) code}
   \item{lad13_name}{Local Authority name}
+  \item{IMD_score}{Index of multiple deprivation score}
   \item{IMD_rank}{Index of multiple deprivation rank}
   \item{IMD_decile}{Index of multiple deprivation decile}
   ...
