@@ -23,7 +23,7 @@ A data frame of class "tbl" with 410 rows and 12 variables:
 }
 }
 \source{
-\url{https://www.osci.uk/}
+\url{https://osci.uk/}
 }
 \usage{
 cni_wales_msoa11
