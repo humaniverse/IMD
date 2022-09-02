@@ -600,7 +600,7 @@
 #'   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
 #'   ...
 #' }
-#' @source \url{https://osci.uk/}
+#' @source \url{https://ocsi.uk/}
 "cni_england_ward17"
 
 #' Community Needs Index and Left Behind Areas for MSOAs (2011 codes) in Wales
@@ -624,7 +624,7 @@
 #'   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
 #'   ...
 #' }
-#' @source \url{https://osci.uk/}
+#' @source \url{https://ocsi.uk/}
 "cni_wales_msoa11"
 
 #' Community Needs Index and Left Behind Areas for Intermediate Zones (2011
@@ -648,7 +648,7 @@
 #'   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
 #'   ...
 #' }
-#' @source \url{https://osci.uk/}
+#' @source \url{https://ocsi.uk/}
 "cni_scotland_iz11"
 
 #' Community Needs Index and Left Behind Areas for Super Output Areas (2011
