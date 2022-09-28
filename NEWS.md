@@ -1,6 +1,7 @@
 # IMD 1.2.2
 
 - Updated list of Left Behind Areas to match latest OCSI data
+- Moved repo to the Humaniverse suite of packages: https://github.com/humaniverse/IMD
 
 # IMD 1.2.1
 

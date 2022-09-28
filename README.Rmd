@@ -39,7 +39,7 @@ Alternatively, you can install the development version from [GitHub](https://git
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("matthewgthomas/IMD")
+devtools::install_github("humaniverse/IMD")
 ```
 
 ## Usage

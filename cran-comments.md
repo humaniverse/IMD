@@ -2,6 +2,7 @@
 This is a minor release in which we have:
 
 * Fixed a bug in the left-behind areas flag for England
+* Moved GitHub repo to the Humaniverse suite of packages: https://github.com/humaniverse/IMD
 
 ## Test environments
 * local Windows 10 install, R 4.1.0
