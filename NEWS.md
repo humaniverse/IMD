@@ -1,3 +1,7 @@
+# IMD 1.2.2
+
+- Updated list of Left Behind Areas to match latest OCSI data
+
 # IMD 1.2.1
 
 - Added Community Needs Index

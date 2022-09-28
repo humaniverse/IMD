@@ -1,7 +1,7 @@
 Package: IMD
 Type: Package
 Title: Index of Multiple Deprivation Data for the UK
-Version: 1.2.1
+Version: 1.2.2
 Authors@R: c(
     person(given = c("Matthew", "Gwynfryn"), 
            family = "Thomas", 

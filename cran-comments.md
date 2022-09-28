@@ -1,7 +1,7 @@
 ## Release summary
 This is a minor release in which we have:
 
-* Added the Community Needs Index for each nation
+* Fixed a bug in the left-behind areas flag for England
 
 ## Test environments
 * local Windows 10 install, R 4.1.0
