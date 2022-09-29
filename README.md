@@ -124,13 +124,13 @@ We’ve provided `.csv` files for each geographical area in each nation:
 ### England
 
 -   Lower Layer Super Output Areas:
-    [imd_england_lsoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lsoa.csv)
+    [imd_england_lsoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lsoa.csv)
 -   Middle Layer Super Output Areas:
-    [imd_england_msoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_msoa.csv)
+    [imd_england_msoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_msoa.csv)
 -   Wards:
-    [imd_england_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_ward.csv)
+    [imd_england_ward.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_ward.csv)
 -   Local Authorities:
-    [imd_england_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lad.csv)
+    [imd_england_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lad.csv)
 
 **Sub-domains of deprivation** are also available for England. These
 include two in the Education domain (‘children and young people’ and
@@ -139,46 +139,46 @@ and ‘wider barriers’), and two for the Living Environment domain
 (‘indoors’ and ‘outdoors’)
 
 -   Sub-domains for LSOAs:
-    [imd_england_lsoa_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lsoa_subdomains.csv)
+    [imd_england_lsoa_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lsoa_subdomains.csv)
 -   Sub-domains for MSOAs:
-    [imd_england_msoa_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_msoa_subdomains.csv)
+    [imd_england_msoa_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_msoa_subdomains.csv)
 -   Sub-domains for wards:
-    [imd_england_ward_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_ward_subdomains.csv)
+    [imd_england_ward_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_ward_subdomains.csv)
 -   Sub-domains for Local Authorities:
-    [imd_england_lad_subdomains.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_england_lad_subdomains.csv)
+    [imd_england_lad_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lad_subdomains.csv)
 
 ### Wales
 
 -   Lower Layer Super Output Areas:
-    [imd_wales_lsoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_lsoa.csv)
+    [imd_wales_lsoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_lsoa.csv)
 -   Middle Layer Super Output Areas:
-    [imd_wales_msoa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_msoa.csv)
+    [imd_wales_msoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_msoa.csv)
 -   Wards:
-    [imd_wales_ward.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_ward.csv)
+    [imd_wales_ward.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_ward.csv)
 -   Local Authorities:
-    [imd_wales_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_wales_lad.csv)
+    [imd_wales_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_lad.csv)
 
 ### Scotland
 
 -   Data Zones:
-    [imd_scotland_dz.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_dz.csv)
+    [imd_scotland_dz.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_scotland_dz.csv)
 -   Intermediate Zones:
-    [imd_scotland_iz.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_iz.csv)
+    [imd_scotland_iz.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_scotland_iz.csv)
 -   Council Areas:
-    [imd_scotland_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_scotland_lad.csv)
+    [imd_scotland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_scotland_lad.csv)
 
 ### Northern Ireland
 
 -   Super Output Areas:
-    [imd_northern_ireland_soa.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_northern_ireland_soa.csv)
+    [imd_northern_ireland_soa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_soa.csv)
 -   Local Government Districts:
-    [imd_northern_ireland_lad.csv](https://github.com/matthewgthomas/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
+    [imd_northern_ireland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
 
 ## Getting help
 
 If you encounter a clear bug, please file an issue with a minimal
 reproducible example on
-[GitHub](https://github.com/matthewgthomas/IMD/issues).
+[GitHub](https://github.com/humaniverse/IMD/issues).
 
 ------------------------------------------------------------------------
 
