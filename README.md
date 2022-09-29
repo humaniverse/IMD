@@ -192,7 +192,7 @@ and ‘wider barriers’), and two for the Living Environment domain
     [imd_northern_ireland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
 
 **Community Needs Index:**
-[community-needs-index-northern-ireland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-northern-ireland.csv.csv)
+[community-needs-index-northern-ireland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-northern-ireland.csv)
 
 ## Getting help
 

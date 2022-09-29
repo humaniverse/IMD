@@ -149,7 +149,7 @@ We've provided `.csv` files for each geographical area in each nation:
 - Super Output Areas: [imd_northern_ireland_soa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_soa.csv)
 - Local Government Districts: [imd_northern_ireland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
 
-**Community Needs Index:** [community-needs-index-northern-ireland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-northern-ireland.csv.csv)
+**Community Needs Index:** [community-needs-index-northern-ireland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-northern-ireland.csv)
 
 ## Getting help
 If you encounter a clear bug, please file an issue with a minimal reproducible example on [GitHub](https://github.com/humaniverse/IMD/issues).
