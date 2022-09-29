@@ -61,6 +61,8 @@ and ‘wider barriers’), and two for the Living Environment domain
 -   Sub-domains for wards: `IMD::imd_england_ward_subdomains`
 -   Sub-domains for Local Authorities: `IMD::imd_england_lad_subdomains`
 
+**Community Needs Index:** `IMD::cni_england_ward17`
+
 ### Wales
 
 -   Lower Layer Super Output Areas: `IMD::imd_wales_lsoa`
@@ -68,16 +70,22 @@ and ‘wider barriers’), and two for the Living Environment domain
 -   Wards: `IMD::imd_wales_ward`
 -   Local Authorities: `IMD::imd_wales_lad`
 
+**Community Needs Index:** `IMD::cni_wales_msoa11`
+
 ### Scotland
 
 -   Data Zones: `IMD::imd_scotland_dz`
 -   Intermediate Zones: `IMD::imd_scotland_iz`
 -   Council Areas: `IMD::imd_scotland_lad`
 
+**Community Needs Index:** `IMD::cni_scotland_iz11`
+
 ### Northern Ireland
 
 -   Super Output Areas: `IMD::imd_northern_ireland_soa`
 -   Local Government Districts: `IMD::imd_northern_ireland_lad`
+
+**Community Needs Index:** `IMD::cni_northern_ireland_soa11`
 
 ### Composite 2020 UK Index of Multiple Deprivation
 
@@ -147,6 +155,9 @@ and ‘wider barriers’), and two for the Living Environment domain
 -   Sub-domains for Local Authorities:
     [imd_england_lad_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lad_subdomains.csv)
 
+**Community Needs Index:**
+[community-needs-index-england.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-england.csv)
+
 ### Wales
 
 -   Lower Layer Super Output Areas:
@@ -158,6 +169,9 @@ and ‘wider barriers’), and two for the Living Environment domain
 -   Local Authorities:
     [imd_wales_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_lad.csv)
 
+**Community Needs Index:**
+[community-needs-index-wales.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-wales.csv)
+
 ### Scotland
 
 -   Data Zones:
@@ -167,12 +181,18 @@ and ‘wider barriers’), and two for the Living Environment domain
 -   Council Areas:
     [imd_scotland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_scotland_lad.csv)
 
+**Community Needs Index:**
+[community-needs-index-scotland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-scotland.csv)
+
 ### Northern Ireland
 
 -   Super Output Areas:
     [imd_northern_ireland_soa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_soa.csv)
 -   Local Government Districts:
     [imd_northern_ireland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
+
+**Community Needs Index:**
+[community-needs-index-northern-ireland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-northern-ireland.csv.csv)
 
 ## Getting help
 
