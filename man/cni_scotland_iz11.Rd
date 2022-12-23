@@ -23,7 +23,7 @@ A data frame of class "tbl" with 1,279 rows and 11 variables:
 }
 }
 \source{
-\url{https://www.osci.uk/}
+\url{https://ocsi.uk/}
 }
 \usage{
 cni_scotland_iz11

@@ -1,7 +1,7 @@
 Package: IMD
 Type: Package
 Title: Index of Multiple Deprivation Data for the UK
-Version: 1.2.0.9000
+Version: 1.2.2
 Authors@R: c(
     person(given = c("Matthew", "Gwynfryn"), 
            family = "Thomas", 
@@ -26,18 +26,17 @@ Description: Index of Multiple Deprivation for UK nations at various
     The 'IMD' package also provides the composite UK index developed by
     <https://github.com/mysociety/composite_uk_imd>.
 License: MIT + file LICENSE
-URL: https://github.com/matthewgthomas/IMD
-BugReports: https://github.com/matthewgthomas/IMD/issues
+URL: https://github.com/humaniverse/IMD
+BugReports: https://github.com/humaniverse/IMD/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 Imports:
     rlang,
     dplyr,
     readr,
     tibble,
-    janitor,
-    readxl
+    janitor
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

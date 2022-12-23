@@ -1,7 +1,8 @@
-## Resubmission
-This is a new submission. In this new version I have:
+## Release summary
+This is a minor release in which we have:
 
-* Added the Community Needs Index for each nation
+* Fixed a bug in the left-behind areas flag for England
+* Moved GitHub repo to the Humaniverse suite of packages: https://github.com/humaniverse/IMD
 
 ## Test environments
 * local Windows 10 install, R 4.1.0
@@ -10,3 +11,5 @@ This is a new submission. In this new version I have:
 
 ## R CMD check results
 0 errors | 0 warnings | 0 notes
+
+R CMD check succeeded
