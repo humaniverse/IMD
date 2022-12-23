@@ -676,3 +676,285 @@
 #' }
 #' @source \url{https://ocsi.uk/}
 "cni_northern_ireland_soa11"
+
+#' Index of Multiple Deprivation (2000) for Wards in England
+#'
+#' A data set containing IMD scores, ranks and deciles for Wards in England.
+#'
+#' @format A data frame of class "tbl" with 8,414 rows and 21 variables:
+#' \describe{
+#'   \item{Ward}{Ward code}
+#'   \item{Ward Name}{Ward name}
+#'   \item{LA}{Local Authority code}
+#'   \item{LA Name}{LA name}
+#'   \item{DETR LA Code}{DETR LA code}
+#'   \item{Index of Multiple Deprivation Score}{IMD score}
+#'   \item{Rank of Index of Multiple Deprivation}{IMD rank}
+#'   \item{Income Domain Score}{Income domain score}
+#'   \item{Rank of Income Domain}{Income domain rank}
+#'   \item{Employment Domain Score}{Employment domain score}
+#'   \item{Rank of Employment Domain}{Employment domain rank}
+#'   \item{Health Domain Score}{Health domain score}
+#'   \item{Rank of Health Domain}{Health domain rank}
+#'   \item{Education Domain Score}{Education domain score}
+#'   \item{Rank of Education Domain}{Education domain rank}
+#'   \item{Housing Domain Score}{Housing domain score}
+#'   \item{Rank of Housing Domain}{Housing domain rank}
+#'   \item{Access Domain Score}{Access domain score}
+#'   \item{Rank of Access Domain}{Access domain rank}
+#'   \item{Child Poverty Index Score}{Child Poverty Index score}
+#'   \item{Rank of Child Poverty Index}{Child Poverty Index rank}
+#'   \item{IMD_decile}{IMD decile}
+#'   \item{Income_decile}{Income domain decile}
+#'   \item{Employment_decile}{Employment domain decile}
+#'   \item{Health_decile}{Health domain decile}
+#'   \item{Education_decile}{Education domain decile}
+#'   \item{Housing_decile}{Housing domain decile}
+#'   \item{Access_decile}{Access to services domain decile}
+#'   \item{Child_Poverty_decile}{Child Poverty Index decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2000_ward98_england"
+
+#' Index of Multiple Deprivation (2015) for LSOAs in England
+#'
+#' A data set containing IMD ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,844 rows and 6 variables:
+#' \describe{
+#'   \item{lsoa11_code}{LSOA (2011) code}
+#'   \item{lsoa11_name}{LSOA name}
+#'   \item{lad13_code}{Local Authority (2013) code}
+#'   \item{lad13_name}{Local Authority name}
+#'   \item{IMD_score}{Index of multiple deprivation score}
+#'   \item{IMD_rank}{Index of multiple deprivation rank}
+#'   \item{IMD_decile}{Index of multiple deprivation decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2015_lsoa11_england"
+
+#' Index of Multiple Deprivation (2015) for Local Authorities in England
+#'
+#' A data set containing IMD proportions and extents for Local Authorites
+#' (2021 codes) in England.
+#'
+#' @format A data frame of class "tbl" with 309 rows and 3 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Score}{Population-weighted deprivation score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2015_lad21_england"
+
+#' Index of Multiple Deprivation (2015) for MSOAs in England
+#'
+#' A data set containing IMD proportions and extents for MSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 6,791 rows and 3 variables:
+#' \describe{
+#'   \item{msoa111_code}{MSOA code}
+#'   \item{Score}{Population-weighted deprivation score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2015_msoa11_england"
+
+#' Index of Multiple Deprivation (2010) for LSOAs in England
+#'
+#' A data set containing IMD ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,482 rows and 7 variables:
+#' \describe{
+#'   \item{lsoa01_code}{LSOA (2001) code}
+#'   \item{lad09_code}{Local Authority (2009) code}
+#'   \item{lad09_name}{Local Authority name}
+#'   \item{IMD_score}{Index of multiple deprivation score}
+#'   \item{IMD_rank}{Index of multiple deprivation rank}
+#'   \item{IMD_decile}{Index of multiple deprivation decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2010_lsoa01_england"
+
+#' Index of Multiple Deprivation (2010) for Local Authorities in England
+#'
+#' A data set containing IMD scores, proportions and extents for Local
+#' Authorites (2021 codes) in England.
+#'
+#' @format A data frame of class "tbl" with 310 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2010_lad21_england"
+
+#' Index of Multiple Deprivation (2010) for MSOA in England
+#'
+#' A data set containing IMD scores, proportions and extents for Local MSOAs
+#' in England.
+#'
+#' @format A data frame of class "tbl" with 6,791 rows and 4 variables:
+#' \describe{
+#'   \item{msoa11_code}{MSOA code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2010_msoa11_england"
+
+#' Index of Multiple Deprivation (2019) for Local Authorities (2021 codes) in
+#' England
+#'
+#' A data set containing population-weighted average scores, proportions and
+#' extents for Local Authorities (2021 codes) in England.
+#'
+#' @format A data frame of class "tbl" with 309 rows and 25 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
+#'   \item{Extent}{Extent for overall IMD}
+#'   \item{Income_Score}{Population-weighted average score for Income domain}
+#'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
+#'   \item{Income_Extent}{Extent for Income}
+#'   \item{Employment_Score}{Population-weighted average score for Employment
+#'     domain}
+#'   \item{Employment_Proportion}{Proportion of most deprived areas for
+#'     Employment}
+#'   \item{Employment_Extent}{Extent for Employment}
+#'   \item{Education_Score}{Population-weighted average score for Education
+#'     domain}
+#'   \item{Education_Proportion}{Proportion of most deprived areas for
+#'     Education}
+#'   \item{Education_Extent}{Extent for Education}
+#'   \item{Health_Score}{Population-weighted average score for Health domain}
+#'   \item{Health_Proportion}{Proportion of most deprived areas for Health}
+#'   \item{Health_Extent}{Extent for Health}
+#'   \item{Crime_Score}{Population-weighted average score for Crime domain}
+#'   \item{Crime_Proportion}{Proportion of most deprived areas for Crime}
+#'   \item{Crime_Extent}{Extent for Crime}
+#'   \item{Housing_and_Access_Score}{Population-weighted average score for
+#'     Housing/Access domain}
+#'   \item{Housing_and_Access_Proportion}{Proportion of most deprived areas
+#'     for Housing/Access domain}
+#'   \item{Housing_and_Access_Extent}{Extent for Housing/Access}
+#'   \item{Environment_Score}{Population-weighted average score for Environment
+#'     domain}
+#'   \item{Environment_Proportion}{Proportion of most deprived areas for
+#'     Environment}
+#'   \item{Environment_Extent}{Extent for Environment}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2019_lad21_england"
+
+#' Index of Multiple Deprivation (2007) for LSOAs in England
+#'
+#' A data set containing IMD scores, ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,482 rows and 6 variables:
+#' \describe{
+#'   \item{lsoa01_code}{LSOA (2001) code}
+#'   \item{lad07_code}{Local Authority (2007) code}
+#'   \item{lad07_name}{Local Authority name}
+#'   \item{IMD_score}{Index of multiple deprivation score}
+#'   \item{IMD_rank}{Index of multiple deprivation rank}
+#'   \item{IMD_decile}{Index of multiple deprivation decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2007_lsoa01_england"
+
+#' Index of Multiple Deprivation (2007) for Local Authorities in England
+#'
+#' A data set containing IMD scores, proportions and extents for Local
+#' Authorites (2021 codes) in England.
+#'
+#' @format A data frame of class "tbl" with 309 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2007_lad21_england"
+
+#' Index of Multiple Deprivation (2007) for MSOA in England
+#'
+#' A data set containing IMD scores, proportions and extents for Local MSOAs
+#' in England.
+#'
+#' @format A data frame of class "tbl" with 6,791 rows and 4 variables:
+#' \describe{
+#'   \item{msoa11_code}{MSOA code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2007_msoa11_england"
+
+#' Index of Multiple Deprivation (2004) for LSOAs in England
+#'
+#' A data set containing IMD scores, ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,482 rows and 6 variables:
+#' \describe{
+#'   \item{lsoa01_code}{LSOA (2001) code}
+#'   \item{lad04_code}{Local Authority (2004) code}
+#'   \item{lad04_name}{Local Authority name}
+#'   \item{IMD_score}{Index of multiple deprivation score}
+#'   \item{IMD_rank}{Index of multiple deprivation rank}
+#'   \item{IMD_decile}{Index of multiple deprivation decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2004_lsoa01_england"
+
+#' Index of Multiple Deprivation (2004) for Local Authorities in England
+#'
+#' A data set containing IMD scores, proportions and extents for Local
+#' Authorites (2021 codes) in England.
+#'
+#' @format A data frame of class "tbl" with 309 rows and 4 variables:
+#' \describe{
+#'   \item{ltla21_code}{Local Authority (2021) code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2004_lad21_england"
+
+#' Index of Multiple Deprivation (2004) for MSOA in England
+#'
+#' A data set containing IMD scores, proportions and extents for Local MSOAs
+#' in England.
+#'
+#' @format A data frame of class "tbl" with 6,791 rows and 4 variables:
+#' \describe{
+#'   \item{msoa11_code}{MSOA code}
+#'   \item{Score}{Population-weighted average IMD score}
+#'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
+#'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2004_msoa11_england"
