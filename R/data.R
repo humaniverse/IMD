@@ -15,6 +15,23 @@
 #' @source \url{https://www.nomisweb.co.uk/}
 "census_deprivation_england_wales_msoa21"
 
+#' Census "Households by deprivation" data for MSOAs in England and Wales
+#'
+#' This dataset provides Census 2011 estimates that classify households in
+#' England and Wales by four dimensions of deprivation: Employment, education,
+#' health and disability, and household overcrowding.
+#'
+#' @format A data frame of class "tbl" with 36,005 rows and 4 variables:
+#' \describe{
+#'   \item{msoa11_code}{MSOA 2011 code}
+#'   \item{households_number_deprivation_dimensions}{The number of dimensions of deprivation}
+#'   \item{count}{Number of households}
+#'   \item{proportion}{Proportion of households}
+#'   ...
+#' }
+#' @source \url{https://www.nomisweb.co.uk/}
+"census11_deprivation_england_wales_msoa11"
+
 #' Index of Multiple Deprivation for LSOAs in England
 #'
 #' A data set containing IMD ranks and deciles for Lower Layer Super
