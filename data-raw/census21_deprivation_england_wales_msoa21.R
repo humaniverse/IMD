@@ -1,7 +1,7 @@
 library(tidyverse)
 
 raw <- read_csv(
-  "data-raw/census_deprivation_england_wales_msoa21.csv",
+  "data-raw/census21_deprivation_england_wales_msoa21.csv",
   skip = 7
 ) |>
   slice(-7265:-7269)
