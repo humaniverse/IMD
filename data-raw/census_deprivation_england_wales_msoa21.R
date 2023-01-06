@@ -35,15 +35,15 @@ number_dimensions <- renamed |>
     )
   )
 
-census_deprivation_england_wales_msoa21 <- number_dimensions |>
+census21_deprivation_england_wales_msoa21 <- number_dimensions |>
   mutate(
     type = if_else(
       str_detect(name, "_count$"),
       "count",
       "percent"
     )
-  ) |> 
-  select(-name) |> 
+  ) |>
+  select(-name) |>
   pivot_wider(names_from = type, values_from = value)
 
-usethis::use_data(census_deprivation_england_wales_msoa21, overwrite = TRUE)
+usethis::use_data(census21_deprivation_england_wales_msoa21, overwrite = TRUE)

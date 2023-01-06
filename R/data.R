@@ -13,7 +13,7 @@
 #'   ...
 #' }
 #' @source \url{https://www.nomisweb.co.uk/}
-"census_deprivation_england_wales_msoa21"
+"census21_deprivation_england_wales_msoa21"
 
 #' Census "Households by deprivation" data for MSOAs in England and Wales
 #'
