@@ -9,8 +9,8 @@ A data frame of class "tbl" with 36,320 rows and 4 variables:
 \describe{
   \item{msoa21_code}{MSOA 2021 code}
   \item{households_number_deprivation_dimensions}{The number of dimensions of deprivation}
-  \item{count}{Count of number of households}
-  \item{percent}{Percentage of number of households}
+  \item{count}{Count of households}
+  \item{percent}{Percentage of households}
   ...
 }
 }
