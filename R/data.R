@@ -671,6 +671,54 @@
 #' @source \url{https://ocsi.uk/}
 "cni_england_ward17"
 
+#' Community Needs Index and Left Behind Areas for LSOAs (2021 codes) in England
+#'
+#' A data set containing the Community Needs Index scores and ranks and its
+#' three domains. Also highlights which areas are categorised as 'Left Behind'.
+#'
+#' @format A data frame of class "tbl" with 33,755 rows and 11 variables:
+#' \describe{
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{lsoa21_name}{LSOA name}
+#'   \item{Community Needs Index 2023 Score}{Overall Community Needs Index score (higher score = higher needs)}
+#'   \item{Community Needs Index 2023 Rank}{Overall Community Needs Index rank (1 = highest needs)}
+#'   \item{Civic Assets Domain Score}{Score for the Civic Assets domain (higher score = higher needs)}
+#'   \item{Civic Assets Domain Rank}{Rank for the Civic Assets domain (1 = highest needs)}
+#'   \item{Connectedness Domain Score}{Score for the Connectedness domain (higher score = higher needs)}
+#'   \item{Connectedness Domain Rank}{Rank for the Connectedness domain (1 = highest needs)}
+#'   \item{Active and Engaged Community Domain Score}{Score for the Engaged Community domain (higher score = higher needs)}
+#'   \item{Engaged and Engaged Community Domain Rank}{Rank for the Engaged Community domain (1 = highest needs)}
+#'   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
+#'   ...
+#' }
+#' @source \url{https://ocsi.uk/}
+"cni2023_england_lsoa21"
+
+#' Community Needs Index and Left Behind Areas for Wards (2017 codes) in England
+#'
+#' A data set containing the Community Needs Index scores and ranks and its
+#' three domains. Also highlights which areas are categorised as 'Left Behind'.
+#'
+#' @format A data frame of class "tbl" with 7433 rows and 13 variables:
+#' \describe{
+#'   \item{ward17_code}{Ward code}
+#'   \item{ward17_name}{Ward name}
+#'   \item{lad19_code}{Local Authority code}
+#'   \item{lad19_name}{Local Authority name}
+#'   \item{Civic Assets score}{Score for the Civic Assets domain (higher score = higher needs)}
+#'   \item{Civic Assets rank}{Rank for the Civic Assets domain (1 = highest needs)}
+#'   \item{Connectedness score}{Score for the Connectedness domain (higher score = higher needs)}
+#'   \item{Connectedness rank}{Rank for the Connectedness domain (1 = highest needs)}
+#'   \item{Engaged community score}{Score for the Engaged Community domain (higher score = higher needs)}
+#'   \item{Engaged community rank}{Rank for the Engaged Community domain (1 = highest needs)}
+#'   \item{Community Needs Index score}{Overall Community Needs Index score (higher score = higher needs)}
+#'   \item{Community Needs Index rank}{Overall Community Needs Index rank (1 = highest needs)}
+#'   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
+#'   ...
+#' }
+#' @source \url{https://ocsi.uk/}
+"cni_england_ward17"
+
 #' Community Needs Index and Left Behind Areas for MSOAs (2011 codes) in Wales
 #'
 #' A data set containing the Community Needs Index scores and ranks and its

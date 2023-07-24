@@ -22,14 +22,39 @@ A data frame of class "tbl" with 7433 rows and 13 variables:
   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
   ...
 }
+
+A data frame of class "tbl" with 7433 rows and 13 variables:
+\describe{
+  \item{ward17_code}{Ward code}
+  \item{ward17_name}{Ward name}
+  \item{lad19_code}{Local Authority code}
+  \item{lad19_name}{Local Authority name}
+  \item{Civic Assets score}{Score for the Civic Assets domain (higher score = higher needs)}
+  \item{Civic Assets rank}{Rank for the Civic Assets domain (1 = highest needs)}
+  \item{Connectedness score}{Score for the Connectedness domain (higher score = higher needs)}
+  \item{Connectedness rank}{Rank for the Connectedness domain (1 = highest needs)}
+  \item{Engaged community score}{Score for the Engaged Community domain (higher score = higher needs)}
+  \item{Engaged community rank}{Rank for the Engaged Community domain (1 = highest needs)}
+  \item{Community Needs Index score}{Overall Community Needs Index score (higher score = higher needs)}
+  \item{Community Needs Index rank}{Overall Community Needs Index rank (1 = highest needs)}
+  \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
+  ...
+}
 }
 \source{
+\url{https://ocsi.uk/}
+
 \url{https://ocsi.uk/}
 }
 \usage{
 cni_england_ward17
+
+cni_england_ward17
 }
 \description{
+A data set containing the Community Needs Index scores and ranks and its
+three domains. Also highlights which areas are categorised as 'Left Behind'.
+
 A data set containing the Community Needs Index scores and ranks and its
 three domains. Also highlights which areas are categorised as 'Left Behind'.
 }
