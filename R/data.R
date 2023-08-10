@@ -1,3 +1,6 @@
+#' @importFrom tibble tibble
+NULL
+
 #' Census "Households by deprivation" data for LSOAs in England and Wales
 #'
 #' This dataset provides Census 2021 estimates that classify households in
