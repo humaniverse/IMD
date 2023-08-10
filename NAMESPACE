@@ -2,3 +2,4 @@
 
 export(load_composite_imd)
 importFrom(rlang,.data)
+importFrom(tibble,tibble)
