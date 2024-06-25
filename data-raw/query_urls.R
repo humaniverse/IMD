@@ -19,6 +19,7 @@ query_urls <-
     "imd_england_subdomains", "imd", "Sub-domains of LSOA-level deprivation in England", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833976/File_4_-_IoD2019_Sub-domains_of_Deprivation.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
 
     # Deprivation - historical indices
+    # England
     "imd2000_ward98_england", "imd", "Indices of Deprivation 2000: Ward indices", "https://webarchive.nationalarchives.gov.uk/ukgwa/20100407204456mp_/http://www.communities.gov.uk/documents/citiesandregions/xls/131294.xls", "https://webarchive.nationalarchives.gov.uk/ukgwa/20100407204456/http://www.communities.gov.uk/archived/general-content/communities/indicesofdeprivation/indicesofdeprivation/",
     "imd2004_lsoa01_england", "imd", "SOA Level ID 2004", "https://webarchive.nationalarchives.gov.uk/ukgwa/20100407164233mp_/http://www.communities.gov.uk/documents/communities/zip/soalevelid.zip", "https://webarchive.nationalarchives.gov.uk/ukgwa/20100407164233/http://www.communities.gov.uk/archived/general-content/communities/indicesofdeprivation/216309/",
     "imd2007_lsoa01_england", "imd", "Indices of Multiple Deprivation 2007", "https://webarchive.nationalarchives.gov.uk/ukgwa/20100411141238mp_/http://www.communities.gov.uk/documents/communities/zip/indices2007.zip", "https://webarchive.nationalarchives.gov.uk/ukgwa/20100411141238/http://www.communities.gov.uk/communities/neighbourhoodrenewal/deprivation/deprivation07/",
@@ -26,6 +27,13 @@ query_urls <-
     "imd2010_lad09_england", "imd", "English indices of deprivation 2010: local authority summaries", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/6884/1871689.xls", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2010",
     "imd2015_lsoa11_england", "imd", "File 1: index of multiple deprivation", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/467764/File_1_ID_2015_Index_of_Multiple_Deprivation.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015",
     "imd2015_lsoa11_england_scores", "imd", "File 5: scores for the indices of deprivation", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/467768/File_5_ID_2015_Scores_for_the_Indices_of_Deprivation.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015",
+    # Scotland
+    "imd2016_dz_scotland", "imd", "DZ-level deprivation in Scotland", "https://webarchive.nrscotland.gov.uk/20190708060827mp_/https://www2.gov.scot/Resource/0053/00534450.xlsx", "https://webarchive.nrscotland.gov.uk/20190708060827/https://www2.gov.scot/Topics/Statistics/SIMD",
+    # Wales
+    "imd2011_lsoa_wales", "imd", "LSOA-level deprivation in Wales", "https://www.gov.wales/sites/default/files/statistics-and-research/2019-04/wimd-2011-individual-domain-scores-and-overall-index-scores-for-each-lsoa.xls","https://www.gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2011",
+    # NI
+    "imd2010_soa_ni", "imd", "SOA-level deprivation in NI", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Copy%20of%20NIMDM_2010_Results_SOA_0.xls","https://www.nisra.gov.uk/publications/nothern-ireland-multiple-deprivation-measure-2010-soa-results",
+
 
     # Lookups
     "lsoa_msoa_lad", "lookup", "Output Area to LSOA to MSOA to Local Authority District (December 2017) Lookup with Area Classifications in Great Britain", "https://opendata.arcgis.com/datasets/fe6c55f0924b4734adf1cf7104a0173e_0.csv", "http://geoportal.statistics.gov.uk/datasets/fe6c55f0924b4734adf1cf7104a0173e_0",
