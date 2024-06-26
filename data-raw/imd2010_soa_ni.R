@@ -56,7 +56,7 @@ crime <-
          Crime_rank = `Rank of Crime and Disorder Domain Score (where 1 is most deprived)`)
 
 # Join DF
-imd2019_northern_ireland_soa <- mdm |>
+imd2010_northern_ireland_soa <- mdm |>
   left_join(income) |>
   left_join(employment) |>
   left_join(health) |>
@@ -77,5 +77,5 @@ imd2019_northern_ireland_soa <- mdm |>
 
 
 # Save output to data/ folder
-usethis::use_data(imd2019_northern_ireland_soa, overwrite = TRUE)
-readr::write_csv(imd2019_northern_ireland_soa, "data-raw/imd2019_northern_ireland_soa.csv")
+usethis::use_data(imd2010_northern_ireland_soa, overwrite = TRUE)
+readr::write_csv(imd2010_northern_ireland_soa, "data-raw/imd2010_northern_ireland_soa.csv")
