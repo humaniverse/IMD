@@ -6,7 +6,7 @@ simd_raw <- read_csv("data-raw/simd2012_data_00410767_plusintervals.csv")
 imd2012_scotland_dz <-
   simd_raw |>
   select(
-    dz11_code = `Data Zone`,
+    dz01_code = `Data Zone`,
 
     IMD_rank = `Overall SIMD 2012 Rank`,
     Income_rank = `Income domain 2012 rank`,

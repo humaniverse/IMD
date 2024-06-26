@@ -1,4 +1,4 @@
-dz11_code,IMD_rank,Income_rank,Employment_rank,Health_rank,Education_rank,Housing_rank,Access_rank,Crime_rank,IMD_decile,Income_decile,Employment_decile,Health_decile,Education_decile,Access_decile,Housing_decile,Crime_decile
+dz01_code,IMD_rank,Income_rank,Employment_rank,Health_rank,Education_rank,Housing_rank,Access_rank,Crime_rank,IMD_decile,Income_decile,Employment_decile,Health_decile,Education_decile,Access_decile,Housing_decile,Crime_decile
 S01000001,4726,4102,4518,3490,4795,3929,3420,4839,8,7,7,6,8,6,7,8
 S01000002,6214,6489,6106,5554,5360,5880,2151,6487,10,10,10,9,9,4,10,10
 S01000003,6238,6284,6340,5267,5211,4784,3036,5066,10,10,10,9,9,5,8,8
