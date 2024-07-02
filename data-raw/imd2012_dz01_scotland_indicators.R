@@ -18,7 +18,7 @@ income <- read_excel(tf)
 
 income <-
   income |>
-  rename(dz11_code = `Data Zone`) |>
+  rename(dz01_code = `Data Zone`) |>
   select(-`Local Authority Code`, -`...7`, -Notes)
 
 # ---- Employment ----
@@ -33,7 +33,7 @@ employment <- read_excel(tf)
 
 employment <-
   employment |>
-  rename(dz11_code = `Data Zone`) |>
+  rename(dz01_code = `Data Zone`) |>
   select(-`Local Authority Code`, -`...7`, -Notes)
 
 # ---- Health ----
@@ -48,7 +48,7 @@ health <- read_excel(tf)
 
 health <-
   health |>
-  rename(dz11_code = `Data Zone`) |>
+  rename(dz01_code = `Data Zone`) |>
   select(-`Local Authority Code`, -`...12`, -Notes)
 
 # ---- Education ----
@@ -63,7 +63,7 @@ education <- read_excel(tf)
 
 education <-
   education |>
-  rename(dz11_code = `Data Zone`) |>
+  rename(dz01_code = `Data Zone`) |>
   select(-`Local Authority Code`, -`...10`, -Notes)
 
 # ---- Housing ----
@@ -78,7 +78,7 @@ housing <- read_excel(tf)
 
 housing <-
   housing |>
-  rename(dz11_code = `Data Zone`) |>
+  rename(dz01_code = `Data Zone`) |>
   select(-`Local Authority Code`, -`...8`, -Notes)
 
 # ---- Access ----
@@ -93,7 +93,7 @@ access <- read_excel(tf)
 
 access <-
   access |>
-  rename(dz11_code = `Data Zone`) |>
+  rename(dz01_code = `Data Zone`) |>
   select(-`Local Authority Code`, -`...16`, -Notes)
 
 # ---- Crime ----
@@ -108,7 +108,7 @@ crime <- read_excel(tf)
 
 crime <-
   crime |>
-  rename(dz11_code = `Data Zone`) |>
+  rename(dz01_code = `Data Zone`) |>
   select(-`Local Authority Code`, -`...7`, -Notes)
 
 # ---- Combine indicators ----
