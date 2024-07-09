@@ -1,3 +1,7 @@
+library(tidyverse)
+library(geographr)
+library(sf)
+
 # Load package
 devtools::load_all(".")
 
