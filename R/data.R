@@ -1077,3 +1077,16 @@ NULL
 #' }
 #' @source \url{https://www.gov.uk/}
 "imd2004_msoa11_england"
+
+#' Index of Multiple Deprivation (multiple years) for LAD in UK
+#'
+#' A data set containing IMD deciles for the UK. Each nation deciled separately.
+#'
+#' @format A data frame of class "tbl" with 382 rows and 2 variables:
+#' \describe{
+#'   \item{lad_code}{LAD equivalent code}
+#'   \item{IMD Deciles, 1: most deprived, 10: least deprived}{IMD decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd_uk_lad"
