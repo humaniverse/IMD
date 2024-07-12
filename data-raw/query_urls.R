@@ -49,6 +49,10 @@ query_urls <-
     # NI
     "imd2010_soa_ni", "imd", "SOA-level deprivation in NI", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Copy%20of%20NIMDM_2010_Results_SOA_0.xls","https://www.nisra.gov.uk/publications/nothern-ireland-multiple-deprivation-measure-2010-soa-results",
 
+    # Household-level deprivation from Census(es)
+    "census21_deprivation_ni_lgd14", "imd", "Household deprivation", "https://build.nisra.gov.uk/en/custom/table.csv?d=HOUSEHOLD&v=LGD14&v=HH_DEPRIVATION", "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=LGD14&v=HH_DEPRIVATION",
+    "census21_deprivation_ni_sdz21", "imd", "Household deprivation", "https://build.nisra.gov.uk/en/custom/table.csv?d=HOUSEHOLD&v=SDZ21&v=HH_DEPRIVATION", "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=SDZ21&v=HH_DEPRIVATION",
+
     # Lookups
     "lsoa_msoa_lad", "lookup", "Output Area to LSOA to MSOA to Local Authority District (December 2017) Lookup with Area Classifications in Great Britain", "https://opendata.arcgis.com/datasets/fe6c55f0924b4734adf1cf7104a0173e_0.csv", "http://geoportal.statistics.gov.uk/datasets/fe6c55f0924b4734adf1cf7104a0173e_0",
     "lsoa_ward", "lookup", "Lower Layer Super Output Area (2011) to Ward (2019) Lookup in England and Wales", "https://opendata.arcgis.com/datasets/15299a7b8e6c498d94a08b687c75b73f_0.csv", "https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-area-2011-to-ward-2019-lookup-in-england-and-wales",
