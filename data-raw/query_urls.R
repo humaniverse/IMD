@@ -6,17 +6,23 @@ query_urls <-
     ~data_set, ~type, ~notes, ~query_url, ~source,
 
     # Deprivation - latest indices
+    # England
     "imd_lsoa_england", "imd", "LSOA-level deprivation in England", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/845345/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
+    "imd_lad_england", "imd", "Local Authority deprivation in England", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833995/File_10_-_IoD2019_Local_Authority_District_Summaries__lower-tier__.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
+    "imd_england_subdomains", "imd", "Sub-domains of LSOA-level deprivation in England", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833976/File_4_-_IoD2019_Sub-domains_of_Deprivation.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
+    # Wales
     "imd_lsoa_wales", "imd", "LSOA-level deprivation in Wales", "https://gov.wales/sites/default/files/statistics-and-research/2019-11/welsh-index-multiple-deprivation-2019-index-and-domain-ranks-by-small-area.ods", "https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019",
     "imd_lsoa_wales_scores", "imd", "LSOA-level deprivation scores in Wales", "https://gov.wales/sites/default/files/statistics-and-research/2019-12/wimd-2019-index-and-domain-scores-by-small-area_0.ods", "https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019",
+    # Scotland
     "imd_dz_scotland", "imd", "DZ-level deprivation in Scotland", "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2020/01/scottish-index-of-multiple-deprivation-2020-ranks-and-domain-ranks/documents/scottish-index-of-multiple-deprivation-2020-ranks-and-domain-ranks/scottish-index-of-multiple-deprivation-2020-ranks-and-domain-ranks/govscot%3Adocument/SIMD_2020_Ranks_and_Domain_Ranks.xlsx", "https://simd.scot",
+    "imd2020_dz11_scotland_indicators", "imd", "Scottish Index of Multiple Deprivation 2020v2 - indicators", "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2020/01/scottish-index-of-multiple-deprivation-2020-indicator-data/documents/simd_2020_indicators/simd_2020_indicators/govscot%3Adocument/SIMD%2B2020v2%2B-%2Bindicators.xlsx", "https://www.gov.scot/publications/scottish-index-of-multiple-deprivation-2020v2-indicator-data/",
+    # NI
     "imd_soa_ni", "imd","SOA-level deprivation in Northern Ireland", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/NIMDM17_SOAresults.xls", "https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017",
-    "imd_lad_england", "imd", "Local Authority deprivation in England", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833995/File_10_-_IoD2019_Local_Authority_District_Summaries__lower-tier__.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
+    # UK-wide version
     "imd_uk_e", "imd", "Composite 2020 UK Index of Multiple Deprivation: England", "https://github.com/mysociety/composite_uk_imd/raw/main/data/uk_index/UK_IMD_E.csv", "https://github.com/mysociety/composite_uk_imd",
     "imd_uk_w", "imd", "Composite 2020 UK Index of Multiple Deprivation: Wales", "https://github.com/mysociety/composite_uk_imd/raw/main/data/uk_index/UK_IMD_W.csv", "https://github.com/mysociety/composite_uk_imd",
     "imd_uk_s", "imd", "Composite 2020 UK Index of Multiple Deprivation: Scotland", "https://github.com/mysociety/composite_uk_imd/raw/main/data/uk_index/UK_IMD_S.csv", "https://github.com/mysociety/composite_uk_imd",
     "imd_uk_n", "imd", "Composite 2020 UK Index of Multiple Deprivation: NI", "https://github.com/mysociety/composite_uk_imd/raw/main/data/uk_index/UK_IMD_N.csv", "https://github.com/mysociety/composite_uk_imd",
-    "imd_england_subdomains", "imd", "Sub-domains of LSOA-level deprivation in England", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833976/File_4_-_IoD2019_Sub-domains_of_Deprivation.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
 
     # Deprivation - historical indices
     # England
@@ -29,11 +35,19 @@ query_urls <-
     "imd2015_lsoa11_england_scores", "imd", "File 5: scores for the indices of deprivation", "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/467768/File_5_ID_2015_Scores_for_the_Indices_of_Deprivation.xlsx", "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015",
     # Scotland
     "imd2016_dz_scotland", "imd", "DZ-level deprivation in Scotland", "https://webarchive.nrscotland.gov.uk/20190708060827mp_/https://www2.gov.scot/Resource/0053/00534450.xlsx", "https://webarchive.nrscotland.gov.uk/20190708060827/https://www2.gov.scot/Topics/Statistics/SIMD",
+    "imd2016_dz11_scotland_indicators", "imd", "SIMD16 indicator data", "https://webarchive.nrscotland.gov.uk/20190708060827mp_/https://www2.gov.scot/Resource/0053/00534452.xlsx", "https://webarchive.nrscotland.gov.uk/20190708060827/https://www2.gov.scot/Topics/Statistics/SIMD",
+    "imd2012_dz01_scotland", "imd", "SIMD 2012 Data - Overall rank and domain rank", "https://web.archive.org/web/20130201182625/http://www.scotland.gov.uk/Resource/0041/00410767.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
+    "imd2012_dz01_scotland_indicators_income", "imd", "SIMD 2012 Data - Income domain", "https://web.archive.org/web/20130201182628/http://www.scotland.gov.uk/Resource/0041/00410768.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
+    "imd2012_dz01_scotland_indicators_employment", "imd", "SIMD 2012 Data - Employment domain", "https://web.archive.org/web/20130201182630/http://www.scotland.gov.uk/Resource/0041/00410769.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
+    "imd2012_dz01_scotland_indicators_health", "imd", "SIMD 2012 Data - Health domain", "https://web.archive.org/web/20130201182633/http://www.scotland.gov.uk/Resource/0041/00410770.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
+    "imd2012_dz01_scotland_indicators_education", "imd", "SIMD 2012 Data - Education domain", "https://web.archive.org/web/20130201182635/http://www.scotland.gov.uk/Resource/0041/00413502.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
+    "imd2012_dz01_scotland_indicators_housing", "imd", "SIMD 2012 Data - Housing domain", "https://web.archive.org/web/20130201182637/http://www.scotland.gov.uk/Resource/0041/00410772.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
+    "imd2012_dz01_scotland_indicators_access", "imd", "SIMD 2012 Data - Access domain", "https://web.archive.org/web/20130201182640/http://www.scotland.gov.uk/Resource/0041/00410773.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
+    "imd2012_dz01_scotland_indicators_crime", "imd", "SIMD 2012 Data - Crime domain", "https://web.archive.org/web/20130201182642/http://www.scotland.gov.uk/Resource/0041/00410775.xls", "https://web.archive.org/web/20130204090839/http://www.scotland.gov.uk/Topics/Statistics/SIMD/DataAnalysis/Background-Data-2012",
     # Wales
     "imd2011_lsoa_wales", "imd", "LSOA-level deprivation in Wales", "https://www.gov.wales/sites/default/files/statistics-and-research/2019-04/wimd-2011-individual-domain-scores-and-overall-index-scores-for-each-lsoa.xls","https://www.gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2011",
     # NI
     "imd2010_soa_ni", "imd", "SOA-level deprivation in NI", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Copy%20of%20NIMDM_2010_Results_SOA_0.xls","https://www.nisra.gov.uk/publications/nothern-ireland-multiple-deprivation-measure-2010-soa-results",
-
 
     # Lookups
     "lsoa_msoa_lad", "lookup", "Output Area to LSOA to MSOA to Local Authority District (December 2017) Lookup with Area Classifications in Great Britain", "https://opendata.arcgis.com/datasets/fe6c55f0924b4734adf1cf7104a0173e_0.csv", "http://geoportal.statistics.gov.uk/datasets/fe6c55f0924b4734adf1cf7104a0173e_0",
