@@ -50,6 +50,7 @@ query_urls <-
     "imd2010_soa_ni", "imd", "SOA-level deprivation in NI", "https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/Copy%20of%20NIMDM_2010_Results_SOA_0.xls","https://www.nisra.gov.uk/publications/nothern-ireland-multiple-deprivation-measure-2010-soa-results",
 
     # Household-level deprivation from Census(es)
+    "census11_deprivation_ni_lgd14", "imd", "Household deprivation", "https://www.nisra.gov.uk/system/files/statistics/census-2011-commissioned-table-ct0590ni.xlsx", "https://www.nisra.gov.uk/statistics/2011-census/results/commissioned-output",
     "census21_deprivation_ni_lgd14", "imd", "Household deprivation", "https://build.nisra.gov.uk/en/custom/table.csv?d=HOUSEHOLD&v=LGD14&v=HH_DEPRIVATION", "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=LGD14&v=HH_DEPRIVATION",
     "census21_deprivation_ni_sdz21", "imd", "Household deprivation", "https://build.nisra.gov.uk/en/custom/table.csv?d=HOUSEHOLD&v=SDZ21&v=HH_DEPRIVATION", "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=SDZ21&v=HH_DEPRIVATION",
 
