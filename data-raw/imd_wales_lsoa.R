@@ -1,6 +1,9 @@
+library(tidyverse)
+
 # Load package
 devtools::load_all(".")
 
+# ---- LSOA-level IMD based on ranks ----
 # Set query url
 query_url <-
   query_urls |>
@@ -14,6 +17,8 @@ httr::GET(
 
 imd_wales_lsoa <-
   readODS::read_ods(tf, sheet = "WIMD_2019_ranks", skip = 2)
+
+names(imd_wales_lsoa) <- str_trim(names(imd_wales_lsoa))
 
 imd_wales_lsoa <-
   imd_wales_lsoa |>
@@ -49,6 +54,44 @@ imd_wales_lsoa <-
     Environment_rank = `Physical Environment`,
     Crime_rank = `Community Safety`
   )
+
+# ---- Load IMD scores ----
+query_url <-
+  query_urls |>
+  dplyr::filter(data_set == "imd_lsoa_wales_scores") |>
+  dplyr::pull(query_url)
+
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".ods"))
+)
+
+imd_wales_lsoa_scores <-
+  readODS::read_ods(tf, sheet = "Data", skip = 2)
+
+# Remove trailing spaces
+names(imd_wales_lsoa_scores) <- str_trim(names(imd_wales_lsoa_scores))
+
+imd_wales_lsoa_scores <-
+  imd_wales_lsoa_scores |>
+  tibble::as_tibble() |>
+  dplyr::select(
+    lsoa_code = `LSOA Code`,
+    IMD_score = `WIMD 2019`,
+    Income_score = Income,
+    Employment_score = Employment,
+    Education_score = Education,
+    Health_score = Health,
+    Crime_score = `Community Safety`,
+    Housing_score = Housing,
+    Access_score = `Access to Services`,
+    Environment_score = `Physical Environment`
+  )
+
+# Merge scores
+imd_wales_lsoa <-
+  imd_wales_lsoa |>
+  left_join(imd_wales_lsoa_scores)
 
 # Save output to data/ folder
 usethis::use_data(imd_wales_lsoa, overwrite = TRUE)

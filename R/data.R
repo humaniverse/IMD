@@ -376,7 +376,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://gov.wales/}
-"imd_wales_lad"
+"imd2019_wales_ltla22"
 
 #' Index of Multiple Deprivation for Local Government Districts in Northern
 #' Ireland
