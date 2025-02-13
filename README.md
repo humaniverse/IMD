@@ -15,11 +15,11 @@ status](https://www.r-pkg.org/badges/version/IMD)](https://cran.r-project.org/pa
 The `IMD` package provides easy access to the Indices of Multiple
 Deprivation for the UK’s nations at various geographical levels:
 
--   England: Lower Layer Super Output Area (LSOA), Middle Layer Super
-    Output Area (MSOA), Ward, and Local Authority
--   Wales: LSOA, MSOA, Ward, and Local Authority
--   Scotland: Data Zone, Intermediate Zone, and Council Area
--   Northern Ireland: Super Output Area and Local Government District
+- England: Lower Layer Super Output Area (LSOA), Middle Layer Super
+  Output Area (MSOA), Ward, and Local Authority
+- Wales: LSOA, MSOA, Ward, and Local Authority
+- Scotland: Data Zone, Intermediate Zone, and Council Area
+- Northern Ireland: Super Output Area and Local Government District
 
 ## Installation
 
@@ -45,10 +45,10 @@ nation:
 
 ### England
 
--   Lower Layer Super Output Areas: `IMD::imd_england_lsoa`
--   Middle Layer Super Output Areas: `IMD::imd_england_msoa`
--   Wards: `IMD::imd_england_ward`
--   Local Authorities: `IMD::imd_england_lad`
+- Lower Layer Super Output Areas: `IMD::imd_england_lsoa`
+- Middle Layer Super Output Areas: `IMD::imd_england_msoa`
+- Wards: `IMD::imd_england_ward`
+- Local Authorities: `IMD::imd_england_lad`
 
 **Sub-domains of deprivation** are also available for England. These
 include two in the Education domain (‘children and young people’ and
@@ -56,34 +56,34 @@ include two in the Education domain (‘children and young people’ and
 and ‘wider barriers’), and two for the Living Environment domain
 (‘indoors’ and ‘outdoors’)
 
--   Sub-domains for LSOAs: `IMD::imd_england_lsoa_subdomains`
--   Sub-domains for MSOAs: `IMD::imd_england_msoa_subdomains`
--   Sub-domains for wards: `IMD::imd_england_ward_subdomains`
--   Sub-domains for Local Authorities: `IMD::imd_england_lad_subdomains`
+- Sub-domains for LSOAs: `IMD::imd_england_lsoa_subdomains`
+- Sub-domains for MSOAs: `IMD::imd_england_msoa_subdomains`
+- Sub-domains for wards: `IMD::imd_england_ward_subdomains`
+- Sub-domains for Local Authorities: `IMD::imd_england_lad_subdomains`
 
 **Community Needs Index:** `IMD::cni_england_ward17`
 
 ### Wales
 
--   Lower Layer Super Output Areas: `IMD::imd_wales_lsoa`
--   Middle Layer Super Output Areas: `IMD::imd_wales_msoa`
--   Wards: `IMD::imd_wales_ward`
--   Local Authorities: `IMD::imd_wales_lad`
+- Lower Layer Super Output Areas: `IMD::imd_wales_lsoa`
+- Middle Layer Super Output Areas: `IMD::imd_wales_msoa`
+- Wards: `IMD::imd_wales_ward`
+- Local Authorities: `IMD::imd_wales_lad`
 
 **Community Needs Index:** `IMD::cni_wales_msoa11`
 
 ### Scotland
 
--   Data Zones: `IMD::imd_scotland_dz`
--   Intermediate Zones: `IMD::imd_scotland_iz`
--   Council Areas: `IMD::imd_scotland_lad`
+- Data Zones: `IMD::imd_scotland_dz`
+- Intermediate Zones: `IMD::imd_scotland_iz`
+- Council Areas: `IMD::imd_scotland_lad`
 
 **Community Needs Index:** `IMD::cni_scotland_iz11`
 
 ### Northern Ireland
 
--   Super Output Areas: `IMD::imd_northern_ireland_soa`
--   Local Government Districts: `IMD::imd_northern_ireland_lad`
+- Super Output Areas: `IMD::imd_northern_ireland_soa`
+- Local Government Districts: `IMD::imd_northern_ireland_lad`
 
 **Community Needs Index:** `IMD::cni_northern_ireland_soa11`
 
@@ -119,7 +119,7 @@ library(IMD)
 imd_wales_ward |> 
   dplyr::filter(Extent == 1) |> 
   dplyr::count()
-#> # A tibble: 1 x 1
+#> # A tibble: 1 × 1
 #>       n
 #>   <int>
 #> 1    14
@@ -127,72 +127,8 @@ imd_wales_ward |>
 
 ## Accessing the data for non-R users
 
-We’ve provided `.csv` files for each geographical area in each nation:
-
-### England
-
--   Lower Layer Super Output Areas:
-    [imd_england_lsoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lsoa.csv)
--   Middle Layer Super Output Areas:
-    [imd_england_msoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_msoa.csv)
--   Wards:
-    [imd_england_ward.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_ward.csv)
--   Local Authorities:
-    [imd_england_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lad.csv)
-
-**Sub-domains of deprivation** are also available for England. These
-include two in the Education domain (‘children and young people’ and
-‘adult skills’), two for the Barriers domain (‘geographical barriers’
-and ‘wider barriers’), and two for the Living Environment domain
-(‘indoors’ and ‘outdoors’)
-
--   Sub-domains for LSOAs:
-    [imd_england_lsoa_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lsoa_subdomains.csv)
--   Sub-domains for MSOAs:
-    [imd_england_msoa_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_msoa_subdomains.csv)
--   Sub-domains for wards:
-    [imd_england_ward_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_ward_subdomains.csv)
--   Sub-domains for Local Authorities:
-    [imd_england_lad_subdomains.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_england_lad_subdomains.csv)
-
-**Community Needs Index:**
-[community-needs-index-england.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-england.csv)
-
-### Wales
-
--   Lower Layer Super Output Areas:
-    [imd_wales_lsoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_lsoa.csv)
--   Middle Layer Super Output Areas:
-    [imd_wales_msoa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_msoa.csv)
--   Wards:
-    [imd_wales_ward.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_ward.csv)
--   Local Authorities:
-    [imd_wales_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_wales_lad.csv)
-
-**Community Needs Index:**
-[community-needs-index-wales.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-wales.csv)
-
-### Scotland
-
--   Data Zones:
-    [imd_scotland_dz.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_scotland_dz.csv)
--   Intermediate Zones:
-    [imd_scotland_iz.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_scotland_iz.csv)
--   Council Areas:
-    [imd_scotland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_scotland_lad.csv)
-
-**Community Needs Index:**
-[community-needs-index-scotland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-scotland.csv)
-
-### Northern Ireland
-
--   Super Output Areas:
-    [imd_northern_ireland_soa.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_soa.csv)
--   Local Government Districts:
-    [imd_northern_ireland_lad.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/imd_northern_ireland_lad.csv)
-
-**Community Needs Index:**
-[community-needs-index-northern-ireland.csv](https://github.com/humaniverse/IMD/raw/master/data-raw/community-needs-index-northern-ireland.csv)
+You can download the data from R-Universe via
+<https://humaniverse.r-universe.dev/datasets>
 
 ## Getting help
 
