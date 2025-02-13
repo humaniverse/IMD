@@ -1,6 +1,6 @@
 library(readr)
 library(usethis)
 
-cni_wales_msoa11 <- read_csv("data-raw/community-needs-index-wales.csv")
+cni2022_wales_msoa11 <- read_csv("data-raw/cni2022_wales_msoa11.csv")
 
-use_data(cni_wales_msoa11, overwrite = TRUE)
+use_data(cni2022_wales_msoa11, overwrite = TRUE)

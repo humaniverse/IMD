@@ -3,7 +3,7 @@
 \docType{data}
 \name{cni2023_england_lsoa21}
 \alias{cni2023_england_lsoa21}
-\title{Community Needs Index and Left Behind Areas for LSOAs (2021 codes) in England}
+\title{Community Needs Index (2023) and Left Behind Areas for LSOAs (2021 codes) in England}
 \format{
 A data frame of class "tbl" with 33,755 rows and 11 variables:
 \describe{
