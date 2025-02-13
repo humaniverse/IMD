@@ -10,10 +10,10 @@ query_url <-
 imd_england_lsoa <-
   readr::read_csv(query_url)
 
-imd_england_lsoa <-
+imd2019_england_lsoa11 <-
   imd_england_lsoa |>
   dplyr::select(
-    lsoa_code = `LSOA code (2011)`,
+    lsoa11_code = `LSOA code (2011)`,
 
     IMD_decile = `Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10% of LSOAs)`,
     Income_decile = `Income Decile (where 1 is most deprived 10% of LSOAs)`,
@@ -35,5 +35,4 @@ imd_england_lsoa <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd_england_lsoa, overwrite = TRUE)
-readr::write_csv(imd_england_lsoa, "data-raw/imd_england_lsoa.csv")
+usethis::use_data(imd2019_england_lsoa11, overwrite = TRUE)

@@ -1,21 +1,12 @@
+library(geographr)
+
 # Load package
 devtools::load_all(".")
 
 # ---- LSOA to MSOA lookup ----
-query_url <-
-  query_urls |>
-  dplyr::filter(data_set == "lsoa_msoa_lad") |>
-  dplyr::pull(query_url)
-
 lsoa_msoa <-
-  readr::read_csv(query_url)
-
-lsoa_msoa <-
-  lsoa_msoa |>
-  dplyr::distinct(
-    lsoa_code = LSOA11CD,
-    msoa_code = MSOA11CD
-  )
+  lookup_lsoa11_msoa11 |>
+  select(lsoa11_code, msoa11_code)
 
 # ---- Load English IMD with scores ----
 query_url <-
@@ -30,7 +21,7 @@ eimd_raw <-
 eimd <-
   eimd_raw |>
   dplyr::select(
-    lsoa_code = `LSOA code (2011)`,
+    lsoa11_code = `LSOA code (2011)`,
 
     IMD_score = `Index of Multiple Deprivation (IMD) Score`,
     IMD_rank = `Index of Multiple Deprivation (IMD) Rank (where 1 is most deprived)`,
@@ -67,19 +58,19 @@ eimd <-
     population = `Total population: mid 2015 (excluding prisoners)`
   ) |>
 
-  dplyr::left_join(lsoa_msoa, by = "lsoa_code")
+  dplyr::left_join(lsoa_msoa, by = "lsoa11_code")
 
 # Aggregate into MSOAs
 eimd_msoa <-
-  eimd |> aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa_code, population)
+  eimd |> aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa11_code, population)
 
-eimd_msoa_income   <- eimd |> aggregate_scores(Income_score, Income_rank, Income_decile, msoa_code, population)
-eimd_msoa_employ   <- eimd |> aggregate_scores(Employment_score, Employment_rank, Employment_decile, msoa_code, population)
-eimd_msoa_edu      <- eimd |> aggregate_scores(Education_score, Education_rank, Education_decile, msoa_code, population)
-eimd_msoa_health   <- eimd |> aggregate_scores(Health_score, Health_rank, Health_decile, msoa_code, population)
-eimd_msoa_crime    <- eimd |> aggregate_scores(Crime_score, Crime_rank, Crime_decile, msoa_code, population)
-eimd_msoa_barriers <- eimd |> aggregate_scores(Housing_and_Access_score, Housing_and_Access_rank, Housing_and_Access_decile, msoa_code, population)
-eimd_msoa_env      <- eimd |> aggregate_scores(Environment_score, Environment_rank, Environment_decile, msoa_code, population)
+eimd_msoa_income   <- eimd |> aggregate_scores(Income_score, Income_rank, Income_decile, msoa11_code, population)
+eimd_msoa_employ   <- eimd |> aggregate_scores(Employment_score, Employment_rank, Employment_decile, msoa11_code, population)
+eimd_msoa_edu      <- eimd |> aggregate_scores(Education_score, Education_rank, Education_decile, msoa11_code, population)
+eimd_msoa_health   <- eimd |> aggregate_scores(Health_score, Health_rank, Health_decile, msoa11_code, population)
+eimd_msoa_crime    <- eimd |> aggregate_scores(Crime_score, Crime_rank, Crime_decile, msoa11_code, population)
+eimd_msoa_barriers <- eimd |> aggregate_scores(Housing_and_Access_score, Housing_and_Access_rank, Housing_and_Access_decile, msoa11_code, population)
+eimd_msoa_env      <- eimd |> aggregate_scores(Environment_score, Environment_rank, Environment_decile, msoa11_code, population)
 
 eimd_msoa_income   <- eimd_msoa_income   |> dplyr::rename(Income_Proportion = Proportion, Income_Extent = Extent, Income_Score = Score)
 eimd_msoa_employ   <- eimd_msoa_employ   |> dplyr::rename(Employment_Proportion = Proportion, Employment_Extent = Extent, Employment_Score = Score)
@@ -91,17 +82,16 @@ eimd_msoa_env      <- eimd_msoa_env      |> dplyr::rename(Environment_Proportion
 
 eimd_msoa <-
   eimd_msoa  |>
-  dplyr::left_join(eimd_msoa_income,   by = "msoa_code") |>
-  dplyr::left_join(eimd_msoa_employ,   by = "msoa_code") |>
-  dplyr::left_join(eimd_msoa_edu,      by = "msoa_code") |>
-  dplyr::left_join(eimd_msoa_health,   by = "msoa_code") |>
-  dplyr::left_join(eimd_msoa_crime,    by = "msoa_code") |>
-  dplyr::left_join(eimd_msoa_barriers, by = "msoa_code") |>
-  dplyr::left_join(eimd_msoa_env,      by = "msoa_code")
+  dplyr::left_join(eimd_msoa_income,   by = "msoa11_code") |>
+  dplyr::left_join(eimd_msoa_employ,   by = "msoa11_code") |>
+  dplyr::left_join(eimd_msoa_edu,      by = "msoa11_code") |>
+  dplyr::left_join(eimd_msoa_health,   by = "msoa11_code") |>
+  dplyr::left_join(eimd_msoa_crime,    by = "msoa11_code") |>
+  dplyr::left_join(eimd_msoa_barriers, by = "msoa11_code") |>
+  dplyr::left_join(eimd_msoa_env,      by = "msoa11_code")
 
 # Rename
-imd_england_msoa <- eimd_msoa
+imd2019_england_msoa11 <- eimd_msoa
 
 # Save output to data/ folder
-usethis::use_data(imd_england_msoa, overwrite = TRUE)
-readr::write_csv(imd_england_msoa, "data-raw/imd_england_msoa.csv")
+usethis::use_data(imd2019_england_msoa11, overwrite = TRUE)

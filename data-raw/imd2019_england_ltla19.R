@@ -18,7 +18,7 @@ imd_overall <-
 imd_overall <-
   imd_overall |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Score = `IMD - Average score`,
     Proportion = `IMD - Proportion of LSOAs in most deprived 10% nationally`,
@@ -32,7 +32,7 @@ income <-
 income <-
   income |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Income_Score = `Income - Average score`,
     Income_Proportion = `Income - Proportion of LSOAs in most deprived 10% nationally`
@@ -45,7 +45,7 @@ employment <-
 employment <-
   employment |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Employment_Score = `Employment - Average score`,
     Employment_Proportion = `Employment - Proportion of LSOAs in most deprived 10% nationally`
@@ -58,7 +58,7 @@ education <-
 education <-
   education |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Education_Score = `Education, Skills and Training - Average score`,
     Education_Proportion = `Education, Skills and Training - Proportion of LSOAs in most deprived 10% nationally`
@@ -71,7 +71,7 @@ health <-
 health <-
   health |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Health_Score = `Health Deprivation and Disability - Average score`,
     Health_Proportion = `Health Deprivation and Disability - Proportion of LSOAs in most deprived 10% nationally`
@@ -84,7 +84,7 @@ crime <-
 crime <-
   crime |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Crime_Score = `Crime - Average score`,
     Crime_Proportion = `Crime - Proportion of LSOAs in most deprived 10% nationally`
@@ -97,7 +97,7 @@ barriers <-
 barriers <-
   barriers |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Housing_and_Access_Score = `Barriers to Housing and Services - Average score`,
     Housing_and_Access_Proportion = `Barriers to Housing and Services - Proportion of LSOAs in most deprived 10% nationally`
@@ -110,23 +110,22 @@ env <-
 env <-
   env |>
   dplyr::select(
-    lad_code = `Local Authority District code (2019)`,
+    ltla19_code = `Local Authority District code (2019)`,
 
     Environment_Score = `Living Environment - Average score`,
     Environment_Proportion = `Living Environment - Proportion of LSOAs in most deprived 10% nationally`
   )
 
 # ---- Combine ----
-imd_england_lad <-
+imd2019_england_ltla19 <-
   imd_overall |>
-  dplyr::left_join(income, by = "lad_code") |>
-  dplyr::left_join(employment, by = "lad_code") |>
-  dplyr::left_join(education, by = "lad_code") |>
-  dplyr::left_join(health, by = "lad_code") |>
-  dplyr::left_join(crime, by = "lad_code") |>
-  dplyr::left_join(barriers, by = "lad_code") |>
-  dplyr::left_join(env, by = "lad_code")
+  dplyr::left_join(income, by = "ltla19_code") |>
+  dplyr::left_join(employment, by = "ltla19_code") |>
+  dplyr::left_join(education, by = "ltla19_code") |>
+  dplyr::left_join(health, by = "ltla19_code") |>
+  dplyr::left_join(crime, by = "ltla19_code") |>
+  dplyr::left_join(barriers, by = "ltla19_code") |>
+  dplyr::left_join(env, by = "ltla19_code")
 
 # Save output to data/ folder
-usethis::use_data(imd_england_lad, overwrite = TRUE)
-readr::write_csv(imd_england_lad, "data-raw/imd_england_lad.csv")
+usethis::use_data(imd2019_england_ltla19, overwrite = TRUE)

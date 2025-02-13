@@ -15,10 +15,10 @@ httr::GET(
 imd_england_lsoa_subdomains <-
   readxl::read_excel(tf, sheet = "IoD2019 Sub-domains")
 
-imd_england_lsoa_subdomains <-
+imd2019_england_lsoa11_subdomains <-
   imd_england_lsoa_subdomains |>
   dplyr::select(
-    lsoa_code = `LSOA code (2011)`,
+    lsoa11_code = `LSOA code (2011)`,
 
     # Deciles
     Education_decile = `Education, Skills and Training Decile (where 1 is most deprived 10% of LSOAs)`,
@@ -49,5 +49,4 @@ imd_england_lsoa_subdomains <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd_england_lsoa_subdomains, overwrite = TRUE)
-readr::write_csv(imd_england_lsoa_subdomains, "data-raw/imd_england_lsoa_subdomains.csv")
+usethis::use_data(imd2019_england_lsoa11_subdomains, overwrite = TRUE)
