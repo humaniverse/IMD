@@ -24,7 +24,7 @@ lookup_lsoa01_lsoa11 <-
 # Set query url
 query_url <-
   query_urls |>
-  filter(data_set == "pop04_lsoa") |>
+  filter(data_set == "pop10_lsoa") |>
   pull(query_url)
 
 GET(
@@ -32,21 +32,21 @@ GET(
   write_disk(tf <- tempfile(fileext = ".xls"))
 )
 
-pop_2004 <- read_excel(tf, sheet = "SOA estimates - rounded", skip = 3)
+pop_2010 <- read_excel(tf, sheet = "Mid_2008")
 
-pop_2004 <-
-  pop_2004 |>
+pop_2010 <-
+  pop_2010 |>
   select(
-    lsoa01_code = `Lower SOA code`,
-    total_population = `Total population`
+    lsoa01_code = `LSOA CODE`,
+    total_population = `Total population: mid 2008 (excluding prisoners)`
   )
 
 # ---- Calculate MSOA-level IMD for 2010 ----
 imd_lsoa <-
-  imd2004_lsoa01_england |>
+  imd2010_lsoa01_england |>
 
   left_join(lookup_lsoa01_lsoa11) |>
-  left_join(pop_2004, by = "lsoa01_code") |>
+  left_join(pop_2010, by = "lsoa01_code") |>
   left_join(geographr::lookup_lsoa11_msoa11, by = "lsoa11_code")
 
 # Aggregate into MSOAs
@@ -54,8 +54,7 @@ imd_msoa <-
   imd_lsoa |>
   aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa11_code, total_population)
 
-imd2004_msoa11_england <- imd_msoa
+imd2010_england_msoa11 <- imd_msoa
 
 # Save output to data/ folder
-usethis::use_data(imd2004_msoa11_england, overwrite = TRUE)
-readr::write_csv(imd2004_msoa11_england, "data-raw/imd2004_msoa11_england.csv")
+usethis::use_data(imd2010_england_msoa11, overwrite = TRUE)

@@ -41,21 +41,20 @@ pop_2010 <-
     total_population = `Total population: mid 2008 (excluding prisoners)`
   )
 
-# ---- Calculate MSOA-level IMD for 2010 ----
+# ---- Calculate LA-level IMD for 2010 ----
 imd_lsoa <-
-  imd2010_lsoa01_england |>
+  imd2010_england_lsoa01 |>
 
   left_join(lookup_lsoa01_lsoa11) |>
   left_join(pop_2010, by = "lsoa01_code") |>
-  left_join(geographr::lookup_lsoa11_msoa11, by = "lsoa11_code")
+  left_join(geographr::lookup_lsoa11_ltla21, by = "lsoa11_code")
 
-# Aggregate into MSOAs
-imd_msoa <-
+# Aggregate into LADs
+imd_lad <-
   imd_lsoa |>
-  aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa11_code, total_population)
+  aggregate_scores(IMD_score, IMD_rank, IMD_decile, ltla21_code, total_population)
 
-imd2010_msoa11_england <- imd_msoa
+imd2010_england_ltla21 <- imd_lad
 
 # Save output to data/ folder
-usethis::use_data(imd2010_msoa11_england, overwrite = TRUE)
-readr::write_csv(imd2010_msoa11_england, "data-raw/imd2010_msoa11_england.csv")
+usethis::use_data(imd2010_england_ltla21, overwrite = TRUE)

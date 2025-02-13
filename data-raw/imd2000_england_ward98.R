@@ -20,7 +20,7 @@ GET(
 imd2000 <- read_excel(tf, sheet = "All")
 
 # Calculate deciles
-imd2000_ward98_england <-
+imd2000_england_ward98 <-
   imd2000 |>
   mutate(
     IMD_decile = as.integer(Hmisc::cut2(`Rank of Index of Multiple Deprivation`, g = 10)),
@@ -34,5 +34,4 @@ imd2000_ward98_england <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd2000_ward98_england, overwrite = TRUE)
-readr::write_csv(imd2000_ward98_england, "data-raw/imd2000_ward98_england.csv")
+usethis::use_data(imd2000_england_ward98, overwrite = TRUE)

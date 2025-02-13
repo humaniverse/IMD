@@ -54,8 +54,7 @@ imd_lad <-
   imd_lsoa |>
   aggregate_scores(IMD_score, IMD_rank, IMD_decile, ltla21_code, total_population)
 
-imd2004_lad21_england <- imd_lad
+imd2004_england_ltla21 <- imd_lad
 
 # Save output to data/ folder
-usethis::use_data(imd2004_lad21_england, overwrite = TRUE)
-readr::write_csv(imd2004_lad21_england, "data-raw/imd2004_lad21_england.csv")
+usethis::use_data(imd2004_england_ltla21, overwrite = TRUE)

@@ -735,7 +735,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2000_ward98_england"
+"imd2000_england_ward98"
 
 #' Index of Multiple Deprivation (2015) for LSOAs in England
 #'
@@ -753,7 +753,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2015_lsoa11_england"
+"imd2015_england_lsoa11"
 
 #' Index of Multiple Deprivation (2015) for Local Authorities in England
 #'
@@ -769,7 +769,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2015_lad21_england"
+"imd2015_england_ltla21"
 
 #' Index of Multiple Deprivation (2015) for MSOAs in England
 #'
@@ -784,7 +784,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2015_msoa11_england"
+"imd2015_england_msoa11"
 
 #' Index of Multiple Deprivation (2010) for LSOAs in England
 #'
@@ -801,7 +801,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2010_lsoa01_england"
+"imd2010_england_lsoa01"
 
 #' Index of Multiple Deprivation (2010) for Local Authorities in England
 #'
@@ -817,7 +817,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2010_lad21_england"
+"imd2010_england_ltla21"
 
 #' Index of Multiple Deprivation (2010) for MSOA in England
 #'
@@ -833,7 +833,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2010_msoa11_england"
+"imd2010_england_msoa11"
 
 #' Index of Multiple Deprivation (2019) for Local Authorities (2023 codes) in
 #' England
@@ -896,7 +896,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2007_lsoa01_england"
+"imd2007_england_lsoa01"
 
 #' Index of Multiple Deprivation (2007) for Local Authorities in England
 #'
@@ -912,7 +912,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2007_lad21_england"
+"imd2007_england_ltla21"
 
 #' Index of Multiple Deprivation (2007) for MSOA in England
 #'
@@ -928,7 +928,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2007_msoa11_england"
+"imd2007_england_msoa11"
 
 #' Index of Multiple Deprivation (2004) for LSOAs in England
 #'
@@ -945,7 +945,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2004_lsoa01_england"
+"imd2004_england_lsoa01"
 
 #' Index of Multiple Deprivation (2004) for Local Authorities in England
 #'
@@ -961,7 +961,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2004_lad21_england"
+"imd2004_england_ltla21"
 
 #' Index of Multiple Deprivation (2004) for MSOA in England
 #'
@@ -977,7 +977,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2004_msoa11_england"
+"imd2004_england_msoa11"
 
 #' Index of Multiple Deprivation (multiple years) for LAD in UK
 #'

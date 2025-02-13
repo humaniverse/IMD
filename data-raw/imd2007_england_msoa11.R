@@ -47,15 +47,14 @@ imd_lsoa <-
 
   left_join(lookup_lsoa01_lsoa11) |>
   left_join(pop_2007, by = "lsoa01_code") |>
-  left_join(geographr::lookup_lsoa11_ltla21, by = "lsoa11_code")
+  left_join(geographr::lookup_lsoa11_msoa11, by = "lsoa11_code")
 
-# Aggregate into LADs
-imd_lad <-
+# Aggregate into MSOAs
+imd_msoa <-
   imd_lsoa |>
-  aggregate_scores(IMD_score, IMD_rank, IMD_decile, ltla21_code, total_population)
+  aggregate_scores(IMD_score, IMD_rank, IMD_decile, msoa11_code, total_population)
 
-imd2007_lad21_england <- imd_lad
+imd2007_england_msoa11 <- imd_msoa
 
 # Save output to data/ folder
-usethis::use_data(imd2007_lad21_england, overwrite = TRUE)
-readr::write_csv(imd2007_lad21_england, "data-raw/imd2007_lad21_england.csv")
+usethis::use_data(imd2007_england_msoa11, overwrite = TRUE)

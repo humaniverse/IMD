@@ -10,10 +10,10 @@ query_url <-
   filter(data_set == "imd2010_lsoa01_england") |>
   pull(query_url)
 
-imd2010_lsoa01_england <- read_csv(query_url)
+imd2010_england_lsoa01 <- read_csv(query_url)
 
-imd2010_lsoa01_england <-
-  imd2010_lsoa01_england |>
+imd2010_england_lsoa01 <-
+  imd2010_england_lsoa01 |>
   select(
     lsoa01_code = `LSOA CODE`,
     IMD_rank = `RANK OF IMD SCORE (where 1 is most deprived)`,
@@ -37,5 +37,4 @@ imd2010_lsoa01_england <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd2010_lsoa01_england, overwrite = TRUE)
-readr::write_csv(imd2010_lsoa01_england, "data-raw/imd2010_lsoa01_england.csv")
+usethis::use_data(imd2010_england_lsoa01, overwrite = TRUE)

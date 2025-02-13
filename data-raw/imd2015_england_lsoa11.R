@@ -39,7 +39,7 @@ imd2015_scores <-
   select(`LSOA code (2011)`, `Index of Multiple Deprivation (IMD) Score`)
 
 # ---- Construct IMD ----
-imd2015_lsoa11_england <-
+imd2015_england_lsoa11 <-
   imd2015 |>
   left_join(imd2015_scores) |>
   select(
@@ -53,5 +53,4 @@ imd2015_lsoa11_england <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd2015_lsoa11_england, overwrite = TRUE)
-readr::write_csv(imd2015_lsoa11_england, "data-raw/imd2015_lsoa11_england.csv")
+usethis::use_data(imd2015_england_lsoa11, overwrite = TRUE)
