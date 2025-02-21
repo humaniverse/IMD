@@ -3,7 +3,7 @@ library(tidyverse)
 # Manually downloaded from https://simd.scot, since the historical links no longer work via https://webarchive.nrscotland.gov.uk/
 simd_raw <- read_csv("data-raw/simd2012_data_00410767_plusintervals.csv")
 
-imd2012_scotland_dz <-
+imd2012_scotland_dz01 <-
   simd_raw |>
   select(
     dz01_code = `Data Zone`,
@@ -30,5 +30,4 @@ imd2012_scotland_dz <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd2012_scotland_dz, overwrite = TRUE)
-readr::write_csv(imd2012_scotland_dz, "data-raw/imd2012_scotland_dz.csv")
+usethis::use_data(imd2012_scotland_dz01, overwrite = TRUE)

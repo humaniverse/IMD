@@ -1,6 +1,5 @@
 library(tidyverse)
 library(devtools)
-library(compositr)
 library(readxl)
 
 # Load package
@@ -12,7 +11,10 @@ query_url <-
   filter(data_set == "imd2012_dz01_scotland_indicators_income") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xls")
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xls"))
+)
 
 income <- read_excel(tf)
 
@@ -27,7 +29,10 @@ query_url <-
   filter(data_set == "imd2012_dz01_scotland_indicators_employment") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xls")
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xls"))
+)
 
 employment <- read_excel(tf)
 
@@ -42,7 +47,10 @@ query_url <-
   filter(data_set == "imd2012_dz01_scotland_indicators_health") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xls")
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xls"))
+)
 
 health <- read_excel(tf)
 
@@ -57,7 +65,10 @@ query_url <-
   filter(data_set == "imd2012_dz01_scotland_indicators_education") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xls")
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xls"))
+)
 
 education <- read_excel(tf)
 
@@ -72,7 +83,10 @@ query_url <-
   filter(data_set == "imd2012_dz01_scotland_indicators_housing") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xls")
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xls"))
+)
 
 housing <- read_excel(tf)
 
@@ -87,7 +101,10 @@ query_url <-
   filter(data_set == "imd2012_dz01_scotland_indicators_access") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xls")
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xls"))
+)
 
 access <- read_excel(tf)
 
@@ -102,7 +119,10 @@ query_url <-
   filter(data_set == "imd2012_dz01_scotland_indicators_crime") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xls")
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xls"))
+)
 
 crime <- read_excel(tf)
 
@@ -112,7 +132,7 @@ crime <-
   select(-`Local Authority Code`, -`...7`, -Notes)
 
 # ---- Combine indicators ----
-imd2012_dz01_scotland_indicators <-
+imd2012_scotland_dz01_indicators <-
   income |>
   left_join(employment) |>
   left_join(health) |>
@@ -122,5 +142,4 @@ imd2012_dz01_scotland_indicators <-
   left_join(crime)
 
 # Save output to data/ folder
-usethis::use_data(imd2012_dz01_scotland_indicators, overwrite = TRUE)
-readr::write_csv(imd2012_dz01_scotland_indicators, "data-raw/imd2012_dz01_scotland_indicators.csv")
+usethis::use_data(imd2012_scotland_dz01_indicators, overwrite = TRUE)

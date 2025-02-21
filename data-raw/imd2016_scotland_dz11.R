@@ -15,7 +15,7 @@ httr::GET(
 imd2016_scotland_dz_raw <-
   readxl::read_excel(tf, sheet = 2)
 
-imd2016_scotland_dz <-
+imd2016_scotland_dz11 <-
   imd2016_scotland_dz_raw |>
 
   dplyr::mutate(
@@ -30,7 +30,7 @@ imd2016_scotland_dz <-
   ) |>
 
   dplyr::select(
-    dz_code = Data_Zone,
+    dz11_code = Data_Zone,
 
     dplyr::ends_with("_decile"),
 
@@ -45,5 +45,4 @@ imd2016_scotland_dz <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd2016_scotland_dz, overwrite = TRUE)
-readr::write_csv(imd2016_scotland_dz, "data-raw/imd2016_scotland_dz.csv")
+usethis::use_data(imd2016_scotland_dz11, overwrite = TRUE)
