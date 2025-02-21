@@ -163,7 +163,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 890 rows and 17 variables:
 #' \describe{
-#'   \item{soa_code}{Super Output Area code}
+#'   \item{soa01_code}{Super Output Area code}
 #'   \item{IMD_decile}{IMD decile}
 #'   \item{Income_decile}{Income domain decile}
 #'   \item{Employment_decile}{Employment domain decile}
@@ -183,7 +183,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.nisra.gov.uk/}
-"imd_northern_ireland_soa"
+"imd2017_northern_ireland_soa01"
 
 #' Index of Multiple Deprivation for MSOAs (2011) in England
 #'
@@ -386,7 +386,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 11 rows and 25 variables:
 #' \describe{
-#'   \item{lad_code}{LAD code}
+#'   \item{lgd14_code}{Local Government District code}
 #'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
 #'   \item{Extent}{Extent for overall IMD}
 #'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
@@ -410,7 +410,11 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.nisra.gov.uk/}
-"imd_northern_ireland_lad"
+"imd2017_northern_ireland_lgd14"
+
+#' Northern Ireland Multiple Deprivation Measure 2017 underlying indicators
+#' @source \url{https://www.nisra.gov.uk/}
+"imd2017_northern_ireland_soa01_indicators"
 
 #' Index of Multiple Deprivation (2019) for Local Authorities (2019) in England
 #'

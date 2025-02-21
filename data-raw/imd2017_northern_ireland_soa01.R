@@ -15,7 +15,7 @@ httr::GET(
 imd_northern_ireland_soa <-
   readxl::read_excel(tf, sheet = "MDM")
 
-imd_northern_ireland_soa <-
+imd2017_northern_ireland_soa01 <-
   imd_northern_ireland_soa |>
 
   dplyr::mutate(
@@ -30,7 +30,7 @@ imd_northern_ireland_soa <-
   ) %>%
 
   dplyr::select(
-    soa_code = SOA2001,
+    soa01_code = SOA2001,
 
     dplyr::ends_with("_decile"),
 
@@ -45,5 +45,4 @@ imd_northern_ireland_soa <-
   )
 
 # Save output to data/ folder
-usethis::use_data(imd_northern_ireland_soa, overwrite = TRUE)
-readr::write_csv(imd_northern_ireland_soa, "data-raw/imd_northern_ireland_soa.csv")
+usethis::use_data(imd2017_northern_ireland_soa01, overwrite = TRUE)
