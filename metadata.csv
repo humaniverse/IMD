@@ -1,40 +1,40 @@
-﻿Nation,Domain,Subdomain,Indicator,Year,Earliest year
-England,Income,,Adults and children in Income Support families,2015,2015
-England,Income,,Adults and children in income-based Jobseeker’s Allowance families,2015,2015
-England,Income,,Adults and children in income-based Employment and Support Allowance families,2015,2015
-England,Income,,Adults and children in Pension Credit (Guarantee) families,2015,2015
-England,Income,,"Adults and children in Universal Credit households in the ‘Searching for work’, ‘No work requirements’, ‘Planning for work’, ‘Working – with requirements’ and ‘Preparing for work' conditionality groups",2015,2015
-England,Income,,Adults and children in Working Tax Credit and Child Tax Credit families,2015,2015
-England,Income,,"Asylum seekers in England in receipt of subsistence support, accommodation support, or both",2015,2015
-England,Employment,,Claimants of Jobseeker’s Allowance,2015-2016,2015
-England,Employment,,Claimants of Employment and Support Allowance,2015-2016,2015
-England,Employment,,Claimants of Incapacity Benefit,2015-2016,2015
-England,Employment,,Claimants of Severe Disablement Allowance,2015-2016,2015
-England,Employment,,Claimants of Carer’s Allowance,2015-2016,2015
-England,Employment,,Claimants of Universal Credit in the 'Searching for work' and ‘No work requirements’ conditionality groups,2015-2016,2015
-England,"Education, Skills and Training",Children and Young People,Key Stage 2 attainment,2014/15 - 2016/17,2014
-England,"Education, Skills and Training",Children and Young People,Key Stage 4 attainment,2014/15 - 2016/17,2014
-England,"Education, Skills and Training",Children and Young People,Secondary school absence,2014/15 - 2016/17,2014
-England,"Education, Skills and Training",Children and Young People,Staying on in education post 16,2010-2012,2010
-England,"Education, Skills and Training",Children and Young People,Entry to higher education,2012/13 - 2016/17,2012
-England,"Education, Skills and Training",Adults,Adult skills,2011,2011
-England,"Education, Skills and Training",Adults,English language proficiency,2011,2011
-England,Health Deprivation and Disability,,Years of potential life lost,2013-2017,2013
-England,Health Deprivation and Disability,,Comparative illness and disability ratio,2016,2016
-England,Health Deprivation and Disability,,Acute morbidity,2015/16 - 2016/17,2015
-England,Health Deprivation and Disability,,Mood and anxiety disorders,2013 - 2017,2013
-England,Crime,,"Rate of violence per 1,000 at-risk population",2016/17 - 2017/18,2016
-England,Crime,,"Rate of burglary per 1,000 at-risk properties",2016/17 - 2017/18,2016
-England,Crime,,"Rate of theft per 1,000 at-risk population",2016/17 - 2017/18,2016
-England,Crime,,"Rate of criminal damage per 1,000 at-risk population",2016/17 - 2017/18,2016
-England,Barriers to Housing and Services,Geographical Barriers,Road distance to a post office,2018,2018
-England,Barriers to Housing and Services,Geographical Barriers,Road distance to a primary school,2019,2019
-England,Barriers to Housing and Services,Geographical Barriers,Road distance to a general store or supermarket,2018,2018
-England,Barriers to Housing and Services,Geographical Barriers,Road distance to a GP surgery,2019,2019
-England,Barriers to Housing and Services,Wider Barriers,Household overcrowding,2011,2011
-England,Barriers to Housing and Services,Wider Barriers,Homelessness,2015/16 - 2017/18,2015
-England,Barriers to Housing and Services,Wider Barriers,Housing affordability,2016,2016
-England,Living Environment,Indoors,Houses without central heating,2011,2011
-England,Living Environment,Indoors,Housing in poor condition,2015,2015
-England,Living Environment,Outdoors,Air quality,2016,2016
-England,Living Environment,Outdoors,Road traffic accidents,2015 - 2017,2015
+﻿Nation,Domain,Subdomain,Indicator,Indicator (short),Year,Earliest year
+England,Income,,Adults and children in Income Support families,Families receiving Income Support,2015,2015
+England,Income,,Adults and children in income-based Jobseeker’s Allowance families,Families receiving Jobseeker’s Allowance,2015,2015
+England,Income,,Adults and children in income-based Employment and Support Allowance families,Families receiving Employment and Support Allowance,2015,2015
+England,Income,,Adults and children in Pension Credit (Guarantee) families,Families receiving Pension Credit,2015,2015
+England,Income,,"Adults and children in Universal Credit households in the ‘Searching for work’, ‘No work requirements’, ‘Planning for work’, ‘Working – with requirements’ and ‘Preparing for work' conditionality groups",Families receiving Universal Credit,2015,2015
+England,Income,,Adults and children in Working Tax Credit and Child Tax Credit families,Families receiving Working/Child Tax Credits,2015,2015
+England,Income,,"Asylum seekers in England in receipt of subsistence support, accommodation support, or both",Asylum seekers receiving support,2015,2015
+England,Employment,,Claimants of Jobseeker’s Allowance,Claimants of Jobseeker’s Allowance,2015-2016,2015
+England,Employment,,Claimants of Employment and Support Allowance,Claimants of Employment and Support Allowance,2015-2016,2015
+England,Employment,,Claimants of Incapacity Benefit,Claimants of Incapacity Benefit,2015-2016,2015
+England,Employment,,Claimants of Severe Disablement Allowance,Claimants of Severe Disablement Allowance,2015-2016,2015
+England,Employment,,Claimants of Carer’s Allowance,Claimants of Carer’s Allowance,2015-2016,2015
+England,Employment,,Claimants of Universal Credit in the 'Searching for work' and ‘No work requirements’ conditionality groups,Claimants of Universal Credit,2015-2016,2015
+England,"Education, Skills and Training",Children and Young People,Key Stage 2 attainment,Key Stage 2 attainment,2014/15 - 2016/17,2014
+England,"Education, Skills and Training",Children and Young People,Key Stage 4 attainment,Key Stage 4 attainment,2014/15 - 2016/17,2014
+England,"Education, Skills and Training",Children and Young People,Secondary school absence,Secondary school absence,2014/15 - 2016/17,2014
+England,"Education, Skills and Training",Children and Young People,Staying on in education post 16,Staying on in education post 16,2010-2012,2010
+England,"Education, Skills and Training",Children and Young People,Entry to higher education,Entry to higher education,2012/13 - 2016/17,2012
+England,"Education, Skills and Training",Adults,Adult skills,Adult skills,2011,2011
+England,"Education, Skills and Training",Adults,English language proficiency,English language proficiency,2011,2011
+England,Health Deprivation and Disability,,Years of potential life lost,Years of potential life lost,2013-2017,2013
+England,Health Deprivation and Disability,,Comparative illness and disability ratio,Comparative illness and disability ratio,2016,2016
+England,Health Deprivation and Disability,,Acute morbidity,Acute morbidity,2015/16 - 2016/17,2015
+England,Health Deprivation and Disability,,Mood and anxiety disorders,Mood and anxiety disorders,2013 - 2017,2013
+England,Crime,,"Rate of violence per 1,000 at-risk population","Rate of violence per 1,000 at-risk population",2016/17 - 2017/18,2016
+England,Crime,,"Rate of burglary per 1,000 at-risk properties","Rate of burglary per 1,000 at-risk properties",2016/17 - 2017/18,2016
+England,Crime,,"Rate of theft per 1,000 at-risk population","Rate of theft per 1,000 at-risk population",2016/17 - 2017/18,2016
+England,Crime,,"Rate of criminal damage per 1,000 at-risk population","Rate of criminal damage per 1,000 at-risk population",2016/17 - 2017/18,2016
+England,Barriers to Housing and Services,Geographical Barriers,Road distance to a post office,Road distance to a post office,2018,2018
+England,Barriers to Housing and Services,Geographical Barriers,Road distance to a primary school,Road distance to a primary school,2019,2019
+England,Barriers to Housing and Services,Geographical Barriers,Road distance to a general store or supermarket,Road distance to a general store or supermarket,2018,2018
+England,Barriers to Housing and Services,Geographical Barriers,Road distance to a GP surgery,Road distance to a GP surgery,2019,2019
+England,Barriers to Housing and Services,Wider Barriers,Household overcrowding,Household overcrowding,2011,2011
+England,Barriers to Housing and Services,Wider Barriers,Homelessness,Homelessness,2015/16 - 2017/18,2015
+England,Barriers to Housing and Services,Wider Barriers,Housing affordability,Housing affordability,2016,2016
+England,Living Environment,Indoors,Houses without central heating,Houses without central heating,2011,2011
+England,Living Environment,Indoors,Housing in poor condition,Housing in poor condition,2015,2015
+England,Living Environment,Outdoors,Air quality,Air quality,2016,2016
+England,Living Environment,Outdoors,Road traffic accidents,Road traffic accidents,2015 - 2017,2015
