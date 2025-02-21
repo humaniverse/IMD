@@ -7,18 +7,9 @@ library(sf)
 load_all(".")
 
 # ---- Fetch LSOA (2001) to LSOA (2011) lookup ----
-# Set query url
-query_url <-
-  query_urls |>
-  filter(data_set == "lsoa01_lsoa11") |>
-  pull(query_url)
-
-lookup_lsoa01_lsoa11 <- read_sf(query_url)
-
 lookup_lsoa01_lsoa11 <-
   lookup_lsoa01_lsoa11 |>
-  st_drop_geometry() |>
-  select(lsoa01_code = LSOA01CD, lsoa11_code = LSOA11CD)
+  select(lsoa01_code, lsoa11_code)
 
 # ---- Fetch population denominators ----
 # Set query url
@@ -43,7 +34,7 @@ pop_2007 <-
 
 # ---- Calculate MSOA-level IMD for 2010 ----
 imd_lsoa <-
-  imd2004_lsoa01_england |>
+  imd2004_england_lsoa01 |>
 
   left_join(lookup_lsoa01_lsoa11) |>
   left_join(pop_2004, by = "lsoa01_code") |>

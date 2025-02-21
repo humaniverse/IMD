@@ -16,6 +16,16 @@ imd2010_england_lsoa01 <-
   imd2010_england_lsoa01 |>
   select(
     lsoa01_code = `LSOA CODE`,
+
+    IMD_score = `IMD SCORE`,
+    Income_score = `INCOME SCORE`,
+    Employment_score = `EMPLOYMENT SCORE`,
+    Health_score = `HEALTH DEPRIVATION AND DISABILITY SCORE`,
+    Education_score = `EDUCATION SKILLS AND TRAINING SCORE`,
+    Housing_and_Access_score = `BARRIERS TO HOUSING AND SERVICES SCORE`,
+    Crime_score = `CRIME AND DISORDER SCORE`,
+    Environment_score = `LIVING ENVIRONMENT SCORE`,
+
     IMD_rank = `RANK OF IMD SCORE (where 1 is most deprived)`,
     Income_rank = `RANK OF INCOME SCORE (where 1 is most deprived)`,
     Employment_rank = `RANK OF EMPLOYMENT SCORE (where 1 is most deprived)`,

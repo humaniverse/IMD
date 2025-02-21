@@ -790,14 +790,33 @@ NULL
 #'
 #' A data set containing IMD ranks and deciles for LSOAs in England.
 #'
-#' @format A data frame of class "tbl" with 32,482 rows and 7 variables:
+#' @format A data frame of class "tbl" with 32,482 rows and 25 variables:
 #' \describe{
 #'   \item{lsoa01_code}{LSOA (2001) code}
-#'   \item{lad09_code}{Local Authority (2009) code}
-#'   \item{lad09_name}{Local Authority name}
 #'   \item{IMD_score}{Index of multiple deprivation score}
+#'   \item{Income_score}{Income domain score}
+#'   \item{Employment_score}{Employment domain score}
+#'   \item{Health_score}{Health and Disability domain score}
+#'   \item{Education_score}{Education domain score}
+#'   \item{Housing_and_Access_score}{Barriers to housing and services score}
+#'   \item{Crime_score}{Crime domain score}
+#'   \item{Environment_score}{Living environment score}
 #'   \item{IMD_rank}{Index of multiple deprivation rank}
+#'   \item{Income_rank}{Income domain rank}
+#'   \item{Employment_rank}{Employment domain rank}
+#'   \item{Health_rank}{Health and Disability domain rank}
+#'   \item{Education_rank}{Education domain rank}
+#'   \item{Housing_and_Access_rank}{Barriers to housing and services rank}
+#'   \item{Crime_rank}{Crime domain rank}
+#'   \item{Environment_rank}{Living environment rank}
 #'   \item{IMD_decile}{Index of multiple deprivation decile}
+#'   \item{Income_decile}{Income domain decile}
+#'   \item{Employment_decile}{Employment domain decile}
+#'   \item{Health_decile}{Health and Disability domain decile}
+#'   \item{Education_decile}{Education domain decile}
+#'   \item{Housing_and_Access_decile}{Barriers to housing and services decile}
+#'   \item{Crime_decile}{Crime domain decile}
+#'   \item{Environment_decile}{Living environment decile}
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
