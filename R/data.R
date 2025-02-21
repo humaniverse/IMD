@@ -135,7 +135,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 6,976 rows and 17 variables:
 #' \describe{
-#'   \item{dz_code}{Data Zone code}
+#'   \item{dz11_code}{Data Zone code}
 #'   \item{IMD_decile}{IMD decile}
 #'   \item{Income_decile}{Income domain decile}
 #'   \item{Employment_decile}{Employment domain decile}
@@ -155,7 +155,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.scot/}
-"imd_scotland_dz"
+"imd2020_scotland_dz11"
 
 #' Index of Multiple Deprivation for Super Output Areas in Northern Ireland
 #'
@@ -282,7 +282,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 1,279 rows and 17 variables:
 #' \describe{
-#'   \item{iz_code}{Intermediate Zone code}
+#'   \item{iz11_code}{Intermediate Zone code}
 #'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
 #'   \item{Extent}{Extent for overall IMD}
 #'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
@@ -306,7 +306,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.scot/}
-"imd_scotland_iz"
+"imd2020_scotland_iz11"
 
 #' Index of Multiple Deprivation for Council Areas in Scotland
 #'
@@ -316,7 +316,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 32 rows and 17 variables:
 #' \describe{
-#'   \item{lad_code}{Local Authority code}
+#'   \item{ltla24_code}{Local Authority code}
 #'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
 #'   \item{Extent}{Extent for overall IMD}
 #'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
@@ -340,7 +340,11 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.scot/}
-"imd_scotland_lad"
+"imd2020_scotland_ltla24"
+
+#' Underlying indicators for Scottish Index of Multiple Deprivation 2020
+#' @source \url{https://www.gov.scot/}
+"imd2020_scotland_dz11_indicators"
 
 #' Index of Multiple Deprivation for Local Authorities in Wales
 #'

@@ -30,7 +30,7 @@ imd_scotland_dz <-
   ) |>
 
   dplyr::select(
-    dz_code = Data_Zone,
+    dz11_code = Data_Zone,
 
     dplyr::ends_with("_decile"),
 
@@ -44,6 +44,7 @@ imd_scotland_dz <-
     Crime_rank = SIMD2020_Crime_Domain_Rank
   )
 
+imd2020_scotland_dz11 <- imd_scotland_dz
+
 # Save output to data/ folder
-usethis::use_data(imd_scotland_dz, overwrite = TRUE)
-readr::write_csv(imd_scotland_dz, "data-raw/imd_scotland_dz.csv")
+usethis::use_data(imd2020_scotland_dz11, overwrite = TRUE)
