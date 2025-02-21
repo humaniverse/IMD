@@ -9,7 +9,7 @@ library(compositr)
 
 devtools::load_all()
 
-cni2023_england_lsoa21 <- read_csv("data-raw/community-needs-index-england-2023.csv")
+cni2023_england_lsoa21 <- read_csv("data-raw/cni2023_england_lsoa21.csv")
 
 cni2023_england_lsoa21 <-
   cni2023_england_lsoa21 |>

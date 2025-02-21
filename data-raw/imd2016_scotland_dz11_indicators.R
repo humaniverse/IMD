@@ -1,0 +1,28 @@
+library(tidyverse)
+library(devtools)
+library(compositr)
+library(readxl)
+
+# Load package
+load_all(".")
+
+# Set query url
+query_url <-
+  query_urls |>
+  filter(data_set == "imd2016_dz11_scotland_indicators") |>
+  pull(query_url)
+
+httr::GET(
+  query_url,
+  httr::write_disk(tf <- tempfile(fileext = ".xlsx"))
+)
+
+imd2016_scotland_dz11_indicators <- read_excel(tf, sheet = "Data")
+
+imd2016_scotland_dz11_indicators <-
+  imd2016_scotland_dz11_indicators |>
+  rename(dz11_code = Data_Zone) |>
+  select(-Intermediate_Zone, -Council_area)
+
+# Save output to data/ folder
+usethis::use_data(imd2016_scotland_dz11_indicators, overwrite = TRUE)
