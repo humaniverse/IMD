@@ -105,7 +105,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 1,909 rows and 19 variables:
 #' \describe{
-#'   \item{lsoa_code}{LSOA code}
+#'   \item{lsoa11_code}{LSOA code}
 #'   \item{IMD_decile}{IMD decile}
 #'   \item{Income_decile}{Income domain decile}
 #'   \item{Employment_decile}{Employment domain decile}
@@ -127,7 +127,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://gov.wales/}
-"imd_wales_lsoa"
+"imd2019_wales_lsoa11"
 
 #' Index of Multiple Deprivation for Data Zones in Scotland
 #'
@@ -237,7 +237,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 410 rows and 28 variables:
 #' \describe{
-#'   \item{msoa_code}{MSOA code}
+#'   \item{msoa11_code}{MSOA code}
 #'   \item{Score}{Population-weighted average IMD score}
 #'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
 #'   \item{Extent}{Extent for overall IMD}
@@ -273,7 +273,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://gov.wales/}
-"imd_wales_msoa"
+"imd2019_wales_msoa11"
 
 #' Index of Multiple Deprivation for IZs in Scotland
 #'
@@ -457,42 +457,6 @@ NULL
 #' }
 #' @source \url{https://www.gov.uk/}
 "imd2019_england_ltla19"
-
-#' Index of Multiple Deprivation for Wards in Wales
-#'
-#' A data set containing population-weighted average scores, proportions and
-#' extents for wards in Wales Note that IMD scores for Wales are not available.
-#'
-#' @format A data frame of class "tbl" with 843 rows and 19 variables:
-#' \describe{
-#'   \item{ward_code}{Ward code}
-#'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
-#'   \item{Extent}{Extent for overall IMD}
-#'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
-#'   \item{Income_Extent}{Extent for Income}
-#'   \item{Employment_Proportion}{Proportion of most deprived areas for
-#'     Employment}
-#'   \item{Employment_Extent}{Extent for Employment}
-#'   \item{Education_Proportion}{Proportion of most deprived areas for
-#'     Education}
-#'   \item{Education_Extent}{Extent for Education}
-#'   \item{Health_Proportion}{Proportion of most deprived areas for Health}
-#'   \item{Health_Extent}{Extent for Health}
-#'   \item{Crime_Proportion}{Proportion of most deprived areas for Crime}
-#'   \item{Crime_Extent}{Extent for Crime}
-#'   \item{Housing_Proportion}{Proportion of most deprived areas
-#'     for Housing domain}
-#'   \item{Housing_Extent}{Extent for Housing}
-#'   \item{Access_Proportion}{Proportion of most deprived areas
-#'     for Access domain}
-#'   \item{Access_Extent}{Extent for Access}
-#'   \item{Environment_Proportion}{Proportion of most deprived areas for
-#'     Environment}
-#'   \item{Environment_Extent}{Extent for Environment}
-#'   ...
-#' }
-#' @source \url{https://gov.wales/}
-"imd_wales_ward"
 
 #' Sub-domains of deprivation for LSOAs (2011) in England
 #'

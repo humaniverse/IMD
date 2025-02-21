@@ -40,7 +40,7 @@ imd_wales_lsoa <-
   ) |>
 
   dplyr::select(
-    lsoa_code = `LSOA Code`,
+    lsoa11_code = `LSOA code`,
 
     dplyr::ends_with("_decile"),
 
@@ -67,7 +67,7 @@ httr::GET(
 )
 
 imd_wales_lsoa_scores <-
-  readODS::read_ods(tf, sheet = "Data", skip = 2)
+  readODS::read_ods(tf, sheet = "Data", skip = 3)
 
 # Remove trailing spaces
 names(imd_wales_lsoa_scores) <- str_trim(names(imd_wales_lsoa_scores))
@@ -76,7 +76,7 @@ imd_wales_lsoa_scores <-
   imd_wales_lsoa_scores |>
   tibble::as_tibble() |>
   dplyr::select(
-    lsoa_code = `LSOA Code`,
+    lsoa11_code = `LSOA code`,
     IMD_score = `WIMD 2019`,
     Income_score = Income,
     Employment_score = Employment,
@@ -89,10 +89,9 @@ imd_wales_lsoa_scores <-
   )
 
 # Merge scores
-imd_wales_lsoa <-
+imd2019_wales_lsoa11 <-
   imd_wales_lsoa |>
   left_join(imd_wales_lsoa_scores)
 
 # Save output to data/ folder
-usethis::use_data(imd_wales_lsoa, overwrite = TRUE)
-readr::write_csv(imd_wales_lsoa, "data-raw/imd_wales_lsoa.csv")
+usethis::use_data(imd2019_wales_lsoa11, overwrite = TRUE)

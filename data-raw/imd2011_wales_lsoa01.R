@@ -17,7 +17,7 @@ httr::GET(
 imd2011_wales_lsoa_raw <-
   readxl::read_excel(tf, sheet = "WIMD 2011 scores")
 
-imd2011_wales_lsoa <-
+imd2011_wales_lsoa01 <-
   imd2011_wales_lsoa_raw |>
 
   # Remove final column which is `NA`
@@ -49,11 +49,10 @@ imd2011_wales_lsoa <-
   ) |>
 
   dplyr::select(
-    lsoa_code = `LSOA Code`,
+    lsoa01_code = `LSOA Code`,
     dplyr::ends_with("_rank"),
     dplyr::ends_with("_decile")
   )
 
 # Save output to data/ folder
-usethis::use_data(imd2011_wales_lsoa, overwrite = TRUE)
-readr::write_csv(imd2011_wales_lsoa, "data-raw/imd2011_wales_lsoa.csv")
+usethis::use_data(imd2011_wales_lsoa01, overwrite = TRUE)
