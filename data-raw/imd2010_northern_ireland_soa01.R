@@ -17,46 +17,46 @@ httr::GET(
 # Process each sheet separately
 mdm <-
   readxl::read_excel(tf, sheet = "MDM 2010") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          IMD_rank = `Rank of Multiple Deprivation Measure Score (where 1 is most deprived)`)
 
 income <-
   readxl::read_excel(tf, sheet = "Income Deprivation") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          Income_rank = `Rank of Income Domain Score (where 1 is most deprived)`)
 
 employment <-
   readxl::read_excel(tf, sheet = "Employment Deprivation") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          Employment_rank = `Rank of Employment Domain Score (where 1 is most deprived)`)
 
 health <-
   readxl::read_excel(tf, sheet = "Health Deprivation & Disability") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          Health_rank = `Rank of Health Deprivation and Disability Domain Score (where 1 is most deprived)`)
 
 education <-
   readxl::read_excel(tf, sheet = "Education, Skills and Training") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          Education_rank = `Rank of Education, Skills and Training Domain Score (where 1 is most deprived)`)
 
 access <-
   readxl::read_excel(tf, sheet = "Proximity to Services") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          Access_rank = `Rank of Proximity to Services Domain Score (where 1 is most deprived)`)
 
 environment <-
   readxl::read_excel(tf, sheet = "Living Environment") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          Environment_rank = `Rank of Living Environment Domain Score (where 1 is most deprived)`)
 
 crime <-
   readxl::read_excel(tf, sheet = "Crime and Disorder") |>
-  select(soa_code = `SOA CODE`,
+  select(soa01_code = `SOA CODE`,
          Crime_rank = `Rank of Crime and Disorder Domain Score (where 1 is most deprived)`)
 
 # Join DF
-imd2010_northern_ireland_soa <- mdm |>
+imd2010_northern_ireland_soa01 <- mdm |>
   left_join(income) |>
   left_join(employment) |>
   left_join(health) |>
@@ -77,5 +77,4 @@ imd2010_northern_ireland_soa <- mdm |>
 
 
 # Save output to data/ folder
-usethis::use_data(imd2010_northern_ireland_soa, overwrite = TRUE)
-readr::write_csv(imd2010_northern_ireland_soa, "data-raw/imd2010_northern_ireland_soa.csv")
+usethis::use_data(imd2010_northern_ireland_soa01, overwrite = TRUE)
