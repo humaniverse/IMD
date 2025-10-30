@@ -1,3 +1,13 @@
+# IMD 2.0.0
+
+## Breaking changes
+- Renamed all data files for clarity and consistency (breaking change)
+
+## New features
+- Added English Indices of Deprivation 2025
+- Added historical Indices of Multiple Deprivation for all nations
+- Updated Left-Behind Neighbourhoods flag in England's Community Need Index to reflect new deprivation index
+
 # IMD 1.2.2
 
 - Updated list of Left Behind Areas to match latest OCSI data
