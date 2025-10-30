@@ -26,11 +26,20 @@ A data frame of class "tbl" with 1,909 rows and 19 variables:
   \item{Housing_rank}{Housing domain rank}
   \item{Access_rank}{Access to services domain rank}
   \item{Environment_rank}{Environment domain rank}
+  \item{IMD_score}{IMD score}
+  \item{Income_score}{Income domain score}
+  \item{Employment_score}{Employment domain score}
+  \item{Education_score}{Education domain score}
+  \item{Health_score}{Health domain score}
+  \item{Crime_score}{Crime domain score}
+  \item{Housing_score}{Housing domain score}
+  \item{Access_score}{Access to services domain score}
+  \item{Environment_score}{Environment domain score}
   ...
 }
 }
 \source{
-\url{https://gov.wales/}
+\url{https://www.gov.wales/}
 }
 \usage{
 imd2019_wales_lsoa11

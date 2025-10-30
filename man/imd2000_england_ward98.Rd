@@ -11,7 +11,7 @@ A data frame of class "tbl" with 8,414 rows and 21 variables:
   \item{Ward Name}{Ward name}
   \item{LA}{Local Authority code}
   \item{LA Name}{LA name}
-  \item{DETR LA Code}{DETR LA code}
+  \item{DETR LA code}{DETR LA code}
   \item{Index of Multiple Deprivation Score}{IMD score}
   \item{Rank of Index of Multiple Deprivation}{IMD rank}
   \item{Income Domain Score}{Income domain score}

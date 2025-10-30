@@ -8,7 +8,7 @@
 A data frame of class "tbl" with 382 rows and 2 variables:
 \describe{
   \item{lad_code}{LAD equivalent code}
-  \item{IMD Deciles, 1: most deprived, 10: least deprived}{IMD decile}
+  \item{`IMD Deciles, 1: most deprived, 10: least deprived`}{IMD decile}
   ...
 }
 }

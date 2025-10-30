@@ -436,9 +436,18 @@ NULL
 #'   \item{Housing_rank}{Housing domain rank}
 #'   \item{Access_rank}{Access to services domain rank}
 #'   \item{Environment_rank}{Environment domain rank}
+#'   \item{IMD_score}{IMD score}
+#'   \item{Income_score}{Income domain score}
+#'   \item{Employment_score}{Employment domain score}
+#'   \item{Education_score}{Education domain score}
+#'   \item{Health_score}{Health domain score}
+#'   \item{Crime_score}{Crime domain score}
+#'   \item{Housing_score}{Housing domain score}
+#'   \item{Access_score}{Access to services domain score}
+#'   \item{Environment_score}{Environment domain score}
 #'   ...
 #' }
-#' @source \url{https://gov.wales/}
+#' @source \url{https://www.gov.wales/}
 "imd2019_wales_lsoa11"
 
 #' Index of Multiple Deprivation for Data Zones in Scotland
@@ -584,7 +593,7 @@ NULL
 #'   \item{Environment_Extent}{Extent for Environment}
 #'   ...
 #' }
-#' @source \url{https://gov.wales/}
+#' @source \url{https://www.gov.wales/}
 "imd2019_wales_msoa11"
 
 #' Index of Multiple Deprivation for IZs in Scotland
@@ -665,7 +674,8 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 22 rows and 19 variables:
 #' \describe{
-#'   \item{lad_code}{LAD code}
+#'   \item{ltla22_code}{LAD code}
+#'   \item{Score}{Population-weighted average score}
 #'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
 #'   \item{Extent}{Extent for overall IMD}
 #'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
@@ -691,7 +701,7 @@ NULL
 #'   \item{Environment_Extent}{Extent for Environment}
 #'   ...
 #' }
-#' @source \url{https://gov.wales/}
+#' @source \url{https://www.gov.wales/}
 "imd2019_wales_ltla22"
 
 #' Index of Multiple Deprivation for Local Government Districts in Northern
@@ -900,7 +910,7 @@ NULL
 #'   \item{Connectedness Domain Score}{Score for the Connectedness domain (higher score = higher needs)}
 #'   \item{Connectedness Domain Rank}{Rank for the Connectedness domain (1 = highest needs)}
 #'   \item{Active and Engaged Community Domain Score}{Score for the Engaged Community domain (higher score = higher needs)}
-#'   \item{Engaged and Engaged Community Domain Rank}{Rank for the Engaged Community domain (1 = highest needs)}
+#'   \item{Active and Engaged Community Domain Rank}{Rank for the Engaged Community domain (1 = highest needs)}
 #'   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
 #'   ...
 #' }
@@ -991,7 +1001,7 @@ NULL
 #'   \item{Ward Name}{Ward name}
 #'   \item{LA}{Local Authority code}
 #'   \item{LA Name}{LA name}
-#'   \item{DETR LA Code}{DETR LA code}
+#'   \item{DETR LA code}{DETR LA code}
 #'   \item{Index of Multiple Deprivation Score}{IMD score}
 #'   \item{Rank of Index of Multiple Deprivation}{IMD rank}
 #'   \item{Income Domain Score}{Income domain score}
@@ -1061,7 +1071,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 6,791 rows and 3 variables:
 #' \describe{
-#'   \item{msoa111_code}{MSOA code}
+#'   \item{msoa11_code}{MSOA code}
 #'   \item{Score}{Population-weighted deprivation score}
 #'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
 #'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
@@ -1289,7 +1299,7 @@ NULL
 #' @format A data frame of class "tbl" with 382 rows and 2 variables:
 #' \describe{
 #'   \item{lad_code}{LAD equivalent code}
-#'   \item{IMD Deciles, 1: most deprived, 10: least deprived}{IMD decile}
+#'   \item{`IMD Deciles, 1: most deprived, 10: least deprived`}{IMD decile}
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}

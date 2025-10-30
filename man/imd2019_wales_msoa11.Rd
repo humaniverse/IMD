@@ -44,7 +44,7 @@ A data frame of class "tbl" with 410 rows and 28 variables:
 }
 }
 \source{
-\url{https://gov.wales/}
+\url{https://www.gov.wales/}
 }
 \usage{
 imd2019_wales_msoa11
