@@ -16,7 +16,7 @@ imd_england_lsoa <-
 imd2025_england_lsoa21 <-
   imd_england_lsoa |>
   select(
-    lsoa11_code = `LSOA code (2021)`,
+    lsoa21_code = `LSOA code (2021)`,
 
     IMD_decile = `Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10% of LSOAs)`,
     Income_decile = `Income Decile (where 1 is most deprived 10% of LSOAs)`,
