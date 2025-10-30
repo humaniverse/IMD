@@ -69,9 +69,46 @@ NULL
 #' @source \url{https://www.nomisweb.co.uk/}
 "census11_deprivation_england_wales_msoa11"
 
+#' Index of Multiple Deprivation for LSOAs (2021) in England
+#'
+#' A data set containing IMD scores, ranks and deciles for Lower Layer Super
+#' Output Areas (LSOAs) in England.
+#'
+#' @format A data frame of class "tbl":
+#' \describe{
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{IMD_decile}{IMD decile}
+#'   \item{Income_decile}{Income domain decile}
+#'   \item{Employment_decile}{Employment domain decile}
+#'   \item{Education_decile}{Education domain decile}
+#'   \item{Health_decile}{Health and Disability domain decile}
+#'   \item{Crime_decile}{Crime domain decile}
+#'   \item{Housing_and_Access_decile}{Housing and access to services domain decile}
+#'   \item{Environment_decile}{Environment domain decile}
+#'   \item{IMD_rank}{IMD rank}
+#'   \item{Income_rank}{Income domain rank}
+#'   \item{Employment_rank}{Employment domain rank}
+#'   \item{Education_rank}{Education domain rank}
+#'   \item{Health_rank}{Health domain rank}
+#'   \item{Crime_rank}{Crime domain rank}
+#'   \item{Housing_and_Access_rank}{Housing and access to services domain rank}
+#'   \item{Environment_rank}{Environment domain rank}
+#'   \item{IMD_score}{IMD score}
+#'   \item{Income_score}{Income domain score}
+#'   \item{Employment_score}{Employment domain score}
+#'   \item{Education_score}{Education domain score}
+#'   \item{Health_score}{Health domain score}
+#'   \item{Crime_score}{Crime domain score}
+#'   \item{Housing_and_Services_score}{Housing and access to services domain score}
+#'   \item{Environment_score}{Environment domain score}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2025_england_lsoa21"
+
 #' Index of Multiple Deprivation for LSOAs (2011) in England
 #'
-#' A data set containing IMD ranks and deciles for Lower Layer Super
+#' A data set containing IMD scores and deciles for Lower Layer Super
 #' Output Areas (LSOAs) in England.
 #'
 #' @format A data frame of class "tbl" with 32,844 rows and 17 variables:
