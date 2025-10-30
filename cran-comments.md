@@ -1,8 +1,10 @@
 ## Release summary
-This is a minor release in which we have:
+This is a major release with breaking changes in which we have:
 
-* Fixed a bug in the left-behind areas flag for England
-* Moved GitHub repo to the Humaniverse suite of packages: https://github.com/humaniverse/IMD
+* Added English Indices of Deprivation 2025
+* Added historical Indices of Multiple Deprivation for all nations
+* Updated Left-Behind Neighbourhoods flag in England's Community Need Index to reflect new deprivation index
+* Renamed all data files for clarity and consistency (breaking change)
 
 ## Test environments
 * local Windows 10 install, R 4.1.0

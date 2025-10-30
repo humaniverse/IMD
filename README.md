@@ -16,10 +16,16 @@ The `IMD` package provides easy access to the Indices of Multiple
 Deprivation for the UK’s nations at various geographical levels:
 
 - England: Lower Layer Super Output Area (LSOA), Middle Layer Super
-  Output Area (MSOA), Ward, and Local Authority
+  Output Area (MSOA), Local Authority, Integrated Care Board, and Local
+  Resilience Forum (includes new data for 2025)
 - Wales: LSOA, MSOA, Ward, and Local Authority
 - Scotland: Data Zone, Intermediate Zone, and Council Area
 - Northern Ireland: Super Output Area and Local Government District
+
+The package also provides data files for the Community Needs Index for
+each UK nation, as well as household-level multiple deprivation figures
+for England, Wales and Northern Ireland (from the 2011 and 2021
+Censuses).
 
 ## Installation
 
@@ -41,51 +47,9 @@ devtools::install_github("humaniverse/IMD")
 ## Usage
 
 The `IMD` package provides several datasets for the IMD in each UK
-nation:
+nation. The format for the names of the data files follows this format:
 
-### England
-
-- Lower Layer Super Output Areas: `IMD::imd_england_lsoa`
-- Middle Layer Super Output Areas: `IMD::imd_england_msoa`
-- Wards: `IMD::imd_england_ward`
-- Local Authorities: `IMD::imd_england_lad`
-
-**Sub-domains of deprivation** are also available for England. These
-include two in the Education domain (‘children and young people’ and
-‘adult skills’), two for the Barriers domain (‘geographical barriers’
-and ‘wider barriers’), and two for the Living Environment domain
-(‘indoors’ and ‘outdoors’)
-
-- Sub-domains for LSOAs: `IMD::imd_england_lsoa_subdomains`
-- Sub-domains for MSOAs: `IMD::imd_england_msoa_subdomains`
-- Sub-domains for wards: `IMD::imd_england_ward_subdomains`
-- Sub-domains for Local Authorities: `IMD::imd_england_lad_subdomains`
-
-**Community Needs Index:** `IMD::cni_england_ward17`
-
-### Wales
-
-- Lower Layer Super Output Areas: `IMD::imd_wales_lsoa`
-- Middle Layer Super Output Areas: `IMD::imd_wales_msoa`
-- Wards: `IMD::imd_wales_ward`
-- Local Authorities: `IMD::imd_wales_lad`
-
-**Community Needs Index:** `IMD::cni_wales_msoa11`
-
-### Scotland
-
-- Data Zones: `IMD::imd_scotland_dz`
-- Intermediate Zones: `IMD::imd_scotland_iz`
-- Council Areas: `IMD::imd_scotland_lad`
-
-**Community Needs Index:** `IMD::cni_scotland_iz11`
-
-### Northern Ireland
-
-- Super Output Areas: `IMD::imd_northern_ireland_soa`
-- Local Government Districts: `IMD::imd_northern_ireland_lad`
-
-**Community Needs Index:** `IMD::cni_northern_ireland_soa11`
+    imd[year]_[nation]_[geography code]
 
 ### Composite 2020 UK Index of Multiple Deprivation
 
@@ -110,19 +74,20 @@ UK nations to load the other versions.
 
 ## Example
 
-How many wards in Wales are there with the 100% of the population living
-in areas classified as among the most deprived?
+How many Council Areas (Local Authorities) in Scotland where at least
+one-third of the population lives in areas classified as among the most
+deprived?
 
 ``` r
 library(IMD)
 
-imd_wales_ward |> 
-  dplyr::filter(Extent == 1) |> 
+imd2020_scotland_ltla24 |> 
+  dplyr::filter(Extent >= 0.33) |> 
   dplyr::count()
 #> # A tibble: 1 × 1
 #>       n
 #>   <int>
-#> 1    14
+#> 1     5
 ```
 
 ## Accessing the data for non-R users
