@@ -1,7 +1,7 @@
 Package: IMD
 Type: Package
 Title: Index of Multiple Deprivation Data for the UK
-Version: 2.0.0.9999
+Version: 2.0.0
 Authors@R: c(
     person(given = c("Matthew", "Gwynfryn"), 
            family = "Thomas", 
@@ -15,10 +15,10 @@ Authors@R: c(
 Description: Index of Multiple Deprivation for UK nations at various 
     geographical levels. In England, deprivation data is for Lower Layer Super
     Output Areas, Middle Layer Super Output Areas, Wards, and Local Authorities
-    based on data from <https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019>.
+    based on data from <https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025>.
     In Wales, deprivation data is for Lower Layer Super Output Areas, Middle 
     Layer Super Output Areas, Wards, and Local Authorities based on data from
-    <https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019>.
+    <https://www.gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019>.
     In Scotland, deprivation data is for Data Zones, Intermediate Zones, and 
     Council Areas based on data from <https://simd.scot>. In Northern Ireland,
     deprivation data is for Super Output Areas and Local Government Districts
@@ -30,7 +30,7 @@ URL: https://github.com/humaniverse/IMD
 BugReports: https://github.com/humaniverse/IMD/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Imports:
     rlang,
     dplyr,

@@ -7,7 +7,7 @@
 \format{
 A data frame of class "tbl" with 6,791 rows and 3 variables:
 \describe{
-  \item{msoa111_code}{MSOA code}
+  \item{msoa11_code}{MSOA code}
   \item{Score}{Population-weighted deprivation score}
   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
   \item{Extent}{Extent of the LAs population living in the most deprived areas}

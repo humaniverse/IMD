@@ -34,7 +34,7 @@ A data frame of class "tbl" with 32,844 rows and 17 variables:
 imd2019_england_lsoa11
 }
 \description{
-A data set containing IMD ranks and deciles for Lower Layer Super
+A data set containing IMD scores and deciles for Lower Layer Super
 Output Areas (LSOAs) in England.
 }
 \keyword{datasets}

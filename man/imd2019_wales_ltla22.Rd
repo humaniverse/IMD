@@ -7,7 +7,8 @@
 \format{
 A data frame of class "tbl" with 22 rows and 19 variables:
 \describe{
-  \item{lad_code}{LAD code}
+  \item{ltla22_code}{LAD code}
+  \item{Score}{Population-weighted average score}
   \item{Proportion}{Proportion of small areas in the nation's most deprived}
   \item{Extent}{Extent for overall IMD}
   \item{Income_Proportion}{Proportion of most deprived areas for Income}
@@ -35,7 +36,7 @@ A data frame of class "tbl" with 22 rows and 19 variables:
 }
 }
 \source{
-\url{https://gov.wales/}
+\url{https://www.gov.wales/}
 }
 \usage{
 imd2019_wales_ltla22

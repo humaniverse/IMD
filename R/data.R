@@ -69,9 +69,321 @@ NULL
 #' @source \url{https://www.nomisweb.co.uk/}
 "census11_deprivation_england_wales_msoa11"
 
+#' Index of Multiple Deprivation (2025) for ICBs (2024) in England
+#'
+#' A dataset containing IMD scores, ranks, and related measures for Integrated Care Boards in England.
+#'
+#' @format A data frame of class "tbl":
+#' \describe{
+#'   \item{icb24_code}{ICB code}
+#'   \item{icb24_name}{ICB name}
+#'   \item{IMD - Average rank}{IMD - Average rank}
+#'   \item{IMD - Rank of average rank}{IMD - Rank of average rank}
+#'   \item{IMD - Average score}{IMD - Average score}
+#'   \item{IMD - Rank of average score}{IMD - Rank of average score}
+#'   \item{IMD - Proportion of LSOAs in most deprived 10percent nationally}{IMD - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{IMD - Rank of proportion of LSOAs in most deprived 10percent nationally}{IMD - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{IMD 2025 - Extent}{IMD 2025 - Extent}
+#'   \item{IMD 2025 - Rank of extent}{IMD 2025 - Rank of extent}
+#'   \item{IMD 2025 - Local concentration}{IMD 2025 - Local concentration}
+#'   \item{IMD 2025 - Rank of local concentration}{IMD 2025 - Rank of local concentration}
+#'   \item{Income - Average rank}{Income - Average rank}
+#'   \item{Income - Rank of average rank}{Income - Rank of average rank}
+#'   \item{Income - Average score}{Income - Average score}
+#'   \item{Income - Rank of average score}{Income - Rank of average score}
+#'   \item{Income - Proportion of LSOAs in most deprived 10percent nationally}{Income - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Income - Rank of proportion of LSOAs in most deprived 10percent nationally}{Income - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Income scale}{Income scale}
+#'   \item{Rank of Income Scale}{Rank of Income Scale}
+#'   \item{Employment - Average rank}{Employment - Average rank}
+#'   \item{Employment - Rank of average rank}{Employment - Rank of average rank}
+#'   \item{Employment - Average score}{Employment - Average score}
+#'   \item{Employment - Rank of average score}{Employment - Rank of average score}
+#'   \item{Employment - Proportion of LSOAs in most deprived 10percent nationally}{Employment - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Employment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Employment - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Employment scale}{Employment scale}
+#'   \item{Rank of Employment Scale}{Rank of Employment Scale}
+#'   \item{Education, Skills and Training - Average rank}{Education, Skills and Training - Average rank}
+#'   \item{Education, Skills and Training - Rank of average rank}{Education, Skills and Training - Rank of average rank}
+#'   \item{Education, Skills and Training - Average score}{Education, Skills and Training - Average score}
+#'   \item{Education, Skills and Training - Rank of average score}{Education, Skills and Training - Rank of average score}
+#'   \item{Education, Skills and Training - Proportion of LSOAs in most deprived 10percent nationally}{Education, Skills and Training - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Education, Skills and Training - Rank of proportion of LSOAs in most deprived 10percent nationally}{Education, Skills and Training - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Health Deprivation and Disability - Average rank}{Health Deprivation and Disability - Average rank}
+#'   \item{Health Deprivation and Disability - Rank of average rank}{Health Deprivation and Disability - Rank of average rank}
+#'   \item{Health Deprivation and Disability - Average score}{Health Deprivation and Disability - Average score}
+#'   \item{Health Deprivation and Disability - Rank of average score}{Health Deprivation and Disability - Rank of average score}
+#'   \item{Health Deprivation and Disability - Proportion of LSOAs in most deprived 10percent nationally}{Health Deprivation and Disability - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Health Deprivation and Disability - Rank of proportion of LSOAs in most deprived 10percent nationally}{Health Deprivation and Disability - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Crime - Average rank}{Crime - Average rank}
+#'   \item{Crime - Rank of average rank}{Crime - Rank of average rank}
+#'   \item{Crime - Average score}{Crime - Average score}
+#'   \item{Crime - Rank of average score}{Crime - Rank of average score}
+#'   \item{Crime - Proportion of LSOAs in most deprived 10percent nationally}{Crime - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Crime - Rank of proportion of LSOAs in most deprived 10percent nationally}{Crime - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Barriers to Housing and Services - Average rank}{Barriers to Housing and Services - Average rank}
+#'   \item{Barriers to Housing and Services - Rank of average rank}{Barriers to Housing and Services - Rank of average rank}
+#'   \item{Barriers to Housing and Services - Average score}{Barriers to Housing and Services - Average score}
+#'   \item{Barriers to Housing and Services - Rank of average score}{Barriers to Housing and Services - Rank of average score}
+#'   \item{Barriers to Housing and Services - Proportion of LSOAs in most deprived 10percent nationally}{Barriers to Housing and Services - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Barriers to Housing and Services - Rank of proportion of LSOAs in most deprived 10percent nationally}{Barriers to Housing and Services - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Living Environment - Average rank}{Living Environment - Average rank}
+#'   \item{Living Environment - Rank of average rank}{Living Environment - Rank of average rank}
+#'   \item{Living Environment - Average score}{Living Environment - Average score}
+#'   \item{Living Environment - Rank of average score}{Living Environment - Rank of average score}
+#'   \item{Living Environment - Proportion of LSOAs in most deprived 10percent nationally}{Living Environment - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Living Environment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Living Environment - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2025_england_icb24"
+
+#' Index of Multiple Deprivation (2025) for LRFs (2024) in England
+#'
+#' A dataset containing IMD scores, ranks, and related measures for Local Resilience Forums in England.
+#'
+#' @format A data frame of class "tbl":
+#' \describe{
+#'   \item{lrf24_code}{LRF code}
+#'   \item{lrf24_name}{LRF name}
+#'   \item{IMD - Average rank}{IMD - Average rank}
+#'   \item{IMD - Rank of average rank}{IMD - Rank of average rank}
+#'   \item{IMD - Average score}{IMD - Average score}
+#'   \item{IMD - Rank of average score}{IMD - Rank of average score}
+#'   \item{IMD - Proportion of LSOAs in most deprived 10percent nationally}{IMD - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{IMD - Rank of proportion of LSOAs in most deprived 10percent nationally}{IMD - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{IMD 2025 - Extent}{IMD 2025 - Extent}
+#'   \item{IMD 2025 - Rank of extent}{IMD 2025 - Rank of extent}
+#'   \item{IMD 2025 - Local concentration}{IMD 2025 - Local concentration}
+#'   \item{IMD 2025 - Rank of local concentration}{IMD 2025 - Rank of local concentration}
+#'   \item{Income - Average rank}{Income - Average rank}
+#'   \item{Income - Rank of average rank}{Income - Rank of average rank}
+#'   \item{Income - Average score}{Income - Average score}
+#'   \item{Income - Rank of average score}{Income - Rank of average score}
+#'   \item{Income - Proportion of LSOAs in most deprived 10percent nationally}{Income - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Income - Rank of proportion of LSOAs in most deprived 10percent nationally}{Income - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Income scale}{Income scale}
+#'   \item{Rank of Income Scale}{Rank of Income Scale}
+#'   \item{Employment - Average rank}{Employment - Average rank}
+#'   \item{Employment - Rank of average rank}{Employment - Rank of average rank}
+#'   \item{Employment - Average score}{Employment - Average score}
+#'   \item{Employment - Rank of average score}{Employment - Rank of average score}
+#'   \item{Employment - Proportion of LSOAs in most deprived 10percent nationally}{Employment - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Employment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Employment - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Employment scale}{Employment scale}
+#'   \item{Rank of Employment Scale}{Rank of Employment Scale}
+#'   \item{Education, Skills and Training - Average rank}{Education, Skills and Training - Average rank}
+#'   \item{Education, Skills and Training - Rank of average rank}{Education, Skills and Training - Rank of average rank}
+#'   \item{Education, Skills and Training - Average score}{Education, Skills and Training - Average score}
+#'   \item{Education, Skills and Training - Rank of average score}{Education, Skills and Training - Rank of average score}
+#'   \item{Education, Skills and Training - Proportion of LSOAs in most deprived 10percent nationally}{Education, Skills and Training - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Education, Skills and Training - Rank of proportion of LSOAs in most deprived 10percent nationally}{Education, Skills and Training - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Health Deprivation and Disability - Average rank}{Health Deprivation and Disability - Average rank}
+#'   \item{Health Deprivation and Disability - Rank of average rank}{Health Deprivation and Disability - Rank of average rank}
+#'   \item{Health Deprivation and Disability - Average score}{Health Deprivation and Disability - Average score}
+#'   \item{Health Deprivation and Disability - Rank of average score}{Health Deprivation and Disability - Rank of average score}
+#'   \item{Health Deprivation and Disability - Proportion of LSOAs in most deprived 10percent nationally}{Health Deprivation and Disability - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Health Deprivation and Disability - Rank of proportion of LSOAs in most deprived 10percent nationally}{Health Deprivation and Disability - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Crime - Average rank}{Crime - Average rank}
+#'   \item{Crime - Rank of average rank}{Crime - Rank of average rank}
+#'   \item{Crime - Average score}{Crime - Average score}
+#'   \item{Crime - Rank of average score}{Crime - Rank of average score}
+#'   \item{Crime - Proportion of LSOAs in most deprived 10percent nationally}{Crime - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Crime - Rank of proportion of LSOAs in most deprived 10percent nationally}{Crime - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Barriers to Housing and Services - Average rank}{Barriers to Housing and Services - Average rank}
+#'   \item{Barriers to Housing and Services - Rank of average rank}{Barriers to Housing and Services - Rank of average rank}
+#'   \item{Barriers to Housing and Services - Average score}{Barriers to Housing and Services - Average score}
+#'   \item{Barriers to Housing and Services - Rank of average score}{Barriers to Housing and Services - Rank of average score}
+#'   \item{Barriers to Housing and Services - Proportion of LSOAs in most deprived 10percent nationally}{Barriers to Housing and Services - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Barriers to Housing and Services - Rank of proportion of LSOAs in most deprived 10percent nationally}{Barriers to Housing and Services - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Living Environment - Average rank}{Living Environment - Average rank}
+#'   \item{Living Environment - Rank of average rank}{Living Environment - Rank of average rank}
+#'   \item{Living Environment - Average score}{Living Environment - Average score}
+#'   \item{Living Environment - Rank of average score}{Living Environment - Rank of average score}
+#'   \item{Living Environment - Proportion of LSOAs in most deprived 10percent nationally}{Living Environment - Proportion of LSOAs in most deprived 10 percent nationally}
+#'   \item{Living Environment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Living Environment - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2025_england_lrf"
+
+#' Index of Multiple Deprivation (2025) Indicators for LSOAs (2021) in England
+#'
+#' A dataset containing Index of Multiple Deprivation indicators for Lower Layer Super Output Areas (LSOAs) in England.
+#'
+#' @format A data frame of class "tbl":
+#' \describe{
+#'   \item{lsoa21_code}{LSOA 2021 code}
+#'   \item{Income Domain numerator}{Income Domain numerator}
+#'   \item{Income Deprivation Affecting Children Index (IDACI) numerator}{Income Deprivation Affecting Children Index (IDACI) numerator}
+#'   \item{Income Deprivation Affecting Older People Index (IDAOPI) numerator}{Income Deprivation Affecting Older People Index (IDAOPI) numerator}
+#'   \item{Employment Domain numerator}{Employment Domain numerator}
+#'   \item{Adult skills and English language proficiency indicator}{Adult skills and English language proficiency indicator}
+#'   \item{Entry to higher education indicator}{Entry to higher education indicator}
+#'   \item{Acute morbidity indicator}{Acute morbidity indicator}
+#'   \item{Comparative illness and disability ratio indicator}{Comparative illness and disability ratio indicator}
+#'   \item{Mental health indicator}{Mental health indicator}
+#'   \item{Years of potential life lost indicator}{Years of potential life lost indicator}
+#'   \item{Violence with injury, rate per 1,000 'at-risk population'}{Violence with injury, rate per 1,000 at-risk population}
+#'   \item{Violence without injury, rate per 1,000 'at-risk population'}{Violence without injury, rate per 1,000 at-risk population}
+#'   \item{Stalking and harassment, rate per 1,000 'at-risk population'}{Stalking and harassment, rate per 1,000 at-risk population}
+#'   \item{Burglary, rate per 1,000 'at-risk properties'}{Burglary, rate per 1,000 at-risk properties}
+#'   \item{Theft, rate per 1,000 'at-risk population'}{Theft, rate per 1,000 at-risk population}
+#'   \item{Criminal damage, rate per 1,000 'at-risk population'}{Criminal damage, rate per 1,000 at-risk population}
+#'   \item{Public order and Possession of weapons, rate per 1,000 'at-risk population'}{Public order and Possession of weapons, rate per 1,000 at-risk population}
+#'   \item{Anti-Social Behaviour, rate per 1,000 'at-risk population'}{Anti-Social Behaviour, rate per 1,000 at-risk population}
+#'   \item{Connectivity Score}{Connectivity Score}
+#'   \item{Owner-occupation affordability (component of housing affordability indicator)}{Owner-occupation affordability (component of housing affordability indicator)}
+#'   \item{Private rental affordability (component of housing affordability indicator)}{Private rental affordability (component of housing affordability indicator)}
+#'   \item{Housing affordability indicator}{Housing affordability indicator}
+#'   \item{Digital Connectivity (Broadband download and upload speeds)}{Digital Connectivity (Broadband download and upload speeds)}
+#'   \item{Core homelessness rate (percent of households)}{Core homelessness rate (percent of households)}
+#'   \item{Patient-to-GP Ratio}{Patient-to-GP Ratio}
+#'   \item{Homelessness indicator (rate per 1,000 households)}{Homelessness indicator (rate per 1,000 households)}
+#'   \item{Household overcrowding indicator (rooms)}{Household overcrowding indicator (rooms)}
+#'   \item{Household overcrowding indicator (bedrooms)}{Household overcrowding indicator (bedrooms)}
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2025_england_lsoa21_indicators"
+
+#' Index of Multiple Deprivation (2025) Subdomain Scores for LSOAs (2021) in England
+#'
+#' A dataset containing subdomain scores, ranks, and deciles for Lower-layer Super Output Areas (LSOAs) in England.
+#' Subdomains include education (children and young people, adult skills), barriers to housing and services (geographical and wider barriers),
+#' and living environment (indoors and outdoors).
+#'
+#' @format A data frame of class "tbl" with the following columns:
+#' \describe{
+#'   \item{lsoa21_code}{LSOA 2021 code}
+#'   \item{children_and_young_people_score}{Score for the Children and Young People subdomain}
+#'   \item{children_and_young_people_rank}{Rank for the Children and Young People subdomain}
+#'   \item{children_and_young_people_decile}{Decile for the Children and Young People subdomain}
+#'   \item{adult_skills_score}{Score for the Adult Skills subdomain}
+#'   \item{adult_skills_rank}{Rank for the Adult Skills subdomain}
+#'   \item{adult_skills_decile}{Decile for the Adult Skills subdomain}
+#'   \item{geographical_barriers_score}{Score for the Geographical Barriers subdomain}
+#'   \item{geographical_barriers_rank}{Rank for the Geographical Barriers subdomain}
+#'   \item{geographical_barriers_decile}{Decile for the Geographical Barriers subdomain}
+#'   \item{wider_barriers_score}{Score for the Wider Barriers subdomain}
+#'   \item{wider_barriers_rank}{Rank for the Wider Barriers subdomain}
+#'   \item{wider_barriers_decile}{Decile for the Wider Barriers subdomain}
+#'   \item{indoors_score}{Score for the Indoors Living Environment subdomain}
+#'   \item{indoors_rank}{Rank for the Indoors Living Environment subdomain}
+#'   \item{indoors_decile}{Decile for the Indoors Living Environment subdomain}
+#'   \item{outdoors_score}{Score for the Outdoors Living Environment subdomain}
+#'   \item{outdoors_rank}{Rank for the Outdoors Living Environment subdomain}
+#'   \item{outdoors_decile}{Decile for the Outdoors Living Environment subdomain}
+#' }
+#' @source \url{https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025}
+"imd2025_england_lsoa21_subdomains"
+
+
+#' Index of Multiple Deprivation for LSOAs (2021) in England
+#'
+#' A data set containing IMD scores, ranks and deciles for Lower Layer Super
+#' Output Areas (LSOAs) in England.
+#'
+#' @format A data frame of class "tbl":
+#' \describe{
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{IMD_decile}{IMD decile}
+#'   \item{Income_decile}{Income domain decile}
+#'   \item{Employment_decile}{Employment domain decile}
+#'   \item{Education_decile}{Education domain decile}
+#'   \item{Health_decile}{Health and Disability domain decile}
+#'   \item{Crime_decile}{Crime domain decile}
+#'   \item{Housing_and_Access_decile}{Housing and access to services domain decile}
+#'   \item{Environment_decile}{Environment domain decile}
+#'   \item{IMD_rank}{IMD rank}
+#'   \item{Income_rank}{Income domain rank}
+#'   \item{Employment_rank}{Employment domain rank}
+#'   \item{Education_rank}{Education domain rank}
+#'   \item{Health_rank}{Health domain rank}
+#'   \item{Crime_rank}{Crime domain rank}
+#'   \item{Housing_and_Access_rank}{Housing and access to services domain rank}
+#'   \item{Environment_rank}{Environment domain rank}
+#'   \item{IMD_score}{IMD score}
+#'   \item{Income_score}{Income domain score}
+#'   \item{Employment_score}{Employment domain score}
+#'   \item{Education_score}{Education domain score}
+#'   \item{Health_score}{Health domain score}
+#'   \item{Crime_score}{Crime domain score}
+#'   \item{Housing_and_Services_score}{Housing and access to services domain score}
+#'   \item{Environment_score}{Environment domain score}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2025_england_lsoa21"
+
+#' Index of Multiple Deprivation (2025) for Lower Tier Local Authorities (2024) in England
+#'
+#' A dataset containing IMD scores, ranks, and subdomain measures for Lower Tier Local Authorities (LTLAs) in England.
+#'
+#' @format A data frame of class "tbl" with the following columns:
+#' \describe{
+#'   \item{ltla24_code}{LTLA 2024 code}
+#'   \item{ltla24_name}{LTLA 2024 name}
+#'   \item{IMD - Average rank}{Population-weighted average IMD rank}
+#'   \item{IMD - Rank of average rank}{Rank of the average IMD rank}
+#'   \item{IMD - Average score}{Population-weighted average IMD score}
+#'   \item{IMD - Rank of average score}{Rank of the average IMD score}
+#'   \item{IMD - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally}
+#'   \item{IMD - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally}
+#'   \item{IMD25 - Extent}{Extent measure for IMD 2025}
+#'   \item{IMD25 - Rank of extent}{Rank of extent measure}
+#'   \item{IMD25 - Local concentration}{Local concentration measure for IMD 2025}
+#'   \item{IMD25 - Rank of local concentration}{Rank of local concentration measure}
+#'   \item{Income - Average rank}{Population-weighted average Income rank}
+#'   \item{Income - Rank of average rank}{Rank of the average Income rank}
+#'   \item{Income - Average score}{Population-weighted average Income score}
+#'   \item{Income - Rank of average score}{Rank of the average Income score}
+#'   \item{Income - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Income}
+#'   \item{Income - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Income}
+#'   \item{Income scale}{Income scale measure}
+#'   \item{Rank of Income Scale}{Rank of Income scale measure}
+#'   \item{Employment - Average rank}{Population-weighted average Employment rank}
+#'   \item{Employment - Rank of average rank}{Rank of the average Employment rank}
+#'   \item{Employment - Average score}{Population-weighted average Employment score}
+#'   \item{Employment - Rank of average score}{Rank of the average Employment score}
+#'   \item{Employment - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Employment}
+#'   \item{Employment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Employment}
+#'   \item{Employment scale}{Employment scale measure}
+#'   \item{Rank of Employment Scale}{Rank of Employment scale measure}
+#'   \item{Education, Skills and Training - Average rank}{Population-weighted average Education rank}
+#'   \item{Education, Skills and Training - Rank of average rank}{Rank of the average Education rank}
+#'   \item{Education, Skills and Training - Average score}{Population-weighted average Education score}
+#'   \item{Education, Skills and Training - Rank of average score}{Rank of the average Education score}
+#'   \item{Education, Skills and Training - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Education}
+#'   \item{Education, Skills and Training - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Education}
+#'   \item{Health Deprivation and Disability - Average rank}{Population-weighted average Health rank}
+#'   \item{Health Deprivation and Disability - Rank of average rank}{Rank of the average Health rank}
+#'   \item{Health Deprivation and Disability - Average score}{Population-weighted average Health score}
+#'   \item{Health Deprivation and Disability - Rank of average score}{Rank of the average Health score}
+#'   \item{Health Deprivation and Disability - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Health}
+#'   \item{Health Deprivation and Disability - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Health}
+#'   \item{Crime - Average rank}{Population-weighted average Crime rank}
+#'   \item{Crime - Rank of average rank}{Rank of the average Crime rank}
+#'   \item{Crime - Average score}{Population-weighted average Crime score}
+#'   \item{Crime - Rank of average score}{Rank of the average Crime score}
+#'   \item{Crime - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Crime}
+#'   \item{Crime - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Crime}
+#'   \item{Barriers to Housing and Services - Average rank}{Population-weighted average Barriers rank}
+#'   \item{Barriers to Housing and Services - Rank of average rank}{Rank of the average Barriers rank}
+#'   \item{Barriers to Housing and Services - Average score}{Population-weighted average Barriers score}
+#'   \item{Barriers to Housing and Services - Rank of average score}{Rank of the average Barriers score}
+#'   \item{Barriers to Housing and Services - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Barriers}
+#'   \item{Barriers to Housing and Services - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Barriers}
+#'   \item{Living Environment - Average rank}{Population-weighted average Living Environment rank}
+#'   \item{Living Environment - Rank of average rank}{Rank of the average Living Environment rank}
+#'   \item{Living Environment - Average score}{Population-weighted average Living Environment score}
+#'   \item{Living Environment - Rank of average score}{Rank of the average Living Environment score}
+#'   \item{Living Environment - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Living Environment}
+#'   \item{Living Environment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Living Environment}
+#' }
+#' @source \url{https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025}
+"imd2025_england_ltla24"
+
 #' Index of Multiple Deprivation for LSOAs (2011) in England
 #'
-#' A data set containing IMD ranks and deciles for Lower Layer Super
+#' A data set containing IMD scores and deciles for Lower Layer Super
 #' Output Areas (LSOAs) in England.
 #'
 #' @format A data frame of class "tbl" with 32,844 rows and 17 variables:
@@ -124,9 +436,18 @@ NULL
 #'   \item{Housing_rank}{Housing domain rank}
 #'   \item{Access_rank}{Access to services domain rank}
 #'   \item{Environment_rank}{Environment domain rank}
+#'   \item{IMD_score}{IMD score}
+#'   \item{Income_score}{Income domain score}
+#'   \item{Employment_score}{Employment domain score}
+#'   \item{Education_score}{Education domain score}
+#'   \item{Health_score}{Health domain score}
+#'   \item{Crime_score}{Crime domain score}
+#'   \item{Housing_score}{Housing domain score}
+#'   \item{Access_score}{Access to services domain score}
+#'   \item{Environment_score}{Environment domain score}
 #'   ...
 #' }
-#' @source \url{https://gov.wales/}
+#' @source \url{https://www.gov.wales/}
 "imd2019_wales_lsoa11"
 
 #' Index of Multiple Deprivation for Data Zones in Scotland
@@ -272,7 +593,7 @@ NULL
 #'   \item{Environment_Extent}{Extent for Environment}
 #'   ...
 #' }
-#' @source \url{https://gov.wales/}
+#' @source \url{https://www.gov.wales/}
 "imd2019_wales_msoa11"
 
 #' Index of Multiple Deprivation for IZs in Scotland
@@ -353,7 +674,8 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 22 rows and 19 variables:
 #' \describe{
-#'   \item{lad_code}{LAD code}
+#'   \item{ltla22_code}{LAD code}
+#'   \item{Score}{Population-weighted average score}
 #'   \item{Proportion}{Proportion of small areas in the nation's most deprived}
 #'   \item{Extent}{Extent for overall IMD}
 #'   \item{Income_Proportion}{Proportion of most deprived areas for Income}
@@ -379,7 +701,7 @@ NULL
 #'   \item{Environment_Extent}{Extent for Environment}
 #'   ...
 #' }
-#' @source \url{https://gov.wales/}
+#' @source \url{https://www.gov.wales/}
 "imd2019_wales_ltla22"
 
 #' Index of Multiple Deprivation for Local Government Districts in Northern
@@ -588,7 +910,7 @@ NULL
 #'   \item{Connectedness Domain Score}{Score for the Connectedness domain (higher score = higher needs)}
 #'   \item{Connectedness Domain Rank}{Rank for the Connectedness domain (1 = highest needs)}
 #'   \item{Active and Engaged Community Domain Score}{Score for the Engaged Community domain (higher score = higher needs)}
-#'   \item{Engaged and Engaged Community Domain Rank}{Rank for the Engaged Community domain (1 = highest needs)}
+#'   \item{Active and Engaged Community Domain Rank}{Rank for the Engaged Community domain (1 = highest needs)}
 #'   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
 #'   ...
 #' }
@@ -679,7 +1001,7 @@ NULL
 #'   \item{Ward Name}{Ward name}
 #'   \item{LA}{Local Authority code}
 #'   \item{LA Name}{LA name}
-#'   \item{DETR LA Code}{DETR LA code}
+#'   \item{DETR LA code}{DETR LA code}
 #'   \item{Index of Multiple Deprivation Score}{IMD score}
 #'   \item{Rank of Index of Multiple Deprivation}{IMD rank}
 #'   \item{Income Domain Score}{Income domain score}
@@ -749,7 +1071,7 @@ NULL
 #'
 #' @format A data frame of class "tbl" with 6,791 rows and 3 variables:
 #' \describe{
-#'   \item{msoa111_code}{MSOA code}
+#'   \item{msoa11_code}{MSOA code}
 #'   \item{Score}{Population-weighted deprivation score}
 #'   \item{Proportion}{Proportion of the nation's most deprived small areas in each LA}
 #'   \item{Extent}{Extent of the LAs population living in the most deprived areas}
@@ -977,7 +1299,7 @@ NULL
 #' @format A data frame of class "tbl" with 382 rows and 2 variables:
 #' \describe{
 #'   \item{lad_code}{LAD equivalent code}
-#'   \item{IMD Deciles, 1: most deprived, 10: least deprived}{IMD decile}
+#'   \item{`IMD Deciles, 1: most deprived, 10: least deprived`}{IMD decile}
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}

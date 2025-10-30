@@ -16,7 +16,7 @@ A data frame of class "tbl" with 33,755 rows and 11 variables:
   \item{Connectedness Domain Score}{Score for the Connectedness domain (higher score = higher needs)}
   \item{Connectedness Domain Rank}{Rank for the Connectedness domain (1 = highest needs)}
   \item{Active and Engaged Community Domain Score}{Score for the Engaged Community domain (higher score = higher needs)}
-  \item{Engaged and Engaged Community Domain Rank}{Rank for the Engaged Community domain (1 = highest needs)}
+  \item{Active and Engaged Community Domain Rank}{Rank for the Engaged Community domain (1 = highest needs)}
   \item{Left Behind Area?}{TRUE if this Ward is a Left Behind Area}
   ...
 }
