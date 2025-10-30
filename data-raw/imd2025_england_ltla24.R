@@ -40,7 +40,8 @@ imd2025_england_ltla24 <-
 imd2025_england_ltla24 <-
   imd2025_england_ltla24|>
   rename(ltla24_code = `Local Authority District code (2024)`,
-         ltla24_name = `Local Authority District name (2024)` )
+         ltla24_name = `Local Authority District name (2024)` ) |>
+  rename_with(~ str_replace_all(.x, "%", "percent"))
 
 # Save output to data/ folder
 usethis::use_data(imd2025_england_ltla24, overwrite = TRUE)

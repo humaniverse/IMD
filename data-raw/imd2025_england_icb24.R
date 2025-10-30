@@ -40,7 +40,8 @@ imd2025_england_icb24 <-
 imd2025_england_icb24 <-
   imd2025_england_icb24|>
   rename(icb24_code = `Integrated Care Board Code (2024)`,
-         icb24_name = `Integrated Care Board Name (2024)` )
+         icb24_name = `Integrated Care Board Name (2024)` ) |>
+  rename_with(~ str_replace_all(.x, "%", "percent"))
 
 # Save output to data/ folder
 usethis::use_data(imd2025_england_icb24, overwrite = TRUE)

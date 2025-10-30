@@ -37,7 +37,8 @@ imd2025_england_lsoa21_indicators <-
 imd2025_england_lsoa21_indicators <-
   imd2025_england_lsoa21_indicators |>
   select(-`LSOA name (2021)`, -`Local Authority District code (2024)`, -`Local Authority District name (2024)`) |>
-  rename(lsoa21_code = `LSOA code (2021)`)
+  rename(lsoa21_code = `LSOA code (2021)`) |>
+  rename_with(~ str_replace_all(.x, "%", "percent"))
 
 # Save output to data/ folder
 usethis::use_data(imd2025_england_lsoa21_indicators, overwrite = TRUE)

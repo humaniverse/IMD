@@ -40,7 +40,8 @@ imd2025_england_lrf <-
 imd2025_england_lrf <-
   imd2025_england_lrf|>
   rename(lrf24_code = `Local Resilience Forum Code (2024)`,
-         lrf24_name = `Local Resilience Forum Name (2024)` )
+         lrf24_name = `Local Resilience Forum Name (2024)` ) |>
+  rename_with(~ str_replace_all(.x, "%", "percent"))
 
 # Save output to data/ folder
 usethis::use_data(imd2025_england_lrf, overwrite = TRUE)
