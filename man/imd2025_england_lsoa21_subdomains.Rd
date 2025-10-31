@@ -26,6 +26,7 @@ A data frame of class "tbl" with the following columns:
   \item{outdoors_score}{Score for the Outdoors Living Environment subdomain}
   \item{outdoors_rank}{Rank for the Outdoors Living Environment subdomain}
   \item{outdoors_decile}{Decile for the Outdoors Living Environment subdomain}
+  ...
 }
 }
 \source{

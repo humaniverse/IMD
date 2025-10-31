@@ -7,35 +7,36 @@
 \format{
 A data frame of class "tbl":
 \describe{
-  \item{lsoa21_code}{LSOA 2021 code}
-  \item{Income Domain numerator}{Income Domain numerator}
-  \item{Income Deprivation Affecting Children Index (IDACI) numerator}{Income Deprivation Affecting Children Index (IDACI) numerator}
-  \item{Income Deprivation Affecting Older People Index (IDAOPI) numerator}{Income Deprivation Affecting Older People Index (IDAOPI) numerator}
-  \item{Employment Domain numerator}{Employment Domain numerator}
-  \item{Adult skills and English language proficiency indicator}{Adult skills and English language proficiency indicator}
-  \item{Entry to higher education indicator}{Entry to higher education indicator}
-  \item{Acute morbidity indicator}{Acute morbidity indicator}
-  \item{Comparative illness and disability ratio indicator}{Comparative illness and disability ratio indicator}
-  \item{Mental health indicator}{Mental health indicator}
-  \item{Years of potential life lost indicator}{Years of potential life lost indicator}
-  \item{Violence with injury, rate per 1,000 'at-risk population'}{Violence with injury, rate per 1,000 at-risk population}
-  \item{Violence without injury, rate per 1,000 'at-risk population'}{Violence without injury, rate per 1,000 at-risk population}
-  \item{Stalking and harassment, rate per 1,000 'at-risk population'}{Stalking and harassment, rate per 1,000 at-risk population}
-  \item{Burglary, rate per 1,000 'at-risk properties'}{Burglary, rate per 1,000 at-risk properties}
-  \item{Theft, rate per 1,000 'at-risk population'}{Theft, rate per 1,000 at-risk population}
-  \item{Criminal damage, rate per 1,000 'at-risk population'}{Criminal damage, rate per 1,000 at-risk population}
-  \item{Public order and Possession of weapons, rate per 1,000 'at-risk population'}{Public order and Possession of weapons, rate per 1,000 at-risk population}
-  \item{Anti-Social Behaviour, rate per 1,000 'at-risk population'}{Anti-Social Behaviour, rate per 1,000 at-risk population}
-  \item{Connectivity Score}{Connectivity Score}
-  \item{Owner-occupation affordability (component of housing affordability indicator)}{Owner-occupation affordability (component of housing affordability indicator)}
-  \item{Private rental affordability (component of housing affordability indicator)}{Private rental affordability (component of housing affordability indicator)}
-  \item{Housing affordability indicator}{Housing affordability indicator}
-  \item{Digital Connectivity (Broadband download and upload speeds)}{Digital Connectivity (Broadband download and upload speeds)}
-  \item{Core homelessness rate (percent of households)}{Core homelessness rate (percent of households)}
-  \item{Patient-to-GP Ratio}{Patient-to-GP Ratio}
-  \item{Homelessness indicator (rate per 1,000 households)}{Homelessness indicator (rate per 1,000 households)}
-  \item{Household overcrowding indicator (rooms)}{Household overcrowding indicator (rooms)}
-  \item{Household overcrowding indicator (bedrooms)}{Household overcrowding indicator (bedrooms)}
+  \item{lsoa21_code}{LSOA code (2021)}
+  \item{income_domain_numerator}{Income Domain numerator}
+  \item{income_deprivation_affecting_children_index_idaci_numerator}{Income Deprivation Affecting Children Index (IDACI) numerator}
+  \item{income_deprivation_affecting_older_people_index_idaopi_numerator}{Income Deprivation Affecting Older People Index (IDAOPI) numerator}
+  \item{employment_domain_numerator}{Employment Domain numerator}
+  \item{adult_skills_and_english_language_proficiency_indicator}{Adult skills and English language proficiency indicator}
+  \item{entry_to_higher_education_indicator}{Entry to higher education indicator}
+  \item{acute_morbidity_indicator}{Acute morbidity indicator}
+  \item{comparative_illness_and_disability_ratio_indicator}{Comparative illness and disability ratio indicator}
+  \item{mental_health_indicator}{Mental health indicator}
+  \item{years_of_potential_life_lost_indicator}{Years of potential life lost indicator}
+  \item{violence_with_injury_rate_per_1_000_at_risk_population}{Violence with injury, rate per 1,000 'at-risk population'}
+  \item{violence_without_injury_rate_per_1_000_at_risk_population}{Violence without injury, rate per 1,000 'at-risk population'}
+  \item{stalking_and_harassment_rate_per_1_000_at_risk_population}{Stalking and harassment, rate per 1,000 'at-risk population'}
+  \item{burglary_rate_per_1_000_at_risk_properties}{Burglary, rate per 1,000 'at-risk properties'}
+  \item{theft_rate_per_1_000_at_risk_population}{Theft, rate per 1,000 'at-risk population'}
+  \item{criminal_damage_rate_per_1_000_at_risk_population}{Criminal damage, rate per 1,000 'at-risk population'}
+  \item{public_order_and_possession_of_weapons_rate_per_1_000_at_risk_population}{Public order and Possession of weapons, rate per 1,000 'at-risk population'}
+  \item{anti_social_behaviour_rate_per_1_000_at_risk_population}{Anti-Social Behaviour, rate per 1,000 'at-risk population'}
+  \item{connectivity_score}{Connectivity Score}
+  \item{owner_occupation_affordability_component_of_housing_affordability_indicator}{Owner-occupation affordability (component of housing affordability indicator)}
+  \item{private_rental_affordability_component_of_housing_affordability_indicator}{Private rental affordability (component of housing affordability indicator)}
+  \item{housing_affordability_indicator}{Housing affordability indicator}
+  \item{digital_connectivity_broadband_download_and_upload_speeds}{Digital Connectivity (Broadband download and upload speeds)}
+  \item{core_homelessness_rate_percent_of_households}{Core homelessness rate ( percent of households)}
+  \item{patient_to_gp_ratio}{Patient-to-GP Ratio}
+  \item{homelessness_indicator_rate_per_1_000_households}{Homelessness indicator (rate per 1,000 households)}
+  \item{household_overcrowding_indicator_rooms}{Household overcrowding indicator (rooms)}
+  \item{household_overcrowding_indicator_bedrooms}{Household overcrowding indicator (bedrooms)}
+  ...
 }
 }
 \source{
