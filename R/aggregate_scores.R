@@ -21,40 +21,50 @@
 #' @return A tibble containing population-weighted average scores,
 #'     proportions of highly deprived areas, and the extent for
 #'     the higher-level geography.
+#'
+#' @export
 aggregate_scores <-
-	function(data,
-	         score_col,
-	         rank_col,
-	         decile_col,
-	         higher_level_geography,
-           population
-			) {
+	function(
+		data,
+		score_col,
+		rank_col,
+		decile_col,
+		higher_level_geography,
+		population
+	) {
+		# data <-
+		#   eimd |>
+		#   select(lsoa_code, higher_level_geography = msoa_code, decile_col = IMD_decile, rank_col = IMD_rank, score_col = IMD_score, population)
 
-	  # data <-
-	  #   eimd |>
-	  #   select(lsoa_code, higher_level_geography = msoa_code, decile_col = IMD_decile, rank_col = IMD_rank, score_col = IMD_score, population)
+		data_proportion <-
+			data |>
+			calculate_proportion({{ decile_col }}, {{ higher_level_geography }})
 
-	  data_proportion <-
-	    data |>
-	    calculate_proportion({{ decile_col }}, {{ higher_level_geography }})
+		data_extent <-
+			data |>
+			calculate_extent(
+				{{ rank_col }},
+				{{ higher_level_geography }},
+				{{ population }}
+			)
 
-	  data_extent <-
-	    data |>
-	    calculate_extent({{ rank_col }}, {{ higher_level_geography }}, {{ population }})
+		data_score <-
+			data |>
+			calculate_pop_weighted_score(
+				{{ score_col }},
+				{{ higher_level_geography }},
+				{{ population }}
+			)
 
-	  data_score <-
-	    data |>
-	    calculate_pop_weighted_score({{ score_col }}, {{ higher_level_geography }}, {{ population }})
+		# Combine and return all aggregated measures
+		data_score |>
+			dplyr::left_join(
+				data_proportion
+				# by = {{ higher_level_geography }}
+			) |>
 
-	  # Combine and return all aggregated measures
-	  data_score |>
-	    dplyr::left_join(
-	      data_proportion
-	      # by = {{ higher_level_geography }}
-	    ) |>
-
-	    dplyr::left_join(
-	      data_extent
-	      # by = {{ higher_level_geography }}
-	    )
+			dplyr::left_join(
+				data_extent
+				# by = {{ higher_level_geography }}
+			)
 	}

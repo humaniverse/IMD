@@ -13,12 +13,10 @@
 #'        the population estimates of the lower level geography
 #'
 #' @importFrom rlang .data
+#'
+#' @export
 calculate_pop_weighted_score <-
-  function(data,
-           var,
-           higher_level_geography,
-           population) {
-
+  function(data, var, higher_level_geography, population) {
     data |>
       dplyr::mutate(Score = {{ var }} * {{ population }}) |>
       dplyr::group_by({{ higher_level_geography }}) |>

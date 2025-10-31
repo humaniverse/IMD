@@ -14,15 +14,16 @@
 #'        or equal to `max_quantile` (default = 1)
 #'
 #' @importFrom rlang .data
+#'
+#' @export
 calculate_proportion <-
-  function(data,
-           var,
-           higher_level_geography,
-           max_quantile = 1) {
+  function(data, var, higher_level_geography, max_quantile = 1) {
     data |>
       # Label LSOAs by whether they're in top 10% most-deprived then summarise by this label
-      dplyr::mutate(Top10 = ifelse({{ var }} <= max_quantile, "Top10", "Other")) |>
-      janitor::tabyl({{higher_level_geography}}, .data$Top10) |>
+      dplyr::mutate(
+        Top10 = ifelse({{ var }} <= max_quantile, "Top10", "Other")
+      ) |>
+      janitor::tabyl({{ higher_level_geography }}, .data$Top10) |>
 
       # Calculate proportion of most deprived LSOAs
       dplyr::mutate(Proportion = .data$Top10 / (.data$Top10 + .data$Other)) |>

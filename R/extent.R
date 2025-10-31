@@ -26,11 +26,10 @@
 #'        the population estimates of the lower level geography
 #'
 #' @importFrom rlang .data
+#'
+#' @export
 calculate_extent <-
-  function(data,
-           var,
-           higher_level_geography,
-           population) {
+  function(data, var, higher_level_geography, population) {
     data <-
       data |>
       dplyr::mutate(percentile = dplyr::ntile({{ var }}, 100)) |>
@@ -38,7 +37,8 @@ calculate_extent <-
         extent = dplyr::case_when(
           percentile <= 10 ~ {{ population }},
           percentile == 11 ~ {{ population }} * 0.95,
-          percentile > 11 & percentile <= 30 ~ {{ population }} * (0.95 - ((0.9 / 19) * (percentile - 11))),
+          percentile > 11 & percentile <= 30 ~ {{ population }} *
+            (0.95 - ((0.9 / 19) * (percentile - 11))),
           TRUE ~ 0
         )
       ) |>
