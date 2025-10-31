@@ -14,7 +14,7 @@ A data frame of class "tbl":
   \item{Education_decile}{Education domain decile}
   \item{Health_decile}{Health and Disability domain decile}
   \item{Crime_decile}{Crime domain decile}
-  \item{Housing_and_Access_decile}{Housing and access to services domain decile}
+  \item{Housing_and_Services_decile}{Housing and access to services domain decile}
   \item{Environment_decile}{Environment domain decile}
   \item{IMD_rank}{IMD rank}
   \item{Income_rank}{Income domain rank}
@@ -22,7 +22,7 @@ A data frame of class "tbl":
   \item{Education_rank}{Education domain rank}
   \item{Health_rank}{Health domain rank}
   \item{Crime_rank}{Crime domain rank}
-  \item{Housing_and_Access_rank}{Housing and access to services domain rank}
+  \item{Housing_and_Services_rank}{Housing and access to services domain rank}
   \item{Environment_rank}{Environment domain rank}
   \item{IMD_score}{IMD score}
   \item{Income_score}{Income domain score}

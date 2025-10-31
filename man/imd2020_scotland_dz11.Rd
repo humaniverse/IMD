@@ -3,7 +3,7 @@
 \docType{data}
 \name{imd2020_scotland_dz11}
 \alias{imd2020_scotland_dz11}
-\title{Index of Multiple Deprivation for Data Zones in Scotland}
+\title{Index of Multiple Deprivation (2020) for Data Zones in Scotland}
 \format{
 A data frame of class "tbl" with 6,976 rows and 17 variables:
 \describe{

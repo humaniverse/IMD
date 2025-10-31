@@ -7,64 +7,64 @@
 \format{
 A data frame of class "tbl" with the following columns:
 \describe{
-  \item{ltla24_code}{LTLA 2024 code}
-  \item{ltla24_name}{LTLA 2024 name}
-  \item{IMD - Average rank}{Population-weighted average IMD rank}
-  \item{IMD - Rank of average rank}{Rank of the average IMD rank}
-  \item{IMD - Average score}{Population-weighted average IMD score}
-  \item{IMD - Rank of average score}{Rank of the average IMD score}
-  \item{IMD - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally}
-  \item{IMD - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally}
-  \item{IMD25 - Extent}{Extent measure for IMD 2025}
-  \item{IMD25 - Rank of extent}{Rank of extent measure}
-  \item{IMD25 - Local concentration}{Local concentration measure for IMD 2025}
-  \item{IMD25 - Rank of local concentration}{Rank of local concentration measure}
-  \item{Income - Average rank}{Population-weighted average Income rank}
-  \item{Income - Rank of average rank}{Rank of the average Income rank}
-  \item{Income - Average score}{Population-weighted average Income score}
-  \item{Income - Rank of average score}{Rank of the average Income score}
-  \item{Income - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Income}
-  \item{Income - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Income}
-  \item{Income scale}{Income scale measure}
-  \item{Rank of Income Scale}{Rank of Income scale measure}
-  \item{Employment - Average rank}{Population-weighted average Employment rank}
-  \item{Employment - Rank of average rank}{Rank of the average Employment rank}
-  \item{Employment - Average score}{Population-weighted average Employment score}
-  \item{Employment - Rank of average score}{Rank of the average Employment score}
-  \item{Employment - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Employment}
-  \item{Employment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Employment}
-  \item{Employment scale}{Employment scale measure}
-  \item{Rank of Employment Scale}{Rank of Employment scale measure}
-  \item{Education, Skills and Training - Average rank}{Population-weighted average Education rank}
-  \item{Education, Skills and Training - Rank of average rank}{Rank of the average Education rank}
-  \item{Education, Skills and Training - Average score}{Population-weighted average Education score}
-  \item{Education, Skills and Training - Rank of average score}{Rank of the average Education score}
-  \item{Education, Skills and Training - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Education}
-  \item{Education, Skills and Training - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Education}
-  \item{Health Deprivation and Disability - Average rank}{Population-weighted average Health rank}
-  \item{Health Deprivation and Disability - Rank of average rank}{Rank of the average Health rank}
-  \item{Health Deprivation and Disability - Average score}{Population-weighted average Health score}
-  \item{Health Deprivation and Disability - Rank of average score}{Rank of the average Health score}
-  \item{Health Deprivation and Disability - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Health}
-  \item{Health Deprivation and Disability - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Health}
-  \item{Crime - Average rank}{Population-weighted average Crime rank}
-  \item{Crime - Rank of average rank}{Rank of the average Crime rank}
-  \item{Crime - Average score}{Population-weighted average Crime score}
-  \item{Crime - Rank of average score}{Rank of the average Crime score}
-  \item{Crime - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Crime}
-  \item{Crime - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Crime}
-  \item{Barriers to Housing and Services - Average rank}{Population-weighted average Barriers rank}
-  \item{Barriers to Housing and Services - Rank of average rank}{Rank of the average Barriers rank}
-  \item{Barriers to Housing and Services - Average score}{Population-weighted average Barriers score}
-  \item{Barriers to Housing and Services - Rank of average score}{Rank of the average Barriers score}
-  \item{Barriers to Housing and Services - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Barriers}
-  \item{Barriers to Housing and Services - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Barriers}
-  \item{Living Environment - Average rank}{Population-weighted average Living Environment rank}
-  \item{Living Environment - Rank of average rank}{Rank of the average Living Environment rank}
-  \item{Living Environment - Average score}{Population-weighted average Living Environment score}
-  \item{Living Environment - Rank of average score}{Rank of the average Living Environment score}
-  \item{Living Environment - Proportion of LSOAs in most deprived 10percent nationally}{Proportion of LSOAs in the most deprived 10 percent nationally for Living Environment}
-  \item{Living Environment - Rank of proportion of LSOAs in most deprived 10percent nationally}{Rank of proportion of LSOAs in the most deprived 10 percent nationally for Living Environment}
+  \item{ltla24_code}{Local Authority District code (2024)}
+  \item{ltla24_name}{Local Authority District name (2024)}
+  \item{imd_average_rank}{IMD - Average rank}
+  \item{imd_rank_of_average_rank}{IMD - Rank of average rank}
+  \item{imd_average_score}{IMD - Average score}
+  \item{imd_rank_of_average_score}{IMD - Rank of average score}
+  \item{imd_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{IMD - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{imd_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{IMD - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+  \item{imd25_extent}{IMD25 - Extent}
+  \item{imd25_rank_of_extent}{IMD25 - Rank of extent}
+  \item{imd25_local_concentration}{IMD25 - Local concentration}
+  \item{imd25_rank_of_local_concentration}{IMD25 - Rank of local concentration}
+  \item{income_average_rank}{Income - Average rank}
+  \item{income_rank_of_average_rank}{Income - Rank of average rank}
+  \item{income_average_score}{Income - Average score}
+  \item{income_rank_of_average_score}{Income - Rank of average score}
+  \item{income_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Income - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{income_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Income - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+  \item{income_scale}{Income scale}
+  \item{rank_of_income_scale}{Rank of Income Scale}
+  \item{employment_average_rank}{Employment - Average rank}
+  \item{employment_rank_of_average_rank}{Employment - Rank of average rank}
+  \item{employment_average_score}{Employment - Average score}
+  \item{employment_rank_of_average_score}{Employment - Rank of average score}
+  \item{employment_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Employment - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{employment_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Employment - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+  \item{employment_scale}{Employment scale}
+  \item{rank_of_employment_scale}{Rank of Employment Scale}
+  \item{education_skills_and_training_average_rank}{Education, Skills and Training - Average rank}
+  \item{education_skills_and_training_rank_of_average_rank}{Education, Skills and Training - Rank of average rank}
+  \item{education_skills_and_training_average_score}{Education, Skills and Training - Average score}
+  \item{education_skills_and_training_rank_of_average_score}{Education, Skills and Training - Rank of average score}
+  \item{education_skills_and_training_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Education, Skills and Training - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{education_skills_and_training_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Education, Skills and Training - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+  \item{health_deprivation_and_disability_average_rank}{Health Deprivation and Disability - Average rank}
+  \item{health_deprivation_and_disability_rank_of_average_rank}{Health Deprivation and Disability - Rank of average rank}
+  \item{health_deprivation_and_disability_average_score}{Health Deprivation and Disability - Average score}
+  \item{health_deprivation_and_disability_rank_of_average_score}{Health Deprivation and Disability - Rank of average score}
+  \item{health_deprivation_and_disability_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Health Deprivation and Disability - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{health_deprivation_and_disability_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Health Deprivation and Disability - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+  \item{crime_average_rank}{Crime - Average rank}
+  \item{crime_rank_of_average_rank}{Crime - Rank of average rank}
+  \item{crime_average_score}{Crime - Average score}
+  \item{crime_rank_of_average_score}{Crime - Rank of average score}
+  \item{crime_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Crime - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{crime_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Crime - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+  \item{barriers_to_housing_and_services_average_rank}{Barriers to Housing and Services - Average rank}
+  \item{barriers_to_housing_and_services_rank_of_average_rank}{Barriers to Housing and Services - Rank of average rank}
+  \item{barriers_to_housing_and_services_average_score}{Barriers to Housing and Services - Average score}
+  \item{barriers_to_housing_and_services_rank_of_average_score}{Barriers to Housing and Services - Rank of average score}
+  \item{barriers_to_housing_and_services_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Barriers to Housing and Services - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{barriers_to_housing_and_services_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Barriers to Housing and Services - Rank of proportion of LSOAs in most deprived 10 percent nationally}
+  \item{living_environment_average_rank}{Living Environment - Average rank}
+  \item{living_environment_rank_of_average_rank}{Living Environment - Rank of average rank}
+  \item{living_environment_average_score}{Living Environment - Average score}
+  \item{living_environment_rank_of_average_score}{Living Environment - Rank of average score}
+  \item{living_environment_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Living Environment - Proportion of LSOAs in most deprived 10 percent nationally}
+  \item{living_environment_rank_of_proportion_of_lso_as_in_most_deprived_10_percent_nationally}{Living Environment - Rank of proportion of LSOAs in most deprived 10 percent nationally}
 }
 }
 \source{

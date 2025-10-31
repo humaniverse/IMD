@@ -1,6 +1,7 @@
 library(tidyverse)
 library(devtools)
 library(readxl)
+library(janitor)
 
 # Load package
 load_all(".")
@@ -140,6 +141,10 @@ imd2012_scotland_dz01_indicators <-
   left_join(housing) |>
   left_join(access) |>
   left_join(crime)
+
+imd2012_scotland_dz01_indicators <- clean_names(
+  imd2012_scotland_dz01_indicators
+)
 
 # Save output to data/ folder
 usethis::use_data(imd2012_scotland_dz01_indicators, overwrite = TRUE)

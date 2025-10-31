@@ -1,6 +1,6 @@
 library(tidyverse)
-library(compositr)
 library(readxl)
+library(janitor)
 
 # Load package
 devtools::load_all(".")
@@ -11,13 +11,13 @@ query_url <-
   filter(data_set == "imd_england_indicators") |>
   pull(query_url)
 
-tf <- download_file(query_url, ".xlsx")
+tf <- download.file(query_url, ".xlsx")
 
 imd_sheets <-
   excel_sheets(tf) |>
   set_names()
 
-imd_sheets <- imd_sheets[-1]  # Don't need 'Notes' worksheet
+imd_sheets <- imd_sheets[-1] # Don't need 'Notes' worksheet
 
 # imd_indicators <-
 #   imd_sheets |>
@@ -44,8 +44,16 @@ imd2019_england_lsoa11_indicators <-
 
 imd2019_england_lsoa11_indicators <-
   imd2019_england_lsoa11_indicators |>
-  select(-`LSOA name (2011)`, -`Local Authority District code (2019)`, -`Local Authority District name (2019)`) |>
+  select(
+    -`LSOA name (2011)`,
+    -`Local Authority District code (2019)`,
+    -`Local Authority District name (2019)`
+  ) |>
   rename(lsoa11_code = `LSOA code (2011)`)
+
+imd2019_england_lsoa11_indicators <- clean_names(
+  imd2019_england_lsoa11_indicators
+)
 
 # Save output to data/ folder
 usethis::use_data(imd2019_england_lsoa11_indicators, overwrite = TRUE)

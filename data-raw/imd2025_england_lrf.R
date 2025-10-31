@@ -1,5 +1,7 @@
 library(tidyverse)
 library(devtools)
+library(readxl)
+library(janitor)
 
 load_all(".")
 
@@ -16,7 +18,7 @@ imd_sheets <-
   excel_sheets(tf) |>
   set_names()
 
-imd_sheets <- imd_sheets[-1]  # Don't need 'Notes' worksheet
+imd_sheets <- imd_sheets[-1] # Don't need 'Notes' worksheet
 
 imd <- read_excel(tf, sheet = imd_sheets[1])
 imd_income <- read_excel(tf, sheet = imd_sheets[2])
@@ -27,7 +29,7 @@ imd_crime <- read_excel(tf, sheet = imd_sheets[6])
 imd_barriers <- read_excel(tf, sheet = imd_sheets[7])
 imd_env <- read_excel(tf, sheet = imd_sheets[8])
 
-imd2025_england_lrf <-
+imd_lrf <-
   imd |>
   left_join(imd_income) |>
   left_join(imd_employment) |>
@@ -38,11 +40,13 @@ imd2025_england_lrf <-
   left_join(imd_env)
 
 imd2025_england_lrf <-
-  imd2025_england_lrf|>
-  rename(lrf24_code = `Local Resilience Forum Code (2024)`,
-         lrf24_name = `Local Resilience Forum Name (2024)` ) |>
-  rename_with(~ str_replace_all(.x, "%", "percent"))
+  imd_lrf |>
+  rename(
+    lrf24_code = `Local Resilience Forum Code (2024)`,
+    lrf24_name = `Local Resilience Forum Name (2024)`
+  ) |>
+  rename_with(~ str_replace_all(.x, "%", " percent")) |>
+  clean_names()
 
 # Save output to data/ folder
 usethis::use_data(imd2025_england_lrf, overwrite = TRUE)
-
