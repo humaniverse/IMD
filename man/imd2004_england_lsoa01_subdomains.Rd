@@ -5,7 +5,7 @@
 \alias{imd2004_england_lsoa01_subdomains}
 \title{Index of Multiple Deprivation (2004) subdomains for LSOAs in England}
 \format{
-A data frame of class "tbl" with 32,482 rows and 6 variables:
+A data frame of class "tbl" with 32,482 rows and 28 variables:
 \describe{
   \item{lsoa01_code}{LSOA (2001) code}
   \item{skills_sub_domain_score]}{Skills score}

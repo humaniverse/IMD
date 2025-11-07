@@ -1650,6 +1650,45 @@ NULL
 #' @source \url{https://www.gov.uk/}
 "imd2007_england_lsoa01"
 
+#' Index of Multiple Deprivation (2007) subdomains for LSOAs in England
+#'
+#' A data set containing subdomain scores, ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,482 rows and 28 variables:
+#' \describe{
+#'   \item{lsoa01_code}{LSOA (2001) code}
+#'   \item{skills_sub_domain_score]}{Skills score}
+#'   \item{children_young_people_sub_domain_score]}{Children and Young People score}
+#'   \item{education_skills_and_training_domain_score]}{Education, Skills and Training score}
+#'   \item{skills_sub_domain_rank]}{Skills rank}
+#'   \item{children_young_people_sub_domain_rank]}{Children and Young People rank}
+#'   \item{education_skills_and_training_domain_rank]}{Education, Skills and Training rank}
+#'   \item{skills_sub_domain_decile]}{Skills decile}
+#'   \item{children_young_people_sub_domain_decile]}{Children and Young People decile}
+#'   \item{education_skills_and_training_domain_decile]}{Education, Skills and Training decile}
+#'   \item{wider_barriers_sub_domain_score]}{Wider Barriers score}
+#'   \item{geographical_barriers_sub_domain_score]}{Geographical Barriers score}
+#'   \item{barriers_to_housing_and_services_domain_score]}{Barriers to Housing and Services score}
+#'   \item{wider_barriers_sub_domain_rank]}{Wider Barriers rank}
+#'   \item{geographical_barriers_sub_domain_rank]}{Geographical Barriers rank}
+#'   \item{barriers_to_housing_and_services_domain_rank]}{Barriers to Housing and Services rank}
+#'   \item{wider_barriers_sub_domain_decile]}{Wider Barriers decile}
+#'   \item{geographical_barriers_sub_domain_decile]}{Geographical Barriers decile}
+#'   \item{barriers_to_housing_and_services_domain_decile]}{Barriers to Housing and Services decile}
+#'   \item{indoors_sub_domain_score]}{Indoors score}
+#'   \item{outdoors_sub_domain_score]}{Outdoors score}
+#'   \item{living_environment_domain_score]}{Living Environment score}
+#'   \item{indoors_sub_domain_rank]}{Indoors rank}
+#'   \item{outdoors_sub_domain_rank]}{Outdoors ranks}
+#'   \item{living_environment_domain_rank]}{Living Environment rank}
+#'   \item{indoors_sub_domain_rank_decile]}{Indoors decile}
+#'   \item{outdoors_sub_domain_rank_decile]}{Outdoors decile}
+#'   \item{living_environment_domain_decile]}{Living Environment decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2007_england_lsoa01_subdomains"
+
 #' Index of Multiple Deprivation (2007) for Local Authorities in England
 #'
 #' A data set containing IMD scores, proportions and extents for Local
@@ -1703,7 +1742,7 @@ NULL
 #'
 #' A data set containing subdomain scores, ranks and deciles for LSOAs in England.
 #'
-#' @format A data frame of class "tbl" with 32,482 rows and 6 variables:
+#' @format A data frame of class "tbl" with 32,482 rows and 28 variables:
 #' \describe{
 #'   \item{lsoa01_code}{LSOA (2001) code}
 #'   \item{skills_sub_domain_score]}{Skills score}
