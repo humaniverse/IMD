@@ -1488,6 +1488,36 @@ NULL
 #' @source \url{https://www.gov.uk/}
 "imd2015_england_lsoa11"
 
+#' Index of Multiple Deprivation (2015) subdomains for LSOAs in England
+#'
+#' A data set containing subdomain scores, ranks and deciles for LSOAs in England.
+#'
+#' @format A data frame of class "tbl" with 32,844 rows and 19 variables:
+#' \describe{
+#'   \item{lsoa11_code}{LSOA (2011) code}
+#'   \item{adult_skills_sub_domain_score]}{Adult Skills score}
+#'   \item{children_and_young_people_sub_domain_score]}{Children and Young People score}
+#'   \item{adult_skills_sub_domain_rank]}{Adult Skills rank}
+#'   \item{children_and_young_people_sub_domain_rank]}{Children and Young People rank}
+#'   \item{adult_skills_sub_domain_decile]}{Adult Skills decile}
+#'   \item{children_and_young_people_sub_domain_decile]}{Children and Young People decile}
+#'   \item{wider_barriers_sub_domain_score]}{Wider Barriers score}
+#'   \item{geographical_barriers_sub_domain_score]}{Geographical Barriers score}
+#'   \item{wider_barriers_sub_domain_rank]}{Wider Barriers rank}
+#'   \item{geographical_barriers_sub_domain_rank]}{Geographical Barriers rank}
+#'   \item{wider_barriers_sub_domain_decile]}{Wider Barriers decile}
+#'   \item{geographical_barriers_sub_domain_decile]}{Geographical Barriers decile}
+#'   \item{indoors_sub_domain_score]}{Indoors score}
+#'   \item{outdoors_sub_domain_score]}{Outdoors score}
+#'   \item{indoors_sub_domain_rank]}{Indoors rank}
+#'   \item{outdoors_sub_domain_rank]}{Outdoors ranks}
+#'   \item{indoors_sub_domain_rank_decile]}{Indoors decile}
+#'   \item{outdoors_sub_domain_rank_decile]}{Outdoors decile}
+#'   ...
+#' }
+#' @source \url{https://www.gov.uk/}
+"imd2015_england_lsoa01_subdomains"
+
 #' Index of Multiple Deprivation (2015) for Local Authorities in England
 #'
 #' A data set containing IMD proportions and extents for Local Authorites
