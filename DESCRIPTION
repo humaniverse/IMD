@@ -10,6 +10,10 @@ Authors@R: c(
     person(given = "Mike", 
            family = "Page", 
            email = "mpage@redcross.org.uk", 
+           role = "aut"),
+    person(given = "Jenna", 
+           family = "Tan", 
+           email = "jennatan@redcross.org.uk", 
            role = "aut")
     )
 Description: Index of Multiple Deprivation for UK nations at various 
@@ -26,7 +30,7 @@ Description: Index of Multiple Deprivation for UK nations at various
     The 'IMD' package also provides the composite UK index developed by
     <https://github.com/mysociety/composite_uk_imd>.
 License: MIT + file LICENSE
-URL: https://github.com/humaniverse/IMD
+URL: https://github.com/humaniverse/IMD, https://humaniverse.github.io/IMD/
 BugReports: https://github.com/humaniverse/IMD/issues
 Encoding: UTF-8
 LazyData: true
