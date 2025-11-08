@@ -1,3 +1,7 @@
+# IMD (development version)
+
+- Added subdomain data for England's 2004, 2007, 2010 and 2015 Indices of Deprivation
+
 # IMD 2.0.0
 
 ## Breaking changes
