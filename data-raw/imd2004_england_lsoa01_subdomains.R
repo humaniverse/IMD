@@ -71,8 +71,8 @@ imd2004_environment <-
     outdoors_sub_domain_rank = invert_rank(outdoors_sub_domain_score),
     living_environment_domain_rank = invert_rank(living_environment_domain_score),
 
-    indoors_sub_domain_rank_decile = ntile(indoors_sub_domain_rank, n = 10),
-    outdoors_sub_domain_rank_decile = ntile(outdoors_sub_domain_rank, n = 10),
+    indoors_sub_domain_decile = ntile(indoors_sub_domain_rank, n = 10),
+    outdoors_sub_domain_decile = ntile(outdoors_sub_domain_rank, n = 10),
     living_environment_domain_decile = ntile(living_environment_domain_score, n = 10)
   )
 

@@ -27,7 +27,7 @@ imd2010_england_lsoa01_subdomains <-
     geographical_barriers_sub_domain_decile = ntile(geographical_barriers_sub_domain_rank, n = 10),
     wider_barriers_sub_domain_decile = ntile(wider_barriers_sub_domain_rank, n = 10),
     children_young_people_sub_domain_decile = ntile(children_young_people_sub_domain_rank, n = 10),
-    skills_sub_domain_rank_decile = ntile(skills_sub_domain_rank, n = 10)
+    skills_sub_domain_decile = ntile(skills_sub_domain_rank, n = 10)
   )
 
 # Save output to data/ folder
