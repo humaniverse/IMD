@@ -1516,7 +1516,7 @@ NULL
 #'   ...
 #' }
 #' @source \url{https://www.gov.uk/}
-"imd2015_england_lsoa01_subdomains"
+"imd2015_england_lsoa11_subdomains"
 
 #' Index of Multiple Deprivation (2015) for Local Authorities in England
 #'

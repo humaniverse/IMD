@@ -13,7 +13,7 @@ query_url <-
 
 imd2015 <- read_csv(query_url)
 
-imd2015_england_lsoa01_subdomains <-
+imd2015_england_lsoa11_subdomains <-
   imd2015 |>
   select(
     lsoa11_code = `LSOA code (2011)`,
@@ -24,4 +24,4 @@ imd2015_england_lsoa01_subdomains <-
   clean_names()
 
 # Save output to data/ folder
-usethis::use_data(imd2015_england_lsoa01_subdomains, overwrite = TRUE)
+usethis::use_data(imd2015_england_lsoa11_subdomains, overwrite = TRUE)
