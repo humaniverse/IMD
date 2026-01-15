@@ -64,14 +64,12 @@ request(query_url) |>
   req_perform(path = tf)
 
 imd_wales_lsoa_scores <-
-  readODS::read_ods(tf, sheet = "WIMD_2025_ranks", skip = 2)
+  readODS::read_ods(tf, sheet = "Data", skip = 3)
 
 names(imd_wales_lsoa_scores) <- str_trim(names(imd_wales_lsoa_scores))
 
 scores <-
   imd_wales_lsoa_scores |>
-
-  select(-ncol(imd_wales_lsoa_scores)) |>
   as_tibble() |>
 
   select(
@@ -84,12 +82,38 @@ scores <-
     Access_score = `Access to Services`,
     Housing_score = Housing,
     Crime_score = `Community Safety`,
-    Environment_score = `Physical Environment`,
+    Environment_score = `Physical Environment`
   )
 
-# Combine scores, ranks, deciles
+# Get deep rooted deprivation
+query_url <-
+  query_urls |>
+  filter(data_set == "imd2025_lsoa21_wales_deeprooteddep") |>
+  pull(query_url)
+
+tf <- tempfile(fileext = ".ods")
+
+request(query_url) |>
+  req_perform(path = tf)
+
+imd_wales_lsoa_dep <-
+  readODS::read_ods(tf, sheet = "Data", skip = 4)
+
+names(imd_wales_lsoa_dep) <- str_trim(names(imd_wales_lsoa_dep))
+
+dep <-
+  imd_wales_lsoa_dep |>
+  as_tibble() |>
+
+  select(
+    lsoa21_code = `LSOA Code`,
+    category_of_deeprooted_deprivation = `Category of deep-rooted deprivation`
+  )
+
+# Combine scores, ranks, deciles, deep rooted deprivation
 imd2025_wales_lsoa21 <- ranks_deciles |>
-  left_join(scores)
+  left_join(scores) |>
+  left_join(dep)
 
 # Save output to data/ folder
 usethis::use_data(imd2025_wales_lsoa21, overwrite = TRUE)

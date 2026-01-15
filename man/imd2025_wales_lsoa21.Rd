@@ -3,7 +3,7 @@
 \docType{data}
 \name{imd2025_wales_lsoa21}
 \alias{imd2025_wales_lsoa21}
-\title{Index of Multiple Deprivation for LSOAs (2021) in Wales}
+\title{Index of Multiple Deprivation for LSOAs (2021) in Wales.}
 \format{
 A data frame of class "tbl":
 \describe{
@@ -36,18 +36,25 @@ A data frame of class "tbl":
   \item{Access_score}{Housing domain score}
   \item{Housing_score}{Housing domain score}
   \item{Crime_score}{Community safety domain score}
-  \item{Environment_score}{Physical environemnt domain score}
+  \item{Environment_score}{Physical environment domain score}
+  \item{Category_of_deeprooted_deprivation}{
+  Four categories of deep-rooted deprivation:
+  \cr 1. LSOAs in deep rooted deprivation: These LSOAs have remained in the top 50 most deprvied for the last 6 publications of WIMD ranks.
+  \cr 2. LSOAs often ranked in top 50 most deprived: These LSOAs have been in the top 50 most deprived for between 3 and 5 of the last 6 publications of WIMD ranks.
+  \cr 3. LSOAs sometimes ranked in top 50 most deprived: These LSOAs have been in the top 50 most deprived for 1 or 2 of the last 6 publications of WIMD ranks.
+  \cr 4. LSOAs never ranked in top 50 most deprived: The LSOAs have never been in the top 50 most deprived for the last 6 publications of WIMD ranks.
+  }
   ...
 }
 }
 \source{
-\url{https://www.gov.uk/}
+\url{https://www.gov.wales/welsh-index-multiple-deprivation-2025}
 }
 \usage{
 imd2025_wales_lsoa21
 }
 \description{
 A data set containing IMD scores, ranks and deciles for Lower Layer Super
-Output Areas (LSOAs) in Wales
+Output Areas (LSOAs) in Wales. Lower numbers indicate more deprivation, higher numbers indicate less deprivation.
 }
 \keyword{datasets}
