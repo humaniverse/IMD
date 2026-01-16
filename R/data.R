@@ -435,6 +435,55 @@ NULL
 #' @source \url{https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025}
 "imd2025_england_ltla24"
 
+#' Index of Multiple Deprivation for LSOAs (2021) in Wales.
+#'
+#' A data set containing IMD scores, ranks and deciles for Lower Layer Super
+#' Output Areas (LSOAs) in Wales. Lower numbers indicate more deprivation, higher numbers indicate less deprivation.
+#'
+#' @format A data frame of class "tbl":
+#' \describe{
+#'   \item{lsoa21_code}{LSOA code}
+#'   \item{IMD_rank}{IMD rank}
+#'   \item{Income_rank}{Income domain rank}
+#'   \item{Employment_rank}{Employment domain rank}
+#'   \item{Education_rank}{Education domain rank}
+#'   \item{Health_rank}{Health domain rank}
+#'   \item{Access_rank}{Access to services domain rank}
+#'   \item{Housing_rank}{Housing domain rank}
+#'   \item{Crime_rank}{Community safety domain rank}
+#'   \item{Environment_rank}{Environment domain rank}
+#'
+#'   \item{IMD_decile}{IMD decile}
+#'   \item{Income_decile}{Income domain decile}
+#'   \item{Employment_decile}{Employment domain decile}
+#'   \item{Health_decile}{Health and Disability domain decile}
+#'   \item{Education_decile}{Education domain decile}
+#'   \item{Access_decile}{Housing domain score}
+#'   \item{Housing_decile}{Housing domain decile}
+#'   \item{Crime_decile}{Community safety domain decile}
+#'   \item{Environment_decile}{Environment domain decile}
+#'
+#'   \item{IMD_score}{IMD score}
+#'   \item{Income_score}{Income domain score}
+#'   \item{Employment_score}{Employment domain score}
+#'   \item{Health_score}{Health domain score}
+#'   \item{Education_score}{Education domain score}
+#'   \item{Access_score}{Housing domain score}
+#'   \item{Housing_score}{Housing domain score}
+#'   \item{Crime_score}{Community safety domain score}
+#'   \item{Environment_score}{Physical environment domain score}
+#'   \item{Category_of_deeprooted_deprivation}{
+#'   Four categories of deep-rooted deprivation:
+#'   \cr 1. LSOAs in deep rooted deprivation: These LSOAs have remained in the top 50 most deprvied for the last 6 publications of WIMD ranks.
+#'   \cr 2. LSOAs often ranked in top 50 most deprived: These LSOAs have been in the top 50 most deprived for between 3 and 5 of the last 6 publications of WIMD ranks.
+#'   \cr 3. LSOAs sometimes ranked in top 50 most deprived: These LSOAs have been in the top 50 most deprived for 1 or 2 of the last 6 publications of WIMD ranks.
+#'   \cr 4. LSOAs never ranked in top 50 most deprived: The LSOAs have never been in the top 50 most deprived for the last 6 publications of WIMD ranks.
+#'   }
+#'   ...
+#' }
+#' @source \url{https://www.gov.wales/welsh-index-multiple-deprivation-2025}
+"imd2025_wales_lsoa21"
+
 #' Index of Multiple Deprivation for LSOAs (2011) in England
 #'
 #' A data set containing IMD scores and deciles for Lower Layer Super
