@@ -484,6 +484,27 @@ NULL
 #' @source \url{https://www.gov.wales/welsh-index-multiple-deprivation-2025}
 "imd2025_wales_lsoa21"
 
+#' Index of Multiple Deprivation for LTLAs (2024) in Wales
+#'
+#' A data set containing deprivation groups for Lower Tier Local Authorities (LTLAs) in Wales.
+#' The WIMD is calculated at LSOA level. To compare larger geographies, consider the proportion of small
+#' area in a larger geography which are in the most deprived (say) 10 percent of areas in Wales.This table
+#' provides numbers and percentages of LSOAs within a given local authority which are in these categories of deprivation:
+#' 10percent, 20percent, 30percent, 50percent most deprived overall and for each of the 8 domains.
+#'
+#'
+#' @format A data frame of class "tbl"
+#' \describe{
+#'   \item{ltla24_code}{LTLA code}
+#'   \item{domain}{Domain}
+#'   \item{deprivation_group}{Deprivation group}
+#'   \item{data_description}{Data unit - number or percentage}
+#'   \item{data_values}{Value}
+#'   ...
+#' }
+#' @source \url{https://stats.gov.wales/en-GB/f30cc8bc-8e97-449e-96a4-77b0400262d1#about}
+"imd2025_wales_ltla24"
+
 #' Index of Multiple Deprivation for LSOAs (2011) in England
 #'
 #' A data set containing IMD scores and deciles for Lower Layer Super
