@@ -37,7 +37,7 @@ A data frame of class "tbl":
   \item{Housing_score}{Housing domain score}
   \item{Crime_score}{Community safety domain score}
   \item{Environment_score}{Physical environment domain score}
-  \item{Category_of_deeprooted_deprivation}{
+  \item{category_of_deeprooted_deprivation}{
   Four categories of deep-rooted deprivation:
   \cr 1. LSOAs in deep rooted deprivation: These LSOAs have remained in the top 50 most deprvied for the last 6 publications of WIMD ranks.
   \cr 2. LSOAs often ranked in top 50 most deprived: These LSOAs have been in the top 50 most deprived for between 3 and 5 of the last 6 publications of WIMD ranks.

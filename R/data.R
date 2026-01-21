@@ -472,7 +472,7 @@ NULL
 #'   \item{Housing_score}{Housing domain score}
 #'   \item{Crime_score}{Community safety domain score}
 #'   \item{Environment_score}{Physical environment domain score}
-#'   \item{Category_of_deeprooted_deprivation}{
+#'   \item{category_of_deeprooted_deprivation}{
 #'   Four categories of deep-rooted deprivation:
 #'   \cr 1. LSOAs in deep rooted deprivation: These LSOAs have remained in the top 50 most deprvied for the last 6 publications of WIMD ranks.
 #'   \cr 2. LSOAs often ranked in top 50 most deprived: These LSOAs have been in the top 50 most deprived for between 3 and 5 of the last 6 publications of WIMD ranks.
@@ -484,7 +484,7 @@ NULL
 #' @source \url{https://www.gov.wales/welsh-index-multiple-deprivation-2025}
 "imd2025_wales_lsoa21"
 
-#' Index of Multiple Deprivation for LTLAs (2024) in Wales
+#' Index of Multiple Deprivation for LTLAs (2025) in Wales
 #'
 #' A data set containing deprivation groups for Lower Tier Local Authorities (LTLAs) in Wales.
 #' The WIMD is calculated at LSOA level. To compare larger geographies, consider the proportion of small
@@ -504,6 +504,28 @@ NULL
 #' }
 #' @source \url{https://stats.gov.wales/en-GB/f30cc8bc-8e97-449e-96a4-77b0400262d1#about}
 "imd2025_wales_ltla24"
+
+
+#' Index of Multiple Deprivation for MSOAs (2025) in Wales
+#'
+#' A data set containing deprivation groups for Middle Super Output Areas (MSOA) in Wales.
+#' The WIMD is calculated at LSOA level. To compare larger geographies, consider the proportion of small
+#' area in a larger geography which are in the most deprived (say) 10 percent of areas in Wales.This table
+#' provides numbers and percentages of LSOAs within a given local authority which are in these categories of deprivation:
+#' 10percent, 20percent, 30percent, 50percent most deprived overall and for each of the 8 domains.
+#'
+#'
+#' @format A data frame of class "tbl"
+#' \describe{
+#'   \item{msoa21_code}{MSOA code}
+#'   \item{domain}{Domain}
+#'   \item{deprivation_group}{Deprivation group}
+#'   \item{data_description}{Data unit - number or percentage}
+#'   \item{data_values}{Value}
+#'   ...
+#' }
+#' @source \url{https://stats.gov.wales/en-GB/f30cc8bc-8e97-449e-96a4-77b0400262d1#about}
+"imd2025_wales_msoa21"
 
 #' Index of Multiple Deprivation for LSOAs (2011) in England
 #'
