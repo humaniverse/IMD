@@ -261,6 +261,10 @@ By participating in this project you agree to abide by its terms.
   Authorities (2024) in England
 - [`imd2025_wales_lsoa21`](https://humaniverse.github.io/IMD/reference/imd2025_wales_lsoa21.md)
   : Index of Multiple Deprivation for LSOAs (2021) in Wales.
+- [`imd2025_wales_ltla24`](https://humaniverse.github.io/IMD/reference/imd2025_wales_ltla24.md)
+  : Index of Multiple Deprivation for LTLAs (2025) in Wales
+- [`imd2025_wales_msoa21`](https://humaniverse.github.io/IMD/reference/imd2025_wales_msoa21.md)
+  : Index of Multiple Deprivation for MSOAs (2025) in Wales
 - [`imd_uk_lsoa`](https://humaniverse.github.io/IMD/reference/imd_uk_lsoa.md)
   : Index of Multiple Deprivation (multiple years) for LSOAs across the
   UK

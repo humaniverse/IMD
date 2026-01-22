@@ -126,7 +126,7 @@ A data frame of class "tbl":
 
   Physical environment domain score
 
-- Category_of_deeprooted_deprivation:
+- category_of_deeprooted_deprivation:
 
   Four categories of deep-rooted deprivation:  
   1. LSOAs in deep rooted deprivation: These LSOAs have remained in the
