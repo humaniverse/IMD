@@ -1,15 +1,23 @@
+library(httr2)
 library(tidyverse)
 
 # Load package
 devtools::load_all(".")
 
-# Read file
-# No stable link for file, dataset not in StatsWales API
-# URL: https://stats.gov.wales/en-GB/d22b81a1-6c99-4527-986b-2a529567cfba
-# Manually download the file
-# Filename: Welsh Index of Multiple Deprivation 2025 lmiddle layer super output area deprivation profiles
+# Query URL constructed using https://api.stats.gov.wales/v1/docs/#/
+# Dataset ID taken from URL link  https://stats.gov.wales/en-GB/d22b81a1-6c99-4527-986b-2a529567cfba
 
-raw <- read_csv("data-raw/welsh-index-of-multiple-deprivation-wimd-2025-middle-layer-super-output-area-msoa-deprivation-profiles-v4.csv")
+query_url <-
+  query_urls |>
+  filter(data_set == "imd2025_msoa21_wales") |>
+  pull(query_url)
+
+response <- request(query_url) |>
+  req_perform()
+
+csv_text <- resp_body_string(response)
+
+raw <- read_csv(csv_text)
 
 imd2025_wales_msoa21 <- raw |>
   select(
