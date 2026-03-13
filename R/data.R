@@ -1525,6 +1525,10 @@ NULL
 #' Index of Multiple Deprivation (2000) for Wards in England
 #'
 #' A data set containing IMD scores, ranks and deciles for Wards in England.
+#' If joining to [1998 Ward boundaries](https://geoportal.statistics.gov.uk/datasets/ons::wards-december-1998-boundaries-ew-bfe-2/about)
+#' many ward codes do not have the '00' prefix present in the boundary data.
+#' To successfully join these the '00' prefix should be stripped from
+#' the boundary data file.
 #'
 #' @format A data frame of class "tbl" with 8,414 rows and 21 variables:
 #' \describe{
